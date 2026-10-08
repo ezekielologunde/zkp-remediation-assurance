@@ -1,12 +1,14 @@
 # Private remediation assurance with ZKP
 
-**Status: Proposed.** Research proposal only; no experiments, validated novelty, dataset, or final paper is asserted for this repository.
+**Status: literature and artifact feasibility assessment in progress.** The [primary-source review](protocol/literature-audit-v0.md) rejects the generic claim that combining ZKP, inventory commitments, and freshness is novel. A narrower empirical composition audit remains conditional, with a [threat model](protocol/threat-model-v0.md) and [bounded artifact plan](protocol/artifact-audit-plan-v0.md). No cryptographic proof, new protocol, or publishable novelty has been demonstrated.
+
+The public zkSBOM source is pinned and 246 file hashes recorded. Three public CycloneDX fixtures were parsed, containing 522, 2,308, and 4 top-level component records. They are build/parser inputs, not fleet ground truth. [Reproduction instructions](REPRODUCE.md) and [source/data audit](data/public-fixture-audit.json) distinguish these checks from proof-system execution. The historical proposal below is retained for context.
 
 [Research protocol and prior-art leads](protocol/research-plan.md). This plan comes from the October 4, 2026 independent research portfolio. Its literature assessment must be refreshed before implementation and submission.
 
 ## Research identity and publication route
 
-Author: **Ezekiel Ologunde**. Affiliation: **Independent Researcher**, with no institutional affiliation. Corresponding email is pending confirmation. Intended route: a suitable ACM journal, selected after assessing the completed contribution. No journal has accepted this work and no publisher metadata or DOI is assigned.
+Author: **Ezekiel Ologunde**. Affiliation: **Independent Researcher**, Boston, MA, USA, with no institutional affiliation. Author email: ologunde@bu.edu. No corresponding-author designation. Intended route: a suitable ACM journal, selected after assessing the completed contribution. No journal has accepted this work and no publisher metadata or DOI is assigned.
 
 ## Repository workflow
 

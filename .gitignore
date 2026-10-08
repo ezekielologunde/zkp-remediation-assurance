@@ -6,3 +6,6 @@ __pycache__/
 !.env.example
 *.pem
 *.key
+data/zkSBOM-source/
+data/piranhas-source/
+data/proof-sandbox/
