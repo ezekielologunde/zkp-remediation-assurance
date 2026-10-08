@@ -1,0 +1,248 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded ascii-canvas v3.0.0
+  Downloaded anstyle v1.0.7
+  Downloaded atty v0.2.14
+  Downloaded anstyle-query v1.1.0
+  Downloaded itoa v1.0.11
+  Downloaded equivalent v1.0.1
+  Downloaded fixedbitset v0.4.2
+  Downloaded is_terminal_polyfill v1.70.0
+  Downloaded lazy_static v1.5.0
+  Downloaded dirs-sys-next v0.1.2
+  Downloaded ident_case v1.0.1
+  Downloaded pretty_env_logger v0.5.0
+  Downloaded schemafy_lib v0.6.0
+  Downloaded strsim v0.11.1
+  Downloaded unicode-ident v1.0.12
+  Downloaded strum v0.25.0
+  Downloaded clap_lex v0.7.1
+  Downloaded strsim v0.10.0
+  Downloaded scopeguard v1.2.0
+  Downloaded unicode-xid v0.2.4
+  Downloaded utf8parse v0.2.2
+  Downloaded thiserror-impl v1.0.61
+  Downloaded precomputed-hash v0.1.1
+  Downloaded bit-set v0.5.3
+  Downloaded byteorder v1.5.0
+  Downloaded strum_macros v0.24.3
+  Downloaded rustversion v1.0.17
+  Downloaded uriparse v0.6.4
+  Downloaded either v1.12.0
+  Downloaded parking_lot_core v0.9.10
+  Downloaded clap_derive v4.5.5
+  Downloaded thiserror v1.0.61
+  Downloaded walkdir v2.5.0
+  Downloaded term v0.7.0
+  Downloaded log v0.4.21
+  Downloaded proc-macro2 v1.0.86
+  Downloaded derive_builder v0.12.0
+  Downloaded serde_derive v1.0.203
+  Downloaded darling_core v0.14.4
+  Downloaded num-traits v0.2.19
+  Downloaded serde v1.0.203
+  Downloaded rand v0.8.5
+  Downloaded indexmap v2.2.6
+  Downloaded num-bigint-dig v0.8.4
+  Downloaded serde_json v1.0.117
+  Downloaded clap_builder v4.5.7
+  Downloaded unicode-width v0.1.13
+  Downloaded aho-corasick v1.1.3
+  Downloaded hashbrown v0.14.5
+  Downloaded regex v1.10.5
+  Downloaded syn v1.0.109
+  Downloaded syn v2.0.67
+  Downloaded lalrpop v0.20.2
+  Downloaded libm v0.2.8
+  Downloaded itertools v0.11.0
+  Downloaded memchr v2.7.4
+  Downloaded regex-syntax v0.8.4
+  Downloaded clap v4.5.7
+  Downloaded prettyplease v0.2.20
+  Downloaded codespan-reporting v0.11.1
+  Downloaded anyhow v1.0.86
+  Downloaded env_logger v0.10.2
+  Downloaded spin v0.9.8
+  Downloaded smallvec v1.13.2
+  Downloaded ryu v1.0.18
+  Downloaded parking_lot v0.12.3
+  Downloaded once_cell v1.19.0
+  Downloaded derive_builder_core v0.12.0
+  Downloaded regex-automata v0.4.7
+  Downloaded ppv-lite86 v0.2.17
+  Downloaded num-integer v0.1.46
+  Downloaded humantime v2.1.0
+  Downloaded getrandom v0.2.15
+  Downloaded petgraph v0.6.5
+  Downloaded string_cache v0.8.7
+  Downloaded serde-sarif v0.4.2
+  Downloaded libc v0.2.155
+  Downloaded rand_core v0.6.4
+  Downloaded rand_chacha v0.3.1
+  Downloaded quote v1.0.36
+  Downloaded lock_api v0.4.12
+  Downloaded ena v0.14.3
+  Downloaded darling v0.14.4
+  Downloaded bit-vec v0.6.3
+  Downloaded anstream v0.6.14
+  Downloaded Inflector v0.11.4
+  Downloaded heck v0.5.0
+  Downloaded dirs-next v2.0.0
+  Downloaded crunchy v0.2.2
+  Downloaded autocfg v1.3.0
+  Downloaded anstyle-parse v0.2.4
+  Downloaded tiny-keccak v2.0.2
+  Downloaded termcolor v1.4.1
+  Downloaded schemafy_core v0.6.0
+  Downloaded phf_shared v0.10.0
+  Downloaded new_debug_unreachable v1.0.6
+  Downloaded siphasher v0.3.11
+  Downloaded rustc-hex v2.1.0
+  Downloaded lalrpop-util v0.20.2
+  Downloaded darling_macro v0.14.4
+  Downloaded same-file v1.0.6
+  Downloaded num-iter v0.1.45
+  Downloaded pico-args v0.5.0
+  Downloaded fnv v1.0.7
+  Downloaded colorchoice v1.0.1
+  Downloaded is-terminal v0.4.12
+  Downloaded heck v0.4.1
+  Downloaded codespan v0.11.1
+  Downloaded cfg-if v1.0.0
+  Downloaded derive_builder_macro v0.12.0
+   Compiling libc v0.2.155
+   Compiling proc-macro2 v1.0.86
+   Compiling unicode-ident v1.0.12
+   Compiling autocfg v1.3.0
+   Compiling serde v1.0.203
+   Compiling num-traits v0.2.19
+   Compiling cfg-if v1.0.0
+   Compiling syn v1.0.109
+   Compiling quote v1.0.36
+   Compiling syn v2.0.67
+   Compiling memchr v2.7.4
+   Compiling lock_api v0.4.12
+   Compiling fnv v1.0.7
+   Compiling parking_lot_core v0.9.10
+   Compiling regex-syntax v0.8.4
+   Compiling aho-corasick v1.1.3
+   Compiling regex-automata v0.4.7
+   Compiling spin v0.9.8
+   Compiling lazy_static v1.5.0
+   Compiling serde_json v1.0.117
+   Compiling crunchy v0.2.2
+   Compiling libm v0.2.8
+   Compiling tiny-keccak v2.0.2
+   Compiling num-bigint-dig v0.8.4
+   Compiling ident_case v1.0.1
+   Compiling anyhow v1.0.86
+   Compiling serde_derive v1.0.203
+   Compiling strsim v0.10.0
+   Compiling regex v1.10.5
+   Compiling darling_core v0.14.4
+   Compiling smallvec v1.13.2
+   Compiling itoa v1.0.11
+   Compiling ryu v1.0.18
+   Compiling darling_macro v0.14.4
+   Compiling dirs-sys-next v0.1.2
+   Compiling getrandom v0.2.15
+   Compiling prettyplease v0.2.20
+   Compiling scopeguard v1.2.0
+   Compiling rand_core v0.6.4
+   Compiling dirs-next v2.0.0
+   Compiling schemafy_core v0.6.0
+   Compiling darling v0.14.4
+   Compiling Inflector v0.11.4
+   Compiling uriparse v0.6.4
+   Compiling log v0.4.21
+   Compiling rustversion v1.0.17
+   Compiling hashbrown v0.14.5
+   Compiling equivalent v1.0.1
+   Compiling ppv-lite86 v0.2.17
+   Compiling siphasher v0.3.11
+   Compiling termcolor v1.4.1
+   Compiling phf_shared v0.10.0
+   Compiling rand_chacha v0.3.1
+   Compiling indexmap v2.2.6
+   Compiling schemafy_lib v0.6.0
+   Compiling derive_builder_core v0.12.0
+   Compiling parking_lot v0.12.3
+   Compiling term v0.7.0
+   Compiling num-integer v0.1.46
+   Compiling new_debug_unreachable v1.0.6
+   Compiling fixedbitset v0.4.2
+   Compiling either v1.12.0
+   Compiling thiserror v1.0.61
+   Compiling precomputed-hash v0.1.1
+   Compiling same-file v1.0.6
+   Compiling once_cell v1.19.0
+   Compiling bit-vec v0.6.3
+   Compiling bit-set v0.5.3
+   Compiling ena v0.14.3
+   Compiling string_cache v0.8.7
+   Compiling walkdir v2.5.0
+   Compiling itertools v0.11.0
+   Compiling petgraph v0.6.5
+   Compiling serde-sarif v0.4.2
+   Compiling num-iter v0.1.45
+   Compiling derive_builder_macro v0.12.0
+   Compiling ascii-canvas v3.0.0
+   Compiling rand v0.8.5
+   Compiling lalrpop-util v0.20.2
+   Compiling thiserror-impl v1.0.61
+   Compiling byteorder v1.5.0
+   Compiling heck v0.4.1
+   Compiling unicode-xid v0.2.4
+   Compiling pico-args v0.5.0
+   Compiling unicode-width v0.1.13
+   Compiling codespan-reporting v0.11.1
+   Compiling lalrpop v0.20.2
+   Compiling strum_macros v0.24.3
+   Compiling derive_builder v0.12.0
+   Compiling strum v0.25.0
+   Compiling rustc-hex v2.1.0
+   Compiling utf8parse v0.2.2
+   Compiling anstyle-parse v0.2.4
+   Compiling circomspect-circom-algebra v2.0.2 (/work/circom_algebra)
+   Compiling codespan v0.11.1
+   Compiling atty v0.2.14
+   Compiling anstyle v1.0.7
+   Compiling colorchoice v1.0.1
+   Compiling anstyle-query v1.1.0
+   Compiling is_terminal_polyfill v1.70.0
+   Compiling anstream v0.6.14
+   Compiling is-terminal v0.4.12
+   Compiling clap_lex v0.7.1
+   Compiling strsim v0.11.1
+   Compiling circomspect-parser v2.2.0 (/work/parser)
+   Compiling circomspect-program-structure v2.1.4 (/work/program_structure)
+warning: unused return value of `finish` that must be used
+   --> program_structure/src/intermediate_representation/ir.rs:106:9
+    |
+106 |         state.finish();
+    |         ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_must_use)]` on by default
+help: use `let _ = ...` to ignore the resulting value
+    |
+106 |         let _ = state.finish();
+    |         +++++++
+
+   Compiling heck v0.5.0
+   Compiling humantime v2.1.0
+   Compiling env_logger v0.10.2
+   Compiling clap_derive v4.5.5
+   Compiling clap_builder v4.5.7
+warning: `circomspect-program-structure` (lib) generated 1 warning
+   Compiling clap v4.5.7
+   Compiling circomspect-program-analysis v0.8.2 (/work/program_analysis)
+   Compiling pretty_env_logger v0.5.0
+   Compiling circomspect v0.9.0 (/work/cli)
+    Finished `release` profile [optimized] target(s) in 1m 34s
+error: unexpected argument '--version' found
+
+  tip: a similar argument exists: '--verbose'
+
+Usage: circomspect <INPUT|--library <LIBRARIES>|--level <LEVEL>|--sarif-file <OUTPUT>|--allow <ID>|--verbose|--curve <NAME>>
+
+For more information, try '--help'.

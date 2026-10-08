@@ -1,0 +1,43 @@
+const fs=require('fs'),path=require('path');
+const box=path.resolve(__dirname,'../data/proof-sandbox');
+const {buildPoseidon,buildBabyjub}=require(path.join(box,'mutation-runtime/node_modules/circomlibjs'));
+(async()=>{
+ const P=await buildPoseidon(), B=await buildBabyjub(), F=B.F;
+ const H=a=>P.F.toObject(P(a.map(BigInt)));
+ const out=path.join(box,'repair-v0');fs.mkdirSync(out);
+ let source=fs.readFileSync(path.join(box,'attest.circom'),'utf8');
+ function rep(a,b){if(source.split(a).length!==2)throw Error('nonunique anchor');source=source.replace(a,b);}
+ rep('signal input devAddr;',`signal input k;
+    signal input t;`);
+ rep('hasher.inputs[0] <== devAddr;','hasher.inputs[0] <== 101;');
+ rep('signal input message;',`signal message;
+    component auth = Poseidon(3);
+    auth.inputs[0] <== 102;
+    auth.inputs[1] <== root;
+    auth.inputs[2] <== k;
+    message <== auth.out;
+    component tag = Poseidon(3);
+    tag.inputs[0] <== 103;
+    tag.inputs[1] <== challenge;
+    tag.inputs[2] <== k;
+    t === tag.out;
+    enabled === 1;`);
+ rep('public[enabled, pubX, pubY]','public[enabled, pubX, pubY, challenge, t]');
+ fs.writeFileSync(path.join(out,'attest.circom'),source);
+ for(const f of ['merkleTree.circom','verifyKeySchnorrGroup.circom'])fs.copyFileSync(path.join(box,f),path.join(out,f));
+ const old=JSON.parse(fs.readFileSync(path.join(box,'input.json')));
+ let x={root:'0',k:'73',t:'0',response:old.response,challenge:old.challenge,pathElements:old.pathElements,pathIndices:old.pathIndices,enabled:'1',pubX:'0',pubY:'0',S:'0',e:'0'};
+ function root(x){let h=H([101,x.challenge,x.response]);x.pathElements.forEach((p,i)=>{if(!['0','1'].includes(x.pathIndices[i]))throw Error('index');h=H(x.pathIndices[i]==='0'?[h,p]:[p,h]);});return h.toString();}
+ x.root=root(x);x.t=H([103,x.challenge,x.k]).toString();
+ const sk=123456789n,nonce=987654321n,pk=B.mulPointEscalar(B.Base8,sk),R=B.mulPointEscalar(B.Base8,nonce);
+ x.pubX=F.toObject(pk[0]).toString();x.pubY=F.toObject(pk[1]).toString();
+ const msg=H([102,x.root,x.k]),e=H([F.toObject(R[0]),F.toObject(R[1]),msg]);
+ const mod=n=>(n%B.subOrder+B.subOrder)%B.subOrder;
+ x.e=e.toString();x.S=mod(nonce-e*sk).toString();
+ const check=B.addPoint(B.mulPointEscalar(B.Base8,BigInt(x.S)),B.mulPointEscalar(pk,e));
+ if(F.toObject(check[0])!==F.toObject(R[0])||F.toObject(check[1])!==F.toObject(R[1]))throw Error('signature equation');
+ const stale={...x,response:(BigInt(x.response)+1n).toString()},recomputed={...stale,root:root(stale)};
+ const cases={original:x,stale_root:stale,recomputed_root:recomputed,changed_key:{...x,k:'74'},changed_tag:{...x,t:(BigInt(x.t)+1n).toString()},changed_challenge:{...x,challenge:(BigInt(x.challenge)+1n).toString()},invalid_signature:{...x,S:(BigInt(x.S)+1n).toString()}};
+ for(const[n,v]of Object.entries(cases))fs.writeFileSync(path.join(out,n+'.json'),JSON.stringify(v,null,2));
+ console.log(JSON.stringify({signature_equation_checked:true,public_test_key:true,cases:Object.keys(cases)}));
+})().catch(e=>{console.error(e);process.exitCode=1;});

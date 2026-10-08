@@ -1,0 +1,1 @@
+Official source built successfully, but --version is unsupported by this CLI and stopped v0 before analysis. v1 reuses that exact compiled binary, records its hash, and runs the two intended analyses without --version. Tool package version is 0.9.0 from the pinned Cargo.toml, not an executed version response.

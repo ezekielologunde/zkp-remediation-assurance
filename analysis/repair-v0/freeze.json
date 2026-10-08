@@ -1,0 +1,16 @@
+{
+  "protocol\\repair-pilot-v0.md": "f71d413472ef358ce914ef42c503d5ef5ee50a75edc0d78c5c7defe68975515b",
+  "src\\generate_repair.cjs": "053888b5c69f689ddc036fa3e66100278d2c617741006b1e7314ea398daadaf8",
+  "src\\run_repair_pilot.py": "21d92dfbec528aa43f70a96d815afc6bd7b4d4eeb2c2554d681d4587315626e3",
+  "data\\proof-sandbox\\package-lock.json": "5bd86f3942b6bf0ac51ea34549e5490a0b63bd0494e58ef8111782ff1f0c2945",
+  "data\\proof-sandbox\\repair-v0\\attest.circom": "5aa354df2436724c9517c22c58e41d06f5248b7df3615a94ef62f41760591d7f",
+  "data\\proof-sandbox\\repair-v0\\merkleTree.circom": "ec17de35d2596170f1a6f431800bffd9cc90fe6e95f4130256f37559faca79f0",
+  "data\\proof-sandbox\\repair-v0\\verifyKeySchnorrGroup.circom": "ef943680d80091da8ca0ab7cd4d584e62fce1d8b51a38a91fe75311e7c0c241d",
+  "data\\proof-sandbox\\repair-v0\\changed_challenge.json": "d58ed86f3ae0316ac13876ddb6a3fb571e7aef2ff6ce51baed6b9b2eaf607a55",
+  "data\\proof-sandbox\\repair-v0\\changed_key.json": "1685815a69270dd2f56b395177996d7353226210f29c8714827c5cbcb8369fba",
+  "data\\proof-sandbox\\repair-v0\\changed_tag.json": "2392b2ff93f19ce60e7340a3997a5cae4fb764346fa9b282b5c2ad6564d7af04",
+  "data\\proof-sandbox\\repair-v0\\invalid_signature.json": "95d65344d7826c1430bd7a3e603a145f3e9655b723bdc9d8441037e60af6d0cc",
+  "data\\proof-sandbox\\repair-v0\\original.json": "d15adc605429fed885f9bd39fa7ea03bf007353fb8bc64d17e310e820d057122",
+  "data\\proof-sandbox\\repair-v0\\recomputed_root.json": "6fb11947daf621d94e3c6897558abeeb1141eb7d21a53d168d3dfd3098f04473",
+  "data\\proof-sandbox\\repair-v0\\stale_root.json": "52c073309515986dd005ec975799e7e1eb36597cd23f742e24112c7bc541292b"
+}

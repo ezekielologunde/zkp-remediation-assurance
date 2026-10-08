@@ -1,0 +1,11 @@
+{
+  "image": "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+  "revision": "50010b623ed4f3bff9d1b0363cfe952385b47af3",
+  "sha256": {
+    "protocol\\analyzer-baseline-v0.md": "4f1637c72771b666c9420575e54b11907362264dcd6a5fbae02966efab8e93e2",
+    "src\\run_circomspect.py": "a1d1141bc2b84095c9ddfae936adc2901b0c2a40b60b0a9cad1d3111d6a9e4d1",
+    "data\\proof-sandbox\\circomspect-source\\Cargo.lock": "926a342541a37cf59607defae6bf1bf035d0221dbc964e8fda4b60523122a623",
+    "data\\proof-sandbox\\attest.circom": "da224d86a04af86c5291fcbff93c07f8ccd105e2f4a5084b97fd83755ddf0590",
+    "data\\proof-sandbox\\repair-v1\\attest.circom": "5aa354df2436724c9517c22c58e41d06f5248b7df3615a94ef62f41760591d7f"
+  }
+}

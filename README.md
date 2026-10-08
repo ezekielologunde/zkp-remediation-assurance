@@ -14,6 +14,8 @@ The public zkSBOM source is pinned and 246 file hashes recorded. Three public Cy
 
 [Statement-contract assessment](analysis/contribution-gate-v1.md): six TrustBOM adapter controls passed; cross-backend workload differences documented. No matched performance or new-method claim.
 
+[Candidate repair and analyzer results](analysis/repair-report-v0.md): a repaired local statement passes its positive proof and rejects the specified controls. Circomspect and compiler inspection results are preserved. This is a bounded empirical pilot, not a new protocol or security certification.
+
 ## Research identity and publication route
 
 Author: **Ezekiel Ologunde**. Affiliation: **Independent Researcher**, Boston, MA, USA, with no institutional affiliation. Author email: ologunde@bu.edu. No corresponding-author designation. Intended route: a suitable ACM journal, selected after assessing the completed contribution. No journal has accepted this work and no publisher metadata or DOI is assigned.

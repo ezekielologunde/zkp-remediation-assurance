@@ -1,0 +1,14 @@
+{
+  "changed_challenge-witness.log": "52b7116cc114bed188f54c1df6ee12e44157132f9e895c675b3f70a6e94aa261",
+  "changed_key-witness.log": "52b7116cc114bed188f54c1df6ee12e44157132f9e895c675b3f70a6e94aa261",
+  "changed_tag-witness.log": "52b7116cc114bed188f54c1df6ee12e44157132f9e895c675b3f70a6e94aa261",
+  "freeze.json": "2f79ca561925479893ead58a6cfa80c3962a2abb8cb6f5688e1c7395f6b3d70c",
+  "invalid_signature-witness.log": "8fa956cd19b52d768f34f9ea9cabb111af7842c67b934b94a4e73a07a2d262f4",
+  "original-inspect.log": "16d5cc87c84e8630b9e60fdd88df2e1ad9bbf9a964bcc34a9725f6922e2502ed",
+  "original-witness.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+  "r1cs-check.log": "e800fe6d03ece22da105540979622187960ce570d5d1a965b21ba9e78f0e74f5",
+  "receipt.json": "45e919a08676de718b3f00dc95eb0059cc51a73a360766fb030aa4fa7554aa49",
+  "recomputed_root-witness.log": "8fa956cd19b52d768f34f9ea9cabb111af7842c67b934b94a4e73a07a2d262f4",
+  "repair-inspect.log": "8ccdff28442e9bb893fc5707fb2da7951125dd7471c0957d1dc0ed37d6e44738",
+  "stale_root-witness.log": "34166668a38164ca7c4fdceb403a2599427294786e410466443447cd61166c65"
+}

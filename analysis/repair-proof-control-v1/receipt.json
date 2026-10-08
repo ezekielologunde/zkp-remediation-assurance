@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "command": [
+    "node",
+    "node_modules/snarkjs/build/cli.cjs",
+    "groth16",
+    "verify",
+    "repair-proof-v0/vk.json",
+    "repair-proof-v0/changed-public-v1.json",
+    "repair-proof-v0/proof.json"
+  ],
+  "exit_code": 1,
+  "public_order": {
+    "1": "t",
+    "2": "challenge",
+    "3": "enabled",
+    "4": "pubX",
+    "5": "pubY"
+  },
+  "changed_index": 1,
+  "changed_public_sha256": "3c6459b2090705a0a354ded6d20fa9e7c072256c1f9caec4d8c9746017b6a9fb",
+  "note": "Previous driver parsed hex challenge as decimal after positive proof verification; proof unchanged."
+}

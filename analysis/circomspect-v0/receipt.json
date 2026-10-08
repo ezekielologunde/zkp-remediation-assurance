@@ -1,0 +1,29 @@
+{
+  "exit_code": 2,
+  "seconds": 98.29699999999139,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-circomspect-v0",
+    "--cpus",
+    "4",
+    "--memory",
+    "6g",
+    "--env",
+    "CARGO_BUILD_JOBS=4",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\circomspect-source,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox,target=/box,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\circomspect-v0,target=/out",
+    "--mount",
+    "type=volume,source=zkp-circomspect-work-v0,target=/work",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "bash",
+    "-c",
+    "set -eu; cp -a /source/. /work/; cd /work; cargo build --locked --release -p circomspect; target/release/circomspect --version; set +e; target/release/circomspect /box/attest.circom -L /box/node_modules --level INFO --sarif-file /out/original.sarif > /out/original.log 2>&1; echo $? > /out/original.exit; target/release/circomspect /box/repair-v1/attest.circom -L /box/node_modules --level INFO --sarif-file /out/repair.sarif > /out/repair.log 2>&1; echo $? > /out/repair.exit"
+  ]
+}

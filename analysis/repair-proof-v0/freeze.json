@@ -1,0 +1,7 @@
+{
+  "data\\proof-sandbox\\repair-v1\\build\\attest.r1cs": "f1f9f3727a3e053113224b5300708282a80271a52f67faf2a85cf098dd244418",
+  "data\\proof-sandbox\\repair-v1\\original.wtns": "d9f68d5091edf9a30f41da1b2c31acedb35b4124f5f71473de95acff4129e630",
+  "data\\proof-sandbox\\control\\final.ptau": "ad9db54fc3a9fcf9944efa213ce0035c6d5ea07fff009cc496c57758eef84e65",
+  "protocol\\repair-pilot-v0.md": "f71d413472ef358ce914ef42c503d5ef5ee50a75edc0d78c5c7defe68975515b",
+  "src\\prove_repair.py": "002f7f37638bcafc518ced042659482db26380fd638525477440daad3024c7dc"
+}

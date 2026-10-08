@@ -1,0 +1,38 @@
+{
+  "circomspect-v0": {
+    "manifest_hashes": 3,
+    "frozen_hashes": 5
+  },
+  "circomspect-v1": {
+    "manifest_hashes": 9,
+    "frozen_hashes": 5
+  },
+  "issues": {
+    "original": [
+      {
+        "rule": "CS0004",
+        "level": "note",
+        "message": "Field element arithmetic could overflow, which may produce unexpected results."
+      },
+      {
+        "rule": "CS0003",
+        "level": "note",
+        "message": "Comparisons with field elements greater than `p/2` may produce unexpected results."
+      }
+    ],
+    "repair": [
+      {
+        "rule": "CS0004",
+        "level": "note",
+        "message": "Field element arithmetic could overflow, which may produce unexpected results."
+      },
+      {
+        "rule": "CS0003",
+        "level": "note",
+        "message": "Comparisons with field elements greater than `p/2` may produce unexpected results."
+      }
+    ]
+  },
+  "status": "verified",
+  "scope": "Top-level Attest templates; informational findings, no whole-project or other-tool claim"
+}
