@@ -1,0 +1,300 @@
+[
+  {
+    "path": "data/piranhas-source/README.md",
+    "sha256": "02f05625b9a237aa3eb54d7cd2a034c875a5edc18b2912c39572eb57c0ed5449",
+    "anchors": [
+      {
+        "line": 20,
+        "text": "\ud83d\udcc4 The repository includes all code required to reproduce the results presented in **Section V**."
+      },
+      {
+        "line": 104,
+        "text": "* **Groth16** (Circom)"
+      },
+      {
+        "line": 108,
+        "text": "All results presented in **Section V** can be reproduced using the provided benchmark scripts for each backend."
+      },
+      {
+        "line": 115,
+        "text": "This README focuses on the quantitative results reported in **Table II** of **Section V** and **Table V** in Appendix I in the full version of our paper."
+      },
+      {
+        "line": 118,
+        "text": "The proposed protocol $\\Pi_\\text{ranha}$, when implemented using **Groth16**, achieves sub-second proving time on a laptop and remains practical on constrained hardware (e.g., Raspberry Pi Zero 2 W)."
+      },
+      {
+        "line": 130,
+        "text": "### Experiment (E1) \u2014 Groth16 Performance"
+      },
+      {
+        "line": 150,
+        "text": "Step 6: Prepare phase 2 for Groth16"
+      },
+      {
+        "line": 151,
+        "text": "Step 7: Setup Groth16 proving key"
+      },
+      {
+        "line": 153,
+        "text": "Step 9: Prove using Groth16"
+      },
+      {
+        "line": 160,
+        "text": "Performance metrics for **Table IV** (Groth16) are visible in the output."
+      }
+    ]
+  },
+  {
+    "path": "data/piranhas-source/circom/attest.circom",
+    "sha256": "da224d86a04af86c5291fcbff93c07f8ccd105e2f4a5084b97fd83755ddf0590",
+    "anchors": [
+      {
+        "line": 39,
+        "text": "tree.root <== root;"
+      },
+      {
+        "line": 51,
+        "text": "schnorr_verifier.message <== message;"
+      },
+      {
+        "line": 60,
+        "text": "component main {public[enabled, pubX, pubY]} = Attest(20);"
+      }
+    ]
+  },
+  {
+    "path": "data/piranhas-source/circom/benchmark.sh",
+    "sha256": "adaea21253b8d0602f767171f53f0e21a6c889334c10bc565706033813f16dd4",
+    "anchors": [
+      {
+        "line": 30,
+        "text": "echo -e \"${GREEN}\ud83d\udd27 Step 6: Prepare phase 2 for Groth16${NC}\""
+      },
+      {
+        "line": 33,
+        "text": "echo -e \"${GREEN}\ud83d\udcd0 Step 7: Setup Groth16 proving key${NC}\""
+      },
+      {
+        "line": 39,
+        "text": "echo -e \"${GREEN}\u23f1\ufe0f  Step 9: Prove using Groth16${NC}\""
+      }
+    ]
+  },
+  {
+    "path": "data/piranhas-source/noir/1-attest-(Pi-zkRA)/src/attest.nr",
+    "sha256": "66767623fa6364f52817651fb187cf7c0ad7421031f7d8b5103ed469fec91bf3",
+    "anchors": [
+      {
+        "line": 1,
+        "text": "use dep::schnorr::{verify_signature, assert_valid_signature};"
+      },
+      {
+        "line": 57,
+        "text": "w_path_elements: [Field; 10], // Merkle path"
+      },
+      {
+        "line": 58,
+        "text": "w_path_indices: [Field; 10], // Merkle path"
+      },
+      {
+        "line": 74,
+        "text": "let auth_root = pedersen_hash([root, k]);"
+      },
+      {
+        "line": 75,
+        "text": "// std::println(auth_root);"
+      },
+      {
+        "line": 76,
+        "text": "let root_array: [u8; 32] = auth_root.to_le_bytes();"
+      },
+      {
+        "line": 80,
+        "text": "let valid_signature = verify_signature(pub_key, signature, root_array);"
+      },
+      {
+        "line": 81,
+        "text": "assert(valid_signature);"
+      },
+      {
+        "line": 82,
+        "text": "assert_valid_signature(pub_key, signature, root_array);"
+      }
+    ]
+  },
+  {
+    "path": "data/piranhas-source/noir/1-attest-(Pi-zkRA)/src/main.nr",
+    "sha256": "1e88a5863f33c80026f78a9aca74780bcb43db962c81316d3d166bd5a08164ab",
+    "anchors": [
+      {
+        "line": 9,
+        "text": "w_path_elements: [Field; 10], // Merkle path"
+      },
+      {
+        "line": 10,
+        "text": "w_path_indices: [Field; 10], // Merkle path"
+      },
+      {
+        "line": 14,
+        "text": "t: pub Field,"
+      },
+      {
+        "line": 15,
+        "text": "pk_x: pub Field,  // manufacturer"
+      },
+      {
+        "line": 16,
+        "text": "pk_y: pub Field,  // manufacturer"
+      }
+    ]
+  },
+  {
+    "path": "data/proof-sandbox/trustbom-source/verifier-service/src/handlers.rs",
+    "sha256": "9499d99fb8b8bc5daa24dcd063fb8d0e930f9673da3064637628ee1d590546a6",
+    "anchors": [
+      {
+        "line": 21,
+        "text": "let image_id = parse_image_id(&req.image_id)?;"
+      },
+      {
+        "line": 24,
+        "text": ".verify(image_id)"
+      },
+      {
+        "line": 42,
+        "text": "let decoded_banned_hash = hex::encode(outputs.banned_list_hash);"
+      },
+      {
+        "line": 43,
+        "text": "if req.banned_list_hash != decoded_banned_hash {"
+      },
+      {
+        "line": 46,
+        "text": "req.banned_list_hash, decoded_banned_hash"
+      },
+      {
+        "line": 64,
+        "text": "banned_list_hash: decoded_banned_hash,"
+      },
+      {
+        "line": 66,
+        "text": "image_id: req.image_id.clone(),"
+      },
+      {
+        "line": 96,
+        "text": "fn parse_image_id(image_id_vec: &[String]) -> Result<[u32; 8]> {"
+      },
+      {
+        "line": 97,
+        "text": "if image_id_vec.len() != 8 {"
+      },
+      {
+        "line": 100,
+        "text": "image_id_vec.len()"
+      },
+      {
+        "line": 104,
+        "text": "let mut image_id = [0u32; 8];"
+      },
+      {
+        "line": 105,
+        "text": "for (i, val_str) in image_id_vec.iter().enumerate() {"
+      },
+      {
+        "line": 106,
+        "text": "image_id[i] = val_str"
+      },
+      {
+        "line": 111,
+        "text": "Ok(image_id)"
+      }
+    ]
+  },
+  {
+    "path": "data/proof-sandbox/trustbom-source/proof-orchestrator-service/service/proof_service.py",
+    "sha256": "81f5993c708758e8abde7b5077572055dca8fda7a8a53949174272027c58e2df",
+    "anchors": [
+      {
+        "line": 26,
+        "text": "def compute_banned_list_hash(banned_list: list) -> str:"
+      },
+      {
+        "line": 27,
+        "text": "\"\"\"Compute banned_list_hash from banned_list (matches Rust implementation).\"\"\""
+      },
+      {
+        "line": 31,
+        "text": "banned_list_hash = hashlib.sha256(banned_list_bytes).hexdigest()"
+      },
+      {
+        "line": 32,
+        "text": "return banned_list_hash"
+      },
+      {
+        "line": 35,
+        "text": "def compute_composite_hash(root_hash: str, banned_list_hash: str) -> str:"
+      },
+      {
+        "line": 36,
+        "text": "\"\"\"Compute composite hash from root_hash and banned_list_hash.\"\"\""
+      },
+      {
+        "line": 38,
+        "text": "normalized_banned = _normalize_hash(banned_list_hash)"
+      },
+      {
+        "line": 56,
+        "text": "banned_list_hash = compute_banned_list_hash(banned_list)"
+      },
+      {
+        "line": 57,
+        "text": "logger.info(f\"Computed banned_list_hash={banned_list_hash[:16]}...\")"
+      },
+      {
+        "line": 61,
+        "text": "normalized_root, banned_list_hash)"
+      },
+      {
+        "line": 86,
+        "text": "if not merkle_proofs:"
+      },
+      {
+        "line": 96,
+        "text": "proven_banned_list_hash = proving_response.get(\"banned_list_hash\")"
+      },
+      {
+        "line": 101,
+        "text": "if not proven_banned_list_hash:"
+      },
+      {
+        "line": 103,
+        "text": "\"banned_list_hash not found in proving-service response\")"
+      },
+      {
+        "line": 105,
+        "text": "if proven_banned_list_hash.lower() != banned_list_hash.lower():"
+      },
+      {
+        "line": 107,
+        "text": "f\"Banned list hash mismatch: computed={banned_list_hash}, proven={proven_banned_list_hash}\""
+      },
+      {
+        "line": 111,
+        "text": "f\"Extracted: banned_list_hash={proven_banned_list_hash[:16]}..., compliant={compliant}\""
+      },
+      {
+        "line": 115,
+        "text": "proof_root_hash, proven_banned_list_hash"
+      },
+      {
+        "line": 129,
+        "text": "banned_list_hash=banned_list_hash,"
+      },
+      {
+        "line": 135,
+        "text": "\"Proof already exists on blockchain for this root_hash + banned_list_hash combination\""
+      }
+    ]
+  }
+]

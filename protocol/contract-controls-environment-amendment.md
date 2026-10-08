@@ -1,0 +1,1 @@
+The v0 offline build failed because the git dependency cache was not persisted. Permit dependency retrieval with the unchanged Cargo.lock using --locked in v1. No semantic change; preserve v0 failure. No performance measurement.

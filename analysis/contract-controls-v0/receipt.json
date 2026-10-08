@@ -1,0 +1,29 @@
+{
+  "exit_code": 101,
+  "seconds": 4.687999999994645,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-contract-controls-v0",
+    "--cpus",
+    "4",
+    "--memory",
+    "6g",
+    "--env",
+    "RISC0_DEV_MODE=0",
+    "--mount",
+    "type=volume,source=zkp-trustbom-work-v1,target=/work",
+    "--mount",
+    "type=volume,source=zkp-trustbom-registry-v1,target=/usr/local/cargo/registry",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\trustbom_contract_probe.rs,target=/probe.rs,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\trustbom-linux-results-v3\\audit-receipt.json,target=/receipt.json,readonly",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "bash",
+    "-c",
+    "set -eu; mkdir -p /root/.risc0/toolchains; cp -a /opt/risc0-rust /root/.risc0/toolchains/v1.88.0-rust-x86_64-unknown-linux-gnu; cp /probe.rs /work/examples/contract_probe.rs; cd /work; cargo run --offline --locked --release --example contract_probe"
+  ]
+}

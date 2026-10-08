@@ -1,0 +1,10 @@
+{
+  "image": "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+  "sha256": {
+    "src/trustbom_contract_probe.rs": "195e5bc203684a2bae21d70deba269316cc6f254744f52688f3278a96b5af16b",
+    "src/run_contract_controls_online.py": "6f49fbdfe5fb96525eeb62f136d4fdd6398a9c0706e138b2934bb830bb281703",
+    "protocol/contract-controls-v0.md": "3ce33eed4f3e6d52de6138fc4f486aee2188e678ac41c78d25b54e93ddadde2a",
+    "data/proof-sandbox/trustbom-linux-results-v3/audit-receipt.json": "71be596f93f04ec16f120eb6d52e79c013557e55409d2ff46440769522582fbb",
+    "data/proof-sandbox/trustbom-source/proving-service/benchmark/data/merkleproofs/batch_proof_2.json": "4deeb5bc4fe519bd8386dd6c3001c87dde944bfd939cc7dbd0b78204f5dd8e7d"
+  }
+}

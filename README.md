@@ -12,6 +12,8 @@ The public zkSBOM source is pinned and 246 file hashes recorded. Three public Cy
 
 **Second independent reproduction:** [TrustBOM real-receipt results](analysis/trustbom-receipt-report.md) now include a verified non-Fake RISC Zero receipt, two rejected negative controls and 49 successful evidence-hash checks. This clears a feasibility gate, not novelty or production validation.
 
+[Statement-contract assessment](analysis/contribution-gate-v1.md): six TrustBOM adapter controls passed; cross-backend workload differences documented. No matched performance or new-method claim.
+
 ## Research identity and publication route
 
 Author: **Ezekiel Ologunde**. Affiliation: **Independent Researcher**, Boston, MA, USA, with no institutional affiliation. Author email: ologunde@bu.edu. No corresponding-author designation. Intended route: a suitable ACM journal, selected after assessing the completed contribution. No journal has accepted this work and no publisher metadata or DOI is assigned.

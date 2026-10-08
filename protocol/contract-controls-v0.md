@@ -1,0 +1,3 @@
+# Frozen contract controls v0
+
+Reuse the already generated real TrustBOM receipt. Do not generate a new proof or change the upstream guest. A local evaluation adapter verifies the compiled expected image and compares decoded journal values to independently supplied expected root, ordered policy digest, and compliance. Run original and one-at-a-time root, policy, compliance, image and journal mutations. Expected: original accepted; each mismatch rejected. This tests an explicit consumer contract, not the deployed HTTP handler or a novel defense. Preserve logs and exact input hashes. No performance claims.

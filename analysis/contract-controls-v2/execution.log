@@ -1,0 +1,11 @@
+    Updating git repository `https://github.com/risc0/RustCrypto-hashes`
+   Compiling methods v0.3.0 (/work/methods)
+   Compiling proving-service v0.3.0 (/work)
+    Finished `release` profile [optimized] target(s) in 12.24s
+     Running `target/release/examples/contract_probe`
+{"accepted":true,"case":"original","expected":true}
+{"accepted":false,"case":"expected_root","expected":false}
+{"accepted":false,"case":"expected_policy","expected":false}
+{"accepted":false,"case":"expected_compliance","expected":false}
+{"accepted":false,"case":"expected_image","expected":false}
+{"accepted":false,"case":"altered_journal","expected":false}
