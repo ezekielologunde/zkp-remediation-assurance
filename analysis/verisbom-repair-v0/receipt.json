@@ -1,0 +1,54 @@
+{
+  "build": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--cpus",
+      "4",
+      "--memory",
+      "12g",
+      "--mount",
+      "type=volume,source=zkp-verisbom-build-v0,target=/work",
+      "--mount",
+      "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-repair-v0,target=/repair,readonly",
+      "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+      "bash",
+      "-c",
+      "set -eu; cd /work; cp /repair/bound_verifier.rs src/bin/bound_verifier.rs; cargo build --locked --release --bin bound_verifier; sha256sum target/release/bound_verifier target/release/bomz"
+    ],
+    "exit_code": 0,
+    "seconds": 61.10899999999674
+  },
+  "test": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--cpus",
+      "4",
+      "--memory",
+      "12g",
+      "--mount",
+      "type=volume,source=zkp-verisbom-build-v0,target=/compiled,readonly",
+      "--mount",
+      "type=volume,source=zkp-verisbom-work-v0,target=/work",
+      "--mount",
+      "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-repair-v0,target=/repair,readonly",
+      "--mount",
+      "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-repair-v0,target=/out",
+      "--mount",
+      "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence,readonly",
+      "--mount",
+      "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0,target=/bundle,readonly",
+      "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+      "bash",
+      "-c",
+      "set -eu; cd /work; sha256sum bomz; python3 /repair/cases.py"
+    ],
+    "exit_code": 0,
+    "seconds": 19.296999999991385
+  }
+}

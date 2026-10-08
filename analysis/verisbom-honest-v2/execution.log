@@ -1,0 +1,53 @@
+bd0bd39965cb458cd8667ac8cb709b16227395be1fb6691f2d2ae28a1704afa5  bomz
+8ad2dbac5ee31bd47df46e30bdfc22faea3ff8ec80ff2aad8059182f09e01517  circuits/step.r1cs
+c3f1767cd8b8b1be604d154526836a39adf95b13e1f8842816cbd189d8d20bb7  circuits/step.r1cs.pp
+RUN ['python3', 'python/setup_pm_web.py', 'audit']
+[PM] Loading Registry for session audit...
+ -> scheduler       @ Slot [221] Deps: []
+[PM] Root SMT...
+tree_pm_audit.json created.
+RUN ['python3', 'python/setup_auditor_web.py', 'audit']
+[Auditor] Generation 1 trees for session audit...
+policy_ALLOWED_audit.json -> Root: 0x2bd9fd41...
+RUN ['python3', 'python/prove_web.py', '--input', 'selected-sbom.json', '--tree', 'tree_pm_audit.json', '--audit', 'policy_ALLOWED_audit.json', '--db', 'crates_audit.db', '--output', 'witness.json']
+Witness (Patch & Prove) saved: witness.json
+RUN ['./bomz', '--mode', 'prove', '--circuit', 'circuits/step.r1cs', '--input', 'witness.json', '--witnessgenerator', 'circuits/step_cpp/step', '--output', 'honest.proof']
+[*] Loading R1CS...
+R1CS Loaded in: 11.34ms
+[*] Loading Public Parameters from cache (circuits/step.r1cs.pp)
+Public Parameters ready in: 4.03s
+=== PROVER MODE ===
+Reading witness from: witness.json
+Processing 1 packages...
+Generating RecursiveSNARK (Folding)...
+stdout: 11283382868972999250052369921310165333688587052871825124614978909504132285043
+stderr: stdout: 11283382868972999250052369921310165333688587052871825124614978909504132285043
+stderr: Folding took: 106.13ms
+Verifying locally...
+Local Verify took: 84.07ms
+Compressing SNARK...
+Compression took: 4.07s
+Saving Proof...
+Saving Proof to disk took: 4.19ms
+Proof saved to: honest.proof.proof
+TOTAL PROVING TIME: 4.27s
+RUN ['./bomz', '--mode', 'verify', '--circuit', 'circuits/step.r1cs', '--output', 'honest.proof', '--root-pm', '0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497', '--root-audit', '0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca', '--expected-hash', '0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4']
+[*] Loading R1CS...
+R1CS Loaded in: 19.77ms
+[*] Loading Public Parameters from cache (circuits/step.r1cs.pp)
+
+thread 'main' panicked at src/main.rs:218:39:
+Proof file not found: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Public Parameters ready in: 3.94s
+=== VERIFIER MODE ===
+Checking: honest.proof
+Traceback (most recent call last):
+  File "/work/audit_probe.py", line 18, in <module>
+    call(['./bomz','--mode','verify','--circuit','circuits/step.r1cs','--output','honest.proof','--root-pm',pm,'--root-audit',au,'--expected-hash',h])
+  File "/work/audit_probe.py", line 4, in call
+    print('RUN',args,flush=True);subprocess.run(args,check=True,timeout=600)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['./bomz', '--mode', 'verify', '--circuit', 'circuits/step.r1cs', '--output', 'honest.proof', '--root-pm', '0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497', '--root-audit', '0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca', '--expected-hash', '0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4']' died with <Signals.SIGABRT: 6>.

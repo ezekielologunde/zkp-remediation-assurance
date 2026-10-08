@@ -1,0 +1,39 @@
+{
+  "exit_code": 0,
+  "seconds": 4.937000000005355,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-verisbom-honest-v3",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "12g",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-run-v0,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\resume_verisbom_honest.py,target=/probe.py,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-honest-v3,target=/out",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence",
+    "--mount",
+    "type=volume,source=zkp-verisbom-build-v0,target=/compiled,readonly",
+    "--mount",
+    "type=volume,source=zkp-verisbom-work-v0,target=/work",
+    "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+    "bash",
+    "-c",
+    "set -eu; cd /work; python3 /probe.py; cp honest.proof.proof expected.json witness.json selected-sbom.json /evidence/"
+  ],
+  "generated_sha256": {
+    "data\\proof-sandbox\\verisbom-results-v3\\expected.json": "d6dc3c88f8245006b986724147d372680fb1f0e8fe7e0447d4063c1678461931",
+    "data\\proof-sandbox\\verisbom-results-v3\\honest.proof.proof": "1981957955ec051504aa466bdb9c34ec8396f95461eacbe36319058e3dace661",
+    "data\\proof-sandbox\\verisbom-results-v3\\selected-sbom.json": "a8b3df2bd003ff071170ace61465500d02ad9116e0f33705d76f4d0471d6f38a",
+    "data\\proof-sandbox\\verisbom-results-v3\\witness.json": "a494cb1404c572e5631f22405e87713da01ddb86ea1ef5135b89e85137d295b4"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "exit_code": 1,
+  "seconds": 6.6560000000172295,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-verisbom-honest-v1",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "12g",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-run-v0,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\verisbom_honest.py,target=/probe.py,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-honest-v1,target=/out",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v1,target=/evidence",
+    "--mount",
+    "type=volume,source=zkp-verisbom-work-v0,target=/work",
+    "sha256:11197bf4d583ac9fda8a77718da4d259190f41341d7c762c64dd14ca85cbc1e2",
+    "bash",
+    "-c",
+    "set -eu; cp -a /source/. /work/; cp /probe.py /work/audit_probe.py; cd /work; chmod +x bomz circuits/poseidon_cpp/poseidon circuits/poseidon_multi_input_cpp/poseidon_multi_input circuits/poseidon3_cpp/poseidon3 circuits/step_cpp/step; python3 audit_probe.py; cp honest.proof expected.json witness.json selected-sbom.json /evidence/"
+  ],
+  "generated_sha256": {}
+}

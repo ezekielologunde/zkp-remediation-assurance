@@ -1,0 +1,1 @@
+v0 stopped before execution because python3 was missing. A derived container adds Python3 with the original image ID recorded. v1 retains the original scripts and fixture procedure, network disabled for execution. Rust source build proceeds independently with Cargo.lock and network for dependency retrieval. Generated proofs stay in the ignored sandbox.

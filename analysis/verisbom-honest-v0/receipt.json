@@ -1,0 +1,29 @@
+{
+  "exit_code": 127,
+  "seconds": 9.312000000005355,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-verisbom-honest-v0",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "12g",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-run-v0,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\verisbom_honest.py,target=/probe.py,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-honest-v0,target=/out",
+    "--mount",
+    "type=volume,source=zkp-verisbom-work-v0,target=/work",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "bash",
+    "-c",
+    "set -eu; cp -a /source/. /work/; cp /probe.py /work/audit_probe.py; cd /work; chmod +x bomz circuits/poseidon_cpp/poseidon circuits/poseidon_multi_input_cpp/poseidon_multi_input circuits/poseidon3_cpp/poseidon3 circuits/step_cpp/step; python3 audit_probe.py; cp honest.proof expected.json witness.json selected-sbom.json /out/"
+  ]
+}

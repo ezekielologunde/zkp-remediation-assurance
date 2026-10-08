@@ -47,10 +47,10 @@
       "paper": "https://arxiv.org/html/2602.13682v1",
       "artifact": "https://zenodo.org/records/21372814",
       "revision": "Zenodo record 21372814",
-      "status": "source_assessed_execution_pending",
+      "status": "executed_local_cli_output_binding_mismatch",
       "relationship": "Shared author with zRA/PIRANHAS; depositor identity alias VeriSBOM",
-      "evidence": "data/verisbom-artifact-audit.json",
-      "limits": "Archive MD5 and SHA256 recorded; source inspected, no real proof reproduced; depositor uses project alias"
+      "evidence": "analysis/verisbom-output-binding-report.md",
+      "limits": "One-package local real Nova proof, unchanged proof-core bytes, four original and four repaired controls; no hosted test; archived circuit/parameters; depositor project alias"
     }
   ]
 }

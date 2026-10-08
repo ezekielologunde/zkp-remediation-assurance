@@ -1,0 +1,35 @@
+RUN ['python3', 'python/setup_pm_web.py', 'audit']
+[PM] Loading Registry for session audit...
+[ERR] Binary failed: /work/circuits/poseidon_multi_input_cpp/poseidon_multi_input
+
+/work/circuits/poseidon_multi_input_cpp/poseidon_multi_input: /lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /work/circuits/poseidon_multi_input_cpp/poseidon_multi_input)
+/work/circuits/poseidon_multi_input_cpp/poseidon_multi_input: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by /work/circuits/poseidon_multi_input_cpp/poseidon_multi_input)
+
+[PM] Root SMT...
+[ERR] Binary failed: /work/circuits/poseidon_cpp/poseidon
+
+/work/circuits/poseidon_cpp/poseidon: /lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /work/circuits/poseidon_cpp/poseidon)
+/work/circuits/poseidon_cpp/poseidon: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by /work/circuits/poseidon_cpp/poseidon)
+
+Traceback (most recent call last):
+  File "/work/python/setup_pm_web.py", line 80, in <module>
+    main()
+  File "/work/python/setup_pm_web.py", line 67, in main
+    empty_pair_hash = common.hash_node(current_zero, current_zero)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/common.py", line 138, in hash_node
+    "in1": to_decimal_str(left),
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/work/common.py", line 48, in to_decimal_str
+    return str(int(hex_val, 16))
+               ^^^^^^^^^^^^^^^^
+TypeError: int() can't convert non-string with explicit base
+Traceback (most recent call last):
+  File "/work/audit_probe.py", line 8, in <module>
+    call(['python3','python/setup_pm_web.py','audit'])
+  File "/work/audit_probe.py", line 4, in call
+    print('RUN',args,flush=True);subprocess.run(args,check=True,timeout=600)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'python/setup_pm_web.py', 'audit']' returned non-zero exit status 1.

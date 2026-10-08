@@ -16,7 +16,9 @@ The public zkSBOM source is pinned and 246 file hashes recorded. Three public Cy
 
 [Candidate repair and analyzer results](analysis/repair-report-v0.md): a repaired local statement passes its positive proof and rejects the specified controls. Circomspect and compiler inspection results are preserved. This is a bounded empirical pilot, not a new protocol or security certification.
 
-[Five-paper corpus screening](analysis/corpus-expansion-v0.md) adds a zRA proof reproduction with passing selected controls and a newly located VeriSBOM archive. Three systems have executed controls; two await execution. No prevalence or novelty claim.
+[Five-paper corpus screening](analysis/corpus-expansion-v0.md) adds a zRA proof reproduction with passing selected controls and a newly located VeriSBOM archive. Four systems have executed controls; zkSBOM awaits execution. No prevalence or novelty claim.
+
+**VeriSBOM local binding result:** [Report](analysis/verisbom-output-binding-report.md). A metadata-only mutation makes the unchanged archived CLI accept an expected root different from the authenticated proof output. A comparator using authenticated outputs rejects it. Eight cases and 465 recorded hash checks passed. This is a local artifact finding, not a Nova break, hosted exploit or novelty clearance.
 
 ## Research identity and publication route
 

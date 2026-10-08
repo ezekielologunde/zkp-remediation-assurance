@@ -1,0 +1,3 @@
+# VeriSBOM authenticated-output control
+
+Frozen before the control run. Use the same original and metadata-mutated proof bundles and four expected-root combinations as acceptance v0. Replace only the three application comparisons and vector-length accesses to use the authenticated primary output returned by successful Nova verification. Ignore redundant unauthenticated metadata. Predicted acceptance: original true, expected-root-only false, metadata-only true, both changed false. Metadata-only acceptance is correct because the authenticated root still equals the original expected root. No new proof, circuit, public parameters, or policy is generated. This is a local diagnostic repair, not a certified upstream patch.

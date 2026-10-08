@@ -1,0 +1,36 @@
+{
+  "exit_code": 0,
+  "seconds": 23.25,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-verisbom-bundle-v0",
+    "--cpus",
+    "4",
+    "--memory",
+    "12g",
+    "--mount",
+    "type=volume,source=zkp-verisbom-build-v0,target=/work",
+    "--mount",
+    "type=volume,source=zkp-verisbom-work-v0,target=/runtime,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0\\audit_bundle.rs,target=/probe.rs,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0,target=/out",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence,readonly",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "bash",
+    "-c",
+    "set -eu; cd /work; mkdir -p src/bin; cp /probe.rs src/bin/audit_bundle.rs; CARGO_BUILD_JOBS=4 cargo build --locked --release --bin audit_bundle; sha256sum target/release/audit_bundle; target/release/audit_bundle"
+  ],
+  "generated_sha256": {
+    "data\\proof-sandbox\\verisbom-bundle-v0\\audit_bundle.rs": "513e65d29335bffa05e2f4e0904a0e7cd90c3f41b0314338bac86d8a4891ecaf",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\changed-core.bin": "65ec5a351923ca5220e3b82378573bf2c61ac6758b39e311f9fc1c27f4f85443",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\changed-metadata.proof": "f830e6e675091a29ac899c04c31309f07bc4fb4f3db868a6bda43d07d76b1ca2",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\original-core.bin": "65ec5a351923ca5220e3b82378573bf2c61ac6758b39e311f9fc1c27f4f85443",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\probe.json": "b9c72092b2435216ed23ca83a95aea6d1defba86b8a9fdb5150c28ca6476187d"
+  }
+}

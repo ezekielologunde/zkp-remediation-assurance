@@ -1,0 +1,202 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded atty v0.2.14
+  Downloaded adler2 v2.0.1
+  Downloaded arrayref v0.3.9
+  Downloaded execute-command-tokens v0.1.9
+  Downloaded cpufeatures v0.2.17
+  Downloaded constant_time_eq v0.1.5
+  Downloaded block-buffer v0.10.4
+  Downloaded hex-literal v0.3.4
+  Downloaded execute-command-macro v0.1.11
+  Downloaded cfg-if v1.0.4
+  Downloaded arrayvec v0.7.6
+  Downloaded arrayvec v0.5.2
+  Downloaded autocfg v1.5.0
+  Downloaded rand_xorshift v0.3.0
+  Downloaded hex v0.4.3
+  Downloaded funty v2.0.0
+  Downloaded keccak v0.1.5
+  Downloaded radium v0.7.0
+  Downloaded crypto-common v0.1.6
+  Downloaded errno v0.3.14
+  Downloaded lazy_static v1.5.0
+  Downloaded home v0.5.12
+  Downloaded ansi_term v0.12.1
+  Downloaded rand_chacha v0.3.1
+  Downloaded num_cpus v1.17.0
+  Downloaded scopeguard v1.2.0
+  Downloaded ec-gpu v0.2.0
+  Downloaded addchain v0.2.0
+  Downloaded byte-slice-cast v1.2.3
+  Downloaded version_check v0.9.5
+  Downloaded ff_derive v0.13.1
+  Downloaded vec_map v0.8.2
+  Downloaded execute v0.2.15
+  Downloaded pasta-msm v0.1.5
+  Downloaded execute-command-macro-impl v0.1.12
+  Downloaded serde_arrays v0.1.0
+  Downloaded pairing v0.23.0
+  Downloaded itoa v1.0.17
+  Downloaded group v0.13.0
+  Downloaded subtle v2.6.1
+  Downloaded wasm_sync v0.1.2
+  Downloaded rustversion v1.0.22
+  Downloaded rand_core v0.6.4
+  Downloaded generic-array v0.14.9
+  Downloaded bincode v1.3.3
+  Downloaded num-integer v0.1.46
+  Downloaded ff v0.13.1
+  Downloaded digest v0.10.7
+  Downloaded memmap2 v0.5.10
+  Downloaded lock_api v0.4.14
+  Downloaded either v1.15.0
+  Downloaded constant_time_eq v0.4.2
+  Downloaded byteorder v1.5.0
+  Downloaded trait-set v0.3.0
+  Downloaded find-msvc-tools v0.1.9
+  Downloaded threadpool v1.8.1
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded bitflags v1.3.2
+  Downloaded zeroize_derive v1.4.3
+  Downloaded paste v1.0.15
+  Downloaded generic-array v1.3.5
+  Downloaded quote v1.0.44
+  Downloaded once_cell v1.21.3
+  Downloaded blake2b_simd v1.0.4
+  Downloaded getrandom v0.2.17
+  Downloaded bitflags v2.10.0
+  Downloaded crossbeam-epoch v0.9.18
+  Downloaded pasta_curves v0.5.1
+  Downloaded blstrs v0.7.1
+  Downloaded num-traits v0.2.19
+  Downloaded ec-gpu-gen v0.6.0
+  Downloaded crossbeam-utils v0.8.21
+  Downloaded halo2curves v0.1.0
+  Downloaded crossbeam-deque v0.8.6
+  Downloaded serde_core v1.0.228
+  Downloaded proc-macro2 v1.0.106
+  Downloaded crc32fast v1.5.0
+  Downloaded rayon-core v1.13.0
+  Downloaded miniz_oxide v0.8.9
+  Downloaded tap v1.0.1
+  Downloaded rand v0.8.5
+  Downloaded flate2 v1.1.9
+  Downloaded memchr v2.8.0
+  Downloaded zmij v1.0.20
+  Downloaded num-bigint v0.4.6
+  Downloaded itertools v0.11.0
+  Downloaded thiserror v1.0.69
+  Downloaded static_assertions v1.1.0
+  Downloaded rayon v1.11.0
+  Downloaded textwrap v0.11.0
+  Downloaded clap v2.34.0
+  Downloaded shlex v1.3.0
+  Downloaded wyz v0.5.1
+  Downloaded bitvec v1.0.1
+  Downloaded unicode-ident v1.0.23
+  Downloaded serde_derive v1.0.228
+  Downloaded simd-adler32 v0.3.8
+  Downloaded spin v0.9.8
+  Downloaded blst v0.3.16
+  Downloaded zeroize v1.8.2
+  Downloaded rustix v0.38.44
+  Downloaded serde_json v1.0.149
+  Downloaded bellperson v0.25.0
+  Downloaded cc v1.2.55
+  Downloaded typenum v1.19.0
+  Downloaded yastl v0.1.2
+  Downloaded serde v1.0.228
+  Downloaded semolina v0.1.4
+  Downloaded nova-snark v0.23.0
+  Downloaded itertools v0.9.0
+  Downloaded itertools v0.8.2
+  Downloaded flume v0.10.14
+  Downloaded crossbeam-channel v0.5.15
+  Downloaded num-bigint v0.3.3
+  Downloaded log v0.4.29
+  Downloaded blake2s_simd v1.0.4
+  Downloaded sppark v0.1.14
+  Downloaded blake2s_simd v0.5.11
+  Downloaded anyhow v1.0.101
+  Downloaded which v4.4.2
+  Downloaded thiserror-impl v1.0.69
+  Downloaded strsim v0.8.0
+  Downloaded nova-scotia v0.5.0
+  Downloaded sha2 v0.10.9
+  Downloaded libc v0.2.181
+  Downloaded linux-raw-sys v0.4.15
+  Downloaded syn v1.0.109
+  Downloaded unicode-width v0.1.14
+  Downloaded syn v2.0.114
+  Downloaded zerocopy v0.8.39
+  Downloaded neptune v10.0.0
+  Downloaded sha3 v0.10.8
+   Compiling bomz v0.1.0 (/work)
+warning: unused import: `Group`
+ --> src/bin/audit_bundle.rs:9:58
+  |
+9 | use nova_snark::{CompressedSNARK, PublicParams, traits::{Group, circuit::TrivialTestCircuit}};
+  |                                                          ^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: multiple fields are never read
+  --> src/bin/audit_bundle.rs:26:5
+   |
+25 | struct PackagesList {
+   |        ------------ fields in this struct
+26 |     name: Vec<String>, 
+   |     ^^^^
+27 |     version: Vec<String>,
+   |     ^^^^^^^
+28 |     license: Vec<String>,
+   |     ^^^^^^^
+29 |     checksum: Vec<String>,
+   |     ^^^^^^^^
+30 |     alpha: Vec<String>,
+   |     ^^^^^
+31 |     permission: Vec<String>,
+   |     ^^^^^^^^^^
+32 |     path_indices: Vec<Vec<u8>>,
+   |     ^^^^^^^^^^^^
+33 |     path_elements: Vec<Vec<String>>,
+   |     ^^^^^^^^^^^^^
+34 |     root: [u64; 4],
+   |     ^^^^
+35 |     audit_path_elements: Vec<Vec<String>>, 
+   |     ^^^^^^^^^^^^^^^^^^^
+36 |     audit_root: [u64; 4], 
+   |     ^^^^^^^^^^
+   |
+   = note: `PackagesList` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: function `archived_main` is never used
+  --> src/bin/audit_bundle.rs:48:4
+   |
+48 | fn archived_main() {
+   |    ^^^^^^^^^^^^^
+
+warning: function `run_prover` is never used
+   --> src/bin/audit_bundle.rs:113:4
+    |
+113 | fn run_prover(
+    |    ^^^^^^^^^^
+
+warning: function `run_verifier` is never used
+   --> src/bin/audit_bundle.rs:207:4
+    |
+207 | fn run_verifier(
+    |    ^^^^^^^^^^^^
+
+warning: function `hex_to_scalar` is never used
+   --> src/bin/audit_bundle.rs:276:4
+    |
+276 | fn hex_to_scalar(hex_str: &str) -> F<G1> {
+    |    ^^^^^^^^^^^^^
+
+warning: `bomz` (bin "audit_bundle") generated 6 warnings (run `cargo fix --bin "audit_bundle"` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 17.30s
+b9d14f7210c3e06e921cd30990208e1d1bae896f971e83d0efa4a111cf15627a  target/release/audit_bundle
+{"authenticated":["0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4","0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497","0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca"],"changed_metadata":["0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4","0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498","0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca"],"changed_metadata_differs_authenticated":true,"original_metadata_matches_authenticated":true,"proof_bytes_unchanged":true}

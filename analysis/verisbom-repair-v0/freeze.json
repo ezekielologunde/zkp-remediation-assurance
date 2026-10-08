@@ -1,0 +1,20 @@
+{
+  "build_image": "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+  "run_image": "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+  "sha256": {
+    "data\\proof-sandbox\\verisbom-run-v0\\nova\\src\\main.rs": "f34d92b1ad2d49519c9e403f463145d16bd76c3558890206847dcc873ef8cacb",
+    "src\\run_verisbom_repair.py": "eff0553fb16ae2a8dd3e922affedaba19d715d370ebd5bf37cfd38bcccd8ea52",
+    "data\\proof-sandbox\\verisbom-repair-v0\\bound_verifier.rs": "f7bdbee0d7dd011db329eb1a863ad54aec7d234f79d662d13cedd3c040eb196d",
+    "data\\proof-sandbox\\verisbom-repair-v0\\cases.py": "b998c6342c5c121620c69e2e808a6b0e60662fd788385ab68e266a3d03112b82",
+    "protocol\\verisbom-repair-v0.md": "3bf56e0510b5b066ead92f25eca9fcbdfbc748f625b81b9007f03ba53e21a339",
+    "data\\proof-sandbox\\verisbom-results-v3\\expected.json": "d6dc3c88f8245006b986724147d372680fb1f0e8fe7e0447d4063c1678461931",
+    "data\\proof-sandbox\\verisbom-results-v3\\honest.proof.proof": "1981957955ec051504aa466bdb9c34ec8396f95461eacbe36319058e3dace661",
+    "data\\proof-sandbox\\verisbom-results-v3\\selected-sbom.json": "a8b3df2bd003ff071170ace61465500d02ad9116e0f33705d76f4d0471d6f38a",
+    "data\\proof-sandbox\\verisbom-results-v3\\witness.json": "a494cb1404c572e5631f22405e87713da01ddb86ea1ef5135b89e85137d295b4",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\audit_bundle.rs": "513e65d29335bffa05e2f4e0904a0e7cd90c3f41b0314338bac86d8a4891ecaf",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\changed-core.bin": "65ec5a351923ca5220e3b82378573bf2c61ac6758b39e311f9fc1c27f4f85443",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\changed-metadata.proof": "f830e6e675091a29ac899c04c31309f07bc4fb4f3db868a6bda43d07d76b1ca2",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\original-core.bin": "65ec5a351923ca5220e3b82378573bf2c61ac6758b39e311f9fc1c27f4f85443",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\probe.json": "b9c72092b2435216ed23ca83a95aea6d1defba86b8a9fdb5150c28ca6476187d"
+  }
+}

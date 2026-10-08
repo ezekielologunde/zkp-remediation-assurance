@@ -1,0 +1,19 @@
+[*] Loading R1CS...
+R1CS Loaded in: 11.42ms
+[*] Loading Public Parameters from cache (circuits/step.r1cs.pp)
+Public Parameters ready in: 3.93s
+=== VERIFIER MODE ===
+Checking: /evidence/honest.proof.proof
+Step 1: Math Verify (Zero Knowledge Check)...
+ZK Proof Math Valid
+Step 2: Checking Public Roots & BINDING (Consensus Check)...
+Expected PM Root:        0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498
+Actual PM Root:          0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497
+Expected Audit Root:     0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca
+Actual Audit Root:       0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca
+Expected SBOM Hash:      0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4
+Actual ZK Computed Hash: 0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4
+
+VERIFICATION FAILED
+   -> PM Root differs (Data Integrity Fail)
+

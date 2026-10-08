@@ -1,0 +1,10 @@
+{
+  "image": "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+  "sha256": {
+    "src\\run_verisbom_acceptance.py": "cff1e0e4c051f33c56bd1257d5eda9298350068738afd33bb441a52fb40ac45b",
+    "src\\verisbom_acceptance_cases.py": "b685b4a715f7f9d1e62f889e3ccd217fa2f13cdd6733183549bc0e1b016b48fa",
+    "protocol\\verisbom-honest-v0.md": "17a400cc623e246cf152f145d322349a46440f4fb5501bd86d5f923c89e50196",
+    "data\\verisbom-runtime-inputs.json": "dd5e6bbb874633a0eda347387cb682ee35a3638cc10b426327e2fe32a351fb63",
+    "protocol\\verisbom-concrete-cases-v0.md": "2596d356823666951c774efa977e263f7563af5781f9705be7ccc4ae69633b94"
+  }
+}

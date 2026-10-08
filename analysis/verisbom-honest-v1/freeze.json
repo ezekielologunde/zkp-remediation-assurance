@@ -1,0 +1,9 @@
+{
+  "image": "sha256:11197bf4d583ac9fda8a77718da4d259190f41341d7c762c64dd14ca85cbc1e2",
+  "sha256": {
+    "src\\run_verisbom_honest_v1.py": "7cecf6037aa75f20c523f11a412803250827cfc22027f2c879227d2605819872",
+    "src\\verisbom_honest.py": "c941512ad9097fc413f584bf67f463e2266868076409b91d17e423ab0cff9694",
+    "protocol\\verisbom-honest-v0.md": "17a400cc623e246cf152f145d322349a46440f4fb5501bd86d5f923c89e50196",
+    "data\\verisbom-runtime-inputs.json": "dd5e6bbb874633a0eda347387cb682ee35a3638cc10b426327e2fe32a351fb63"
+  }
+}

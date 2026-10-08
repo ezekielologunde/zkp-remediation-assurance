@@ -1,3 +1,23 @@
 * text=auto eol=lf
 data/*.json -text
 analysis/** -text
+
+# Preserve frozen VeriSBOM experiment inputs.
+protocol/verisbom-concrete-cases-v0.md -text
+protocol/verisbom-environment-amendment.md -text
+protocol/verisbom-honest-v0.md -text
+protocol/verisbom-repair-v0.md -text
+src/build_verisbom.py -text
+src/resume_verisbom_honest.py -text
+src/run_verisbom_acceptance.py -text
+src/run_verisbom_bundle_probe.py -text
+src/run_verisbom_honest.py -text
+src/run_verisbom_honest_v1.py -text
+src/run_verisbom_honest_v2.py -text
+src/run_verisbom_honest_v3.py -text
+src/run_verisbom_repair.py -text
+src/verify_verisbom.py -text
+src/verisbom_acceptance_cases.py -text
+src/verisbom_bundle_probe.rs -text
+src/verisbom_honest.py -text
+protocol/verisbom-output-binding-v0.md -text

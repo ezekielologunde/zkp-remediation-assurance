@@ -1,0 +1,11 @@
+{
+  "image": "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+  "sha256": {
+    "data\\proof-sandbox\\verisbom-run-v0\\nova\\src\\main.rs": "f34d92b1ad2d49519c9e403f463145d16bd76c3558890206847dcc873ef8cacb",
+    "src\\verisbom_bundle_probe.rs": "bd5c5f681b7a1d064306a55d83732a91181e015c8723d38f79e4793a6f99cf38",
+    "src\\run_verisbom_bundle_probe.py": "1fa396a26d7d35b116350c789f7c61bf809ef9d98270363f02a75333717c2fe5",
+    "data\\proof-sandbox\\verisbom-bundle-v0\\audit_bundle.rs": "513e65d29335bffa05e2f4e0904a0e7cd90c3f41b0314338bac86d8a4891ecaf",
+    "data\\proof-sandbox\\verisbom-results-v3\\honest.proof.proof": "1981957955ec051504aa466bdb9c34ec8396f95461eacbe36319058e3dace661",
+    "protocol\\verisbom-output-binding-v0.md": "a1363fdb61528236dc2be1e9854c8eee9f59162535e2dc39ff68e8498cb60fdb"
+  }
+}

@@ -1,0 +1,119 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 175B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/zkp-trustbom-audit:local
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [1/2] FROM docker.io/library/zkp-trustbom-audit:local@sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca
+#4 resolve docker.io/library/zkp-trustbom-audit:local@sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca
+#4 resolve docker.io/library/zkp-trustbom-audit:local@sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca 0.1s done
+#4 DONE 0.2s
+
+#5 [2/2] RUN apt-get update && apt-get install -y --no-install-recommends python3 && rm -rf /var/lib/apt/lists/*
+#5 0.909 Hit:1 http://deb.debian.org/debian bookworm InRelease
+#5 0.916 Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+#5 0.949 Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+#5 1.249 Reading package lists...
+#5 2.294 Reading package lists...
+#5 3.176 Building dependency tree...
+#5 3.383 Reading state information...
+#5 3.607 The following additional packages will be installed:
+#5 3.607   libpython3-stdlib libpython3.11-minimal libpython3.11-stdlib libreadline8
+#5 3.608   libsqlite3-0 media-types python3-minimal python3.11 python3.11-minimal
+#5 3.608   readline-common
+#5 3.611 Suggested packages:
+#5 3.611   python3-doc python3-tk python3-venv python3.11-venv python3.11-doc
+#5 3.611   binfmt-support readline-doc
+#5 3.700 The following NEW packages will be installed:
+#5 3.700   libpython3-stdlib libpython3.11-minimal libpython3.11-stdlib libreadline8
+#5 3.701   libsqlite3-0 media-types python3 python3-minimal python3.11
+#5 3.701   python3.11-minimal readline-common
+#5 3.782 0 upgraded, 11 newly installed, 0 to remove and 32 not upgraded.
+#5 3.782 Need to get 6411 kB of archives.
+#5 3.782 After this operation, 24.1 MB of additional disk space will be used.
+#5 3.782 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libpython3.11-minimal amd64 3.11.2-6+deb12u9 [821 kB]
+#5 3.954 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 python3.11-minimal amd64 3.11.2-6+deb12u9 [2055 kB]
+#5 4.155 Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-minimal amd64 3.11.2-1+b1 [26.3 kB]
+#5 4.155 Get:4 http://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
+#5 4.158 Get:5 http://deb.debian.org/debian bookworm/main amd64 readline-common all 8.2-1.3 [69.0 kB]
+#5 4.163 Get:6 http://deb.debian.org/debian bookworm/main amd64 libreadline8 amd64 8.2-1.3 [166 kB]
+#5 4.180 Get:7 http://deb.debian.org/debian bookworm/main amd64 libsqlite3-0 amd64 3.40.1-2+deb12u2 [839 kB]
+#5 4.272 Get:8 http://deb.debian.org/debian-security bookworm-security/main amd64 libpython3.11-stdlib amd64 3.11.2-6+deb12u9 [1798 kB]
+#5 4.427 Get:9 http://deb.debian.org/debian-security bookworm-security/main amd64 python3.11 amd64 3.11.2-6+deb12u9 [575 kB]
+#5 4.500 Get:10 http://deb.debian.org/debian bookworm/main amd64 libpython3-stdlib amd64 3.11.2-1+b1 [9312 B]
+#5 4.500 Get:11 http://deb.debian.org/debian bookworm/main amd64 python3 amd64 3.11.2-1+b1 [26.3 kB]
+#5 4.783 debconf: delaying package configuration, since apt-utils is not installed
+#5 4.827 Fetched 6411 kB in 1s (8089 kB/s)
+#5 4.893 Selecting previously unselected package libpython3.11-minimal:amd64.
+#5 4.893 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 17841 files and directories currently installed.)
+#5 4.942 Preparing to unpack .../libpython3.11-minimal_3.11.2-6+deb12u9_amd64.deb ...
+#5 4.954 Unpacking libpython3.11-minimal:amd64 (3.11.2-6+deb12u9) ...
+#5 5.156 Selecting previously unselected package python3.11-minimal.
+#5 5.158 Preparing to unpack .../python3.11-minimal_3.11.2-6+deb12u9_amd64.deb ...
+#5 5.175 Unpacking python3.11-minimal (3.11.2-6+deb12u9) ...
+#5 5.471 Setting up libpython3.11-minimal:amd64 (3.11.2-6+deb12u9) ...
+#5 5.517 Setting up python3.11-minimal (3.11.2-6+deb12u9) ...
+#5 6.488 Selecting previously unselected package python3-minimal.
+#5 6.488 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18148 files and directories currently installed.)
+#5 6.503 Preparing to unpack .../0-python3-minimal_3.11.2-1+b1_amd64.deb ...
+#5 6.516 Unpacking python3-minimal (3.11.2-1+b1) ...
+#5 6.600 Selecting previously unselected package media-types.
+#5 6.603 Preparing to unpack .../1-media-types_10.0.0_all.deb ...
+#5 6.616 Unpacking media-types (10.0.0) ...
+#5 6.698 Selecting previously unselected package readline-common.
+#5 6.700 Preparing to unpack .../2-readline-common_8.2-1.3_all.deb ...
+#5 6.710 Unpacking readline-common (8.2-1.3) ...
+#5 6.801 Selecting previously unselected package libreadline8:amd64.
+#5 6.803 Preparing to unpack .../3-libreadline8_8.2-1.3_amd64.deb ...
+#5 6.825 Unpacking libreadline8:amd64 (8.2-1.3) ...
+#5 6.916 Selecting previously unselected package libsqlite3-0:amd64.
+#5 6.918 Preparing to unpack .../4-libsqlite3-0_3.40.1-2+deb12u2_amd64.deb ...
+#5 6.929 Unpacking libsqlite3-0:amd64 (3.40.1-2+deb12u2) ...
+#5 7.063 Selecting previously unselected package libpython3.11-stdlib:amd64.
+#5 7.065 Preparing to unpack .../5-libpython3.11-stdlib_3.11.2-6+deb12u9_amd64.deb ...
+#5 7.078 Unpacking libpython3.11-stdlib:amd64 (3.11.2-6+deb12u9) ...
+#5 7.355 Selecting previously unselected package python3.11.
+#5 7.357 Preparing to unpack .../6-python3.11_3.11.2-6+deb12u9_amd64.deb ...
+#5 7.374 Unpacking python3.11 (3.11.2-6+deb12u9) ...
+#5 7.459 Selecting previously unselected package libpython3-stdlib:amd64.
+#5 7.462 Preparing to unpack .../7-libpython3-stdlib_3.11.2-1+b1_amd64.deb ...
+#5 7.473 Unpacking libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+#5 7.548 Setting up python3-minimal (3.11.2-1+b1) ...
+#5 7.793 Selecting previously unselected package python3.
+#5 7.793 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18590 files and directories currently installed.)
+#5 7.810 Preparing to unpack .../python3_3.11.2-1+b1_amd64.deb ...
+#5 7.827 Unpacking python3 (3.11.2-1+b1) ...
+#5 7.904 Setting up media-types (10.0.0) ...
+#5 8.082 Setting up libsqlite3-0:amd64 (3.40.1-2+deb12u2) ...
+#5 8.114 Setting up readline-common (8.2-1.3) ...
+#5 8.149 Setting up libreadline8:amd64 (8.2-1.3) ...
+#5 8.178 Setting up libpython3.11-stdlib:amd64 (3.11.2-6+deb12u9) ...
+#5 8.209 Setting up libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+#5 8.240 Setting up python3.11 (3.11.2-6+deb12u9) ...
+#5 9.087 Setting up python3 (3.11.2-1+b1) ...
+#5 9.113 running python rtupdate hooks for python3.11...
+#5 9.113 running python post-rtupdate hooks for python3.11...
+#5 9.215 Processing triggers for libc-bin (2.36-9+deb12u10) ...
+#5 DONE 9.4s
+
+#6 exporting to image
+#6 exporting layers
+#6 exporting layers 2.1s done
+#6 exporting manifest sha256:e1fdca70f2269e396e78e44162226f1d85f917a2b24c39c4834efe6a85b7f162 0.0s done
+#6 exporting config sha256:0bbdf99c9df0497e8a1ac28824a6e99f2f38693a4ddc3619ab1143aec49d2483 0.0s done
+#6 exporting attestation manifest sha256:69de06f9543c9cb9922c559e056505626420f3b0d4f591ec240eef9fb0aa907f
+#6 exporting attestation manifest sha256:69de06f9543c9cb9922c559e056505626420f3b0d4f591ec240eef9fb0aa907f 0.0s done
+#6 exporting manifest list sha256:11197bf4d583ac9fda8a77718da4d259190f41341d7c762c64dd14ca85cbc1e2 0.0s done
+#6 naming to docker.io/library/zkp-verisbom-audit:local done
+#6 unpacking to docker.io/library/zkp-verisbom-audit:local
+#6 unpacking to docker.io/library/zkp-verisbom-audit:local 0.6s done
+#6 DONE 3.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/waqvwtbonz41gkdzh2swlultv
