@@ -1,0 +1,27 @@
+{
+  "status": "verified",
+  "manifest_entries": 6,
+  "frozen_files": 40,
+  "generated_files": 3,
+  "backend_assertions": {
+    "altered_journal_rejected": true,
+    "banned_list_matches": true,
+    "compliant": true,
+    "image_id": [
+      1450384861,
+      1808721109,
+      4035799086,
+      2551429480,
+      3544741760,
+      2519678270,
+      1589943913,
+      2497644762
+    ],
+    "real_receipt_verified": true,
+    "root_matches": true,
+    "wrong_image_rejected": true
+  },
+  "receipt_sha256": "71be596f93f04ec16f120eb6d52e79c013557e55409d2ff46440769522582fbb",
+  "receipt_bytes": 725293,
+  "note": "Frozen Rust probe performs cryptographic verification; this script independently checks provenance and recorded outcomes. Not a performance benchmark."
+}

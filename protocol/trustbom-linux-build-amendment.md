@@ -1,0 +1,3 @@
+# Linux filesystem build amendment
+
+The initial Windows bind-mounted build was manually stopped after slow compilation with low observed CPU utilization; exit137 reflects that stop, not an observed out-of-memory failure or invalid proof. Preserve its log and receipt. Retry with the unchanged upstream source and CLI probe copied into a dedicated Docker Linux volume, retaining a separate Cargo cache volume. Keep the same image, locked dependencies, four CPUs, 6 GiB and developer mode disabled. This changes storage placement only. Archive outputs to an ignored local directory and record hashes. A 15-minute timeout stops only this named test container.

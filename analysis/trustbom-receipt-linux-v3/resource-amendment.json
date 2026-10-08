@@ -1,0 +1,11 @@
+{
+  "reason": "Real proof reached 6 GiB cap; increase ceiling for functional pilot, not performance comparison",
+  "time_utc": "2026-10-08T04:08:58.0586379Z",
+  "docker_memory_total_bytes": 33531539456,
+  "old_memory": "6g",
+  "new_memory": "12g",
+  "new_memory_swap": "12g",
+  "command": "docker update --memory 12g --memory-swap 12g zkp-trustbom-receipt-linux-v3",
+  "exit_code": 0,
+  "output": "zkp-trustbom-receipt-linux-v3"
+}

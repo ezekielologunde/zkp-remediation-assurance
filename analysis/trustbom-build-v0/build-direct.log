@@ -1,0 +1,55 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.direct
+#1 transferring dockerfile: 639B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rust@sha256:38bc5a86d998772d4aec2348656ed21438d20fcdce2795b56ca434cf21430d89
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/rust@sha256:38bc5a86d998772d4aec2348656ed21438d20fcdce2795b56ca434cf21430d89
+#4 resolve docker.io/library/rust@sha256:38bc5a86d998772d4aec2348656ed21438d20fcdce2795b56ca434cf21430d89 0.0s done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 80.89MB 5.0s
+#5 transferring context: 178.47MB 10.0s
+#5 transferring context: 269.65MB 15.1s
+#5 transferring context: 368.73MB 20.1s
+#5 transferring context: 460.90MB 25.2s
+#5 transferring context: 490.97MB 26.8s done
+#5 DONE 26.9s
+
+#6 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends build-essential libssl-dev pkg-config curl git ca-certificates cmake clang
+#6 CACHED
+
+#7 [3/6] COPY cargo-risczero r0vm /usr/local/bin/
+#7 CACHED
+
+#8 [4/6] RUN chmod +x /usr/local/bin/cargo-risczero /usr/local/bin/r0vm
+#8 CACHED
+
+#9 [5/6] COPY rust-toolchain.tar.gz /tmp/risc0-rust.tar.gz
+#9 DONE 1.3s
+
+#10 [6/6] RUN mkdir -p /opt/risc0-rust && tar -xzf /tmp/risc0-rust.tar.gz -C /opt/risc0-rust && rustup toolchain link risc0 /opt/risc0-rust
+#10 DONE 13.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 82.3s done
+#11 exporting manifest sha256:b3ecf7284272be26f7146afad4771397ade2755b92ec26a09380f3de6f831b0b 0.0s done
+#11 exporting config sha256:f098d5c82c4adb590609c98cb6d141be5e53beb758f6f67c12f5739c5f243e14 0.0s done
+#11 exporting attestation manifest sha256:01c46333a22dcf3c15889ba677f8764a6933e7f65dbfd5fdac238ce0e6441d3d
+#11 exporting attestation manifest sha256:01c46333a22dcf3c15889ba677f8764a6933e7f65dbfd5fdac238ce0e6441d3d 0.0s done
+#11 exporting manifest list sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca 0.0s done
+#11 naming to docker.io/library/zkp-trustbom-audit:local done
+#11 unpacking to docker.io/library/zkp-trustbom-audit:local
+#11 unpacking to docker.io/library/zkp-trustbom-audit:local 17.0s done
+#11 DONE 99.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/thzuvw4j4ztndrrdnft5t9iip

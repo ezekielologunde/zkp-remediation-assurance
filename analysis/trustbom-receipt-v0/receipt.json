@@ -1,0 +1,39 @@
+{
+  "status": "execution_failed",
+  "exit_code": 137,
+  "seconds": 153.46576389999245,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-trustbom-receipt-v0",
+    "--cpus",
+    "4",
+    "--memory",
+    "6g",
+    "--env",
+    "RISC0_DEV_MODE=0",
+    "--env",
+    "RISC0_SERVER_PATH=/usr/local/bin/r0vm",
+    "--env",
+    "CARGO_BUILD_JOBS=2",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\trustbom-run,target=/work",
+    "-w",
+    "/work",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "cargo",
+    "run",
+    "--locked",
+    "--release",
+    "--example",
+    "audit_probe",
+    "--",
+    "benchmark/data/merkleproofs/batch_proof_2.json"
+  ],
+  "generated_sha256": {
+    "data/proof-sandbox/trustbom-run/Cargo.lock": "2b0eed6f9ea515c5bc903a28b357783c456b6e46fa26e8f56208fd8dc644999a",
+    "data/proof-sandbox/trustbom-run/methods/guest/Cargo.lock": "7403e5b0220be77355950a529bb1e367edb8346f9856fa469eadf1b4c59b6438"
+  }
+}

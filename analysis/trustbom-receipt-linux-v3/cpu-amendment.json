@@ -1,0 +1,9 @@
+{
+  "reason": "Increase local functional pilot CPU allowance within available 16 Docker CPUs; excludes run from performance comparison",
+  "time_utc": "2026-10-08T04:13:31.5582569Z",
+  "old_cpus": 4,
+  "new_cpus": 8,
+  "command": "docker update --cpus 8 zkp-trustbom-receipt-linux-v3",
+  "output": "zkp-trustbom-receipt-linux-v3",
+  "exit_code": 0
+}

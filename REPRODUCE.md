@@ -52,3 +52,18 @@ Noir drivers use local Linux containers, four CPUs and 4 GiB, with no exposed po
 ## TrustBOM selection
 
 Clone https://github.com/tuberlin-blockchain-prototyping/sharing-sbom-system.git into `data/proof-sandbox/trustbom-source` and checkout `ea90058af5b137e0cdf6a4aa663bcc77040a928f`. Run `src/audit_trustbom.py` with Python 3.9 or newer. All seven fixture files should reconstruct their recorded Merkle roots: 387 records, 200 distinct proof records. This is independent SHA-256 path validation, not a RISC Zero proof reproduction. See `protocol/trustbom-selection-v0.md` for the remaining build and trust-boundary gates.
+
+### TrustBOM receipt environment
+
+The receipt pilot uses a sandbox CLI example, `src/trustbom_receipt_probe.rs`, while leaving the upstream guest unchanged. It rejects Fake receipts and checks independently expected image ID, root and ordered policy-list digest. Do not enable `RISC0_DEV_MODE` to work around a proving failure.
+
+Official archive inputs, kept in `data/proof-sandbox/risc0-runtime`:
+
+- `cargo-risczero.tgz`: https://github.com/risc0/risc0/releases/download/v3.0.3/cargo-risczero-x86_64-unknown-linux-gnu.tgz
+- `rust-toolchain.tar.gz`: https://github.com/risc0/rust/releases/download/r0.1.88.0/rust-toolchain-x86_64-unknown-linux-gnu.tar.gz
+
+Extract the first archive to obtain cargo-risczero and r0vm. Build `analysis/trustbom-build-v0/Dockerfile.direct` from that directory as `zkp-trustbom-audit:local`. The original Dockerfile's `cargo risczero install` command is deprecated and its failure is retained. The build helper uses rzup's directory discovery, so a rustup registration alone is insufficient. Its discovery also excludes a symlinked version directory. The final local runner copies the compiler to its versioned rzup directory without altering compiler bytes.
+
+`src/run_trustbom_registered_copy.py` uses dedicated Linux volumes `zkp-trustbom-work-v1` and `zkp-trustbom-registry-v1`, which retain build and registry caches. Run in a fresh output workspace and use fresh volumes for a clean reproduction; existing volumes in this research session preserve the failed attempts. The earlier runners and receipts document the Windows bind-mount stop and compiler-discovery failures. The functional run began with four CPUs and 6 GiB, then was explicitly amended to eight CPUs and 12 GiB. Timestamps and commands are recorded in its resource-amendment and cpu-amendment receipts. This amended run is unsuitable as an unqualified performance measurement. Actual completion and semantic controls must be established from the final receipt and independently verified logs, not from the existence of a runner.
+
+The completed v3 run and its checks are summarized in `analysis/trustbom-receipt-report.md`. Run `src/verify_trustbom_receipt.py` after reproduction; the local recorded run passes 49 hash comparisons and all six backend assertions.

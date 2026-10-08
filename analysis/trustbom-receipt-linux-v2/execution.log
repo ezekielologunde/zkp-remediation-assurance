@@ -1,0 +1,18 @@
+    Updating git repository `https://github.com/risc0/RustCrypto-hashes`
+   Compiling methods v0.3.0 (/work/methods)
+   Compiling cookie v0.16.2
+error: failed to run custom build command for `methods v0.3.0 (/work/methods)`
+
+Caused by:
+  process didn't exit successfully: `/work/target/release/build/methods-eb554fb9229c8ee4/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
+  Building guest package: methods.sbom_validator
+  cargo:rerun-if-env-changed=RISC0_SKIP_BUILD
+
+  --- stderr
+
+  thread 'main' panicked at /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/risc0-build-3.0.3/src/lib.rs:379:9:
+  Risc Zero Rust toolchain not found. Try running `rzup install rust`
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
