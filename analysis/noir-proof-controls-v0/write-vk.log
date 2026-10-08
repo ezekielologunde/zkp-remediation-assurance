@@ -1,0 +1,13 @@
+
+bb command: write_vk
+Scheme is: ultra_honk
+  --scheme: ultra_honk
+  --bytecode_path: /work/original/target/attest.json
+  --output_path: /work/original/target
+  --verbose: true
+  --output_format: bytes_and_fields
+  --init_kzg_accumulator: true
+  --honk_recursion: 1
+downloading grumpkin crs...
+sh: 1: curl: not found
+Failed to download grumpkin g1 data.

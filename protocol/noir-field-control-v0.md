@@ -1,0 +1,3 @@
+# Validly serialized public-field control
+
+The first-byte corruption control exited 139 rather than reporting a clean invalid proof. Keep it as abnormal termination, not a successful semantic rejection. The original proof verified. Supplement with a public-key field mutation: verify the binary serialization against every exported proof_fields.json value and its four-byte element-count prefix before editing. Increase only the second field, the public pk_x, by one, leave the byte length and prefix unchanged, and require explicit verifier rejection. The mapping is checked against compiled ABI and Prover.toml. This remains a local finite control.

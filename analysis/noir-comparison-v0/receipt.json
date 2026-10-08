@@ -1,0 +1,125 @@
+{
+  "status": "original_witness_succeeded_proof_not_run",
+  "steps": [
+    {
+      "name": "extract",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "4g",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+        "-w",
+        "/work",
+        "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+        "python",
+        "-c",
+        "import pathlib,tarfile; p=pathlib.Path(\"bin\"); p.mkdir(exist_ok=False); [tarfile.open(x).extractall(p,filter=\"data\") for x in [\"nargo.tar.gz\",\"bb.tar.gz\"]]"
+      ],
+      "exit_code": 0,
+      "seconds": 5.400624300003983
+    },
+    {
+      "name": "nargo-version",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "4g",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+        "-w",
+        "/work",
+        "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+        "/work/bin/nargo",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9853582000068855
+    },
+    {
+      "name": "bb-version",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "4g",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+        "-w",
+        "/work",
+        "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+        "/work/bin/bb",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0863967000041157
+    },
+    {
+      "name": "compile",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "4g",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+        "-w",
+        "/work",
+        "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+        "/work/bin/nargo",
+        "compile",
+        "--program-dir",
+        "/work/original"
+      ],
+      "exit_code": 0,
+      "seconds": 1.335654299997259
+    },
+    {
+      "name": "execute-original",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "4g",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+        "-w",
+        "/work",
+        "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+        "/work/bin/nargo",
+        "execute",
+        "--program-dir",
+        "/work/original"
+      ],
+      "exit_code": 0,
+      "seconds": 1.378839600016363
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.jq
+#1 transferring dockerfile: 140B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/zkp-noir-audit:local
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/zkp-noir-audit:local@sha256:019e1a586ab9ce8bd50bf4e19b2b4afa387f7ce44050d9aa3427956dd36e7324
+#4 resolve docker.io/library/zkp-noir-audit:local@sha256:019e1a586ab9ce8bd50bf4e19b2b4afa387f7ce44050d9aa3427956dd36e7324 0.1s done
+#4 DONE 0.1s
+
+#5 [2/2] RUN apt-get update && apt-get install -y --no-install-recommends jq gzip
+#5 0.424 Hit:1 http://deb.debian.org/debian trixie InRelease
+#5 0.441 Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+#5 0.465 Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+#5 0.477 Reading package lists...
+#5 1.078 Reading package lists...
+#5 1.631 Building dependency tree...
+#5 1.744 Reading state information...
+#5 1.901 gzip is already the newest version (1.13-1+deb13u1).
+#5 1.901 gzip set to manually installed.
+#5 1.901 The following additional packages will be installed:
+#5 1.902   libjq1 libonig5
+#5 1.926 The following NEW packages will be installed:
+#5 1.927   jq libjq1 libonig5
+#5 2.019 0 upgraded, 3 newly installed, 0 to remove and 1 not upgraded.
+#5 2.019 Need to get 436 kB of archives.
+#5 2.019 After this operation, 1271 kB of additional disk space will be used.
+#5 2.019 Get:1 http://deb.debian.org/debian trixie/main amd64 libonig5 amd64 6.9.9-1+b1 [189 kB]
+#5 2.101 Get:2 http://deb.debian.org/debian-security trixie-security/main amd64 libjq1 amd64 1.7.1-6+deb13u4 [168 kB]
+#5 2.111 Get:3 http://deb.debian.org/debian-security trixie-security/main amd64 jq amd64 1.7.1-6+deb13u4 [78.9 kB]
+#5 2.319 debconf: unable to initialize frontend: Dialog
+#5 2.319 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#5 2.319 debconf: falling back to frontend: Readline
+#5 2.319 debconf: unable to initialize frontend: Readline
+#5 2.319 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 3.)
+#5 2.319 debconf: falling back to frontend: Teletype
+#5 2.324 debconf: unable to initialize frontend: Teletype
+#5 2.324 debconf: (This frontend requires a controlling tty.)
+#5 2.324 debconf: falling back to frontend: Noninteractive
+#5 2.860 Fetched 436 kB in 0s (2304 kB/s)
+#5 2.907 Selecting previously unselected package libonig5:amd64.
+#5 2.907 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5882 files and directories currently installed.)
+#5 2.915 Preparing to unpack .../libonig5_6.9.9-1+b1_amd64.deb ...
+#5 2.938 Unpacking libonig5:amd64 (6.9.9-1+b1) ...
+#5 3.021 Selecting previously unselected package libjq1:amd64.
+#5 3.022 Preparing to unpack .../libjq1_1.7.1-6+deb13u4_amd64.deb ...
+#5 3.032 Unpacking libjq1:amd64 (1.7.1-6+deb13u4) ...
+#5 3.095 Selecting previously unselected package jq.
+#5 3.095 Preparing to unpack .../jq_1.7.1-6+deb13u4_amd64.deb ...
+#5 3.105 Unpacking jq (1.7.1-6+deb13u4) ...
+#5 3.174 Setting up libonig5:amd64 (6.9.9-1+b1) ...
+#5 3.207 Setting up libjq1:amd64 (1.7.1-6+deb13u4) ...
+#5 3.236 Setting up jq (1.7.1-6+deb13u4) ...
+#5 3.265 Processing triggers for libc-bin (2.41-12+deb13u4) ...
+#5 DONE 3.4s
+
+#6 exporting to image
+#6 exporting layers
+#6 exporting layers 0.3s done
+#6 exporting manifest sha256:8318fc98a4a880f153fb0ba9d7c01299b6ca6b07ebdc9202b5ee7b853db2617f 0.0s done
+#6 exporting config sha256:90291fa75412a0872116b6ded7b0dc44b58067b66a0e469956aac4c05914f744 0.0s done
+#6 exporting attestation manifest sha256:1db57af1f145ee78fc03f610ae403b48cb6215f7be2fdc0e6b8125bc586ee58b 0.0s done
+#6 exporting manifest list sha256:e4db496aba2ab2c6ef38eb4aa5c948934563d700f523bbd83837e3cc48198775
+#6 exporting manifest list sha256:e4db496aba2ab2c6ef38eb4aa5c948934563d700f523bbd83837e3cc48198775 0.0s done
+#6 naming to docker.io/library/zkp-noir-audit:complete done
+#6 unpacking to docker.io/library/zkp-noir-audit:complete 0.1s done
+#6 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/n2b84avzi521g22hbkij5tgo5

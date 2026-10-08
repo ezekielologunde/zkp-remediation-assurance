@@ -1,0 +1,36 @@
+{
+  "status": "verified",
+  "hash_counts": {
+    "noir-comparison-v0": {
+      "manifest": 7,
+      "frozen": 9,
+      "generated": 0
+    },
+    "noir-proof-controls-v0": {
+      "manifest": 5,
+      "frozen": 7,
+      "generated": 13
+    },
+    "noir-proof-amended-v0": {
+      "manifest": 5,
+      "frozen": 6,
+      "generated": 5
+    },
+    "noir-proof-complete-v0": {
+      "manifest": 8,
+      "frozen": 6,
+      "generated": 12
+    },
+    "noir-field-control-v0": {
+      "manifest": 3,
+      "frozen": 7,
+      "generated": 0
+    }
+  },
+  "original_noir_proof_verified": true,
+  "response_signature_controls": "failed at signature assertion as expected",
+  "malformed_proof": "abnormal termination exit 139, not clean rejection",
+  "public_key_mutation": "explicit rejection exit 1",
+  "independent_research_systems": 1,
+  "executed_backends": 2
+}

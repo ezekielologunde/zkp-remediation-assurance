@@ -1,0 +1,15 @@
+
+C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\build\attest_js\witness_calculator.js:168
+                    throw new Error(err);
+                          ^
+
+Error: Error: Assert Failed.
+Error in template Attest_160 line: 57
+
+    at C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\build\attest_js\witness_calculator.js:168:27
+    at Array.forEach (<anonymous>)
+    at WitnessCalculator._doCalculateWitness (C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\build\attest_js\witness_calculator.js:143:14)
+    at WitnessCalculator.calculateWTNSBin (C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\build\attest_js\witness_calculator.js:218:20)
+    at C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\build\attest_js\generate_witness.js:16:38
+
+Node.js v24.15.0

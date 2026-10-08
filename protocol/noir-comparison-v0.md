@@ -1,0 +1,5 @@
+# Noir comparison feasibility, frozen before execution
+
+Reproduce the pinned PIRANHAS single-device Noir example using documented nargo 1.0.0-beta.3 and bb 0.82.0. Official release archives are kept in the ignored sandbox and hashed. The schnorr v0.1.3 dependency is pinned at 07ab027a52ea75a93f20bb849b6a1da93791d0a3; only its dependency location is changed to a local path in a sandbox copy. Original sources remain unchanged. Use the existing local Python Linux image, limited to four CPUs and 4 GiB, without exposing network services.
+
+First compile and execute the supplied Prover.toml. Preserve any failure as a reproduction limitation rather than silently repairing it. Only a successful original witness permits a response-plus-one mutation; expected rejection is based on the source's signature binding to the derived root. A complete cryptographic proof requires the documented bb commands and successful positive/negative controls. Compilation or witness success alone is not proof verification. This is another backend of the same research artifact, not a second independent research system.

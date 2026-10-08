@@ -1,0 +1,16 @@
+
+bb command: write_vk
+Scheme is: ultra_honk
+  --scheme: ultra_honk
+  --bytecode_path: /work/original/target/attest.json
+  --output_path: /work/original/target
+  --verbose: true
+  --output_format: bytes_and_fields
+  --init_kzg_accumulator: true
+  --honk_recursion: 1
+downloading grumpkin crs...
+Initialized Grumpkin prover CRS from memory with num points = 65537
+sh: 1: jq: not found
+
+gzip: stdin: unexpected end of file
+Input is not large enough

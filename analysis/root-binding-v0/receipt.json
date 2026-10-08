@@ -1,0 +1,184 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "case": "original",
+      "expected_witness_success": true,
+      "witness_success": true,
+      "proof_verified": true
+    },
+    {
+      "case": "stale_root",
+      "expected_witness_success": false,
+      "witness_success": false,
+      "proof_verified": false
+    },
+    {
+      "case": "recomputed_root",
+      "expected_witness_success": true,
+      "witness_success": true,
+      "proof_verified": true
+    },
+    {
+      "case": "invalid_signature",
+      "expected_witness_success": false,
+      "witness_success": false,
+      "proof_verified": false
+    }
+  ],
+  "steps": [
+    {
+      "name": "generate",
+      "command": [
+        "node",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\generate_root_cases.cjs"
+      ],
+      "exit_code": 0,
+      "seconds": 7.147974099993007
+    },
+    {
+      "name": "original-witness",
+      "command": [
+        "node",
+        "build/attest_js/generate_witness.js",
+        "build/attest_js/attest.wasm",
+        "root-binding/original.json",
+        "root-binding/original.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23837489998550154
+    },
+    {
+      "name": "original-check",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "wtns",
+        "check",
+        "build/attest.r1cs",
+        "root-binding/original.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 1.112446799990721
+    },
+    {
+      "name": "original-prove",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "prove",
+        "control/final.zkey",
+        "root-binding/original.wtns",
+        "root-binding/original-proof.json",
+        "root-binding/original-public.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3330765000137035
+    },
+    {
+      "name": "original-verify",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "control/vk.json",
+        "root-binding/original-public.json",
+        "root-binding/original-proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7549786999879871
+    },
+    {
+      "name": "stale_root-witness",
+      "command": [
+        "node",
+        "build/attest_js/generate_witness.js",
+        "build/attest_js/attest.wasm",
+        "root-binding/stale_root.json",
+        "root-binding/stale_root.wtns"
+      ],
+      "exit_code": 1,
+      "seconds": 0.2103550999891013
+    },
+    {
+      "name": "recomputed_root-witness",
+      "command": [
+        "node",
+        "build/attest_js/generate_witness.js",
+        "build/attest_js/attest.wasm",
+        "root-binding/recomputed_root.json",
+        "root-binding/recomputed_root.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2692389000148978
+    },
+    {
+      "name": "recomputed_root-check",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "wtns",
+        "check",
+        "build/attest.r1cs",
+        "root-binding/recomputed_root.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0011191999947187
+    },
+    {
+      "name": "recomputed_root-prove",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "prove",
+        "control/final.zkey",
+        "root-binding/recomputed_root.wtns",
+        "root-binding/recomputed_root-proof.json",
+        "root-binding/recomputed_root-public.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.010857599991141
+    },
+    {
+      "name": "recomputed_root-verify",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "control/vk.json",
+        "root-binding/recomputed_root-public.json",
+        "root-binding/recomputed_root-proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8639316999760922
+    },
+    {
+      "name": "invalid_signature-witness",
+      "command": [
+        "node",
+        "build/attest_js/generate_witness.js",
+        "build/attest_js/attest.wasm",
+        "root-binding/invalid_signature.json",
+        "root-binding/invalid_signature.wtns"
+      ],
+      "exit_code": 1,
+      "seconds": 0.2249395000108052
+    }
+  ],
+  "generated_sha256": {
+    "data/proof-sandbox/root-binding/invalid_signature.json": "75cf2aa94fc04fef71f2c9281ec35308f9293cf8b53698bfa406574761350576",
+    "data/proof-sandbox/root-binding/original-proof.json": "7b2559c3d9de15bbd86400449b37b957f2e3564fa1d8de3127e73916c870a6c5",
+    "data/proof-sandbox/root-binding/original-public.json": "88b17a02a72fedcd076e6c3012360f329ee60696a0394cdd7e7192da509997b3",
+    "data/proof-sandbox/root-binding/original.json": "da1230ee656045fff1daf1ea9de57cf6dc8369ce8b6a93531d666969fa125d7f",
+    "data/proof-sandbox/root-binding/original.wtns": "cff72e52899dd3bfe0381de8bc1436aa2f3974898ce4ff75883a3f27c2a8fcbf",
+    "data/proof-sandbox/root-binding/recomputed_root-proof.json": "2453c8f9e1387b5a3d406333154eb1086c6371cec7732609b9743debc588b7d8",
+    "data/proof-sandbox/root-binding/recomputed_root-public.json": "88b17a02a72fedcd076e6c3012360f329ee60696a0394cdd7e7192da509997b3",
+    "data/proof-sandbox/root-binding/recomputed_root.json": "8e06038e8a8dc50a1aea9228db95485061a63d21c283ec395896276919ff3a02",
+    "data/proof-sandbox/root-binding/recomputed_root.wtns": "62643f5592afc7c8b32fe14db5361263b7467e3aef732d11bb2b6878cf554b72",
+    "data/proof-sandbox/root-binding/stale_root.json": "af120681c9c77d586d0937a5f3edf3e883ac65833c363223aeeb7d9cfb9b38c1"
+  }
+}

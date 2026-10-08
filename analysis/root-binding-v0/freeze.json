@@ -1,0 +1,11 @@
+{
+  "protocol\\root-binding-pilot-v0.md": "758286a87eddf46524f3bf1cc8767276b5d6f54d77bd83883fd934acb80bdb98",
+  "src\\run_root_binding.py": "ab8f861f6b506c79e9ce5cf9779059cd7c51c895b634b44f51213418b7530ec7",
+  "src\\generate_root_cases.cjs": "7a36c99551ee1bda08dac44b5fd3280092a9dc68dc74b3e7ae8111415e6c89f2",
+  "data\\proof-sandbox\\input.json": "32432a40f3366e74c66aff1a61cb5f4cc2c100806c4592f0f82e1d7fad327f7f",
+  "data\\proof-sandbox\\build\\attest.r1cs": "f50116d885411b9cc58c5b9ce7cc27da34907aa03b7746925d7bb454a8b99162",
+  "data\\proof-sandbox\\build\\attest_js\\attest.wasm": "cea28d5bb1f54a18febdd754e5d66662dc3541be7a2daa9c8cfb8f68ecec06ec",
+  "data\\proof-sandbox\\control\\final.zkey": "63b618c5a2bf31be9cde98811e2e5d4ff446eb88008191347dbb229e8dea7e55",
+  "data\\proof-sandbox\\control\\vk.json": "dc76820a6053cc5537c0835846a45d1174cc0dc6fd44c487e39b29ff86d492cd",
+  "data\\proof-sandbox\\mutation-runtime\\package-lock.json": "9e877420e9940c313f893186ab3c15c9140eea655e5500c26ac9a541b4813ac2"
+}

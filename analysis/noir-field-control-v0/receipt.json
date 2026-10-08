@@ -1,0 +1,33 @@
+{
+  "exit_code": 1,
+  "seconds": 0.7054417000035755,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "4g",
+    "--env",
+    "HOME=/work/home",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\noir-runtime,target=/work",
+    "-w",
+    "/work",
+    "sha256:e4db496aba2ab2c6ef38eb4aa5c948934563d700f523bbd83837e3cc48198775",
+    "/work/bin/bb",
+    "verify",
+    "-s",
+    "ultra_honk",
+    "-k",
+    "/work/original/target/vk",
+    "-p",
+    "/work/changed-field-proof"
+  ],
+  "serialization_fields": 459,
+  "same_length": true,
+  "log": "\nScheme is: ultra_honk\nSumcheck verification failed.\nProof verification failed\n"
+}

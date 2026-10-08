@@ -1,0 +1,12 @@
+
+error: Failed constraint
+   ┌─ /work/mutated_response/src/attest.nr:81:12
+   │
+81 │     assert(valid_signature);
+   │            ---------------
+   │
+   = Call stack:
+     1. /work/mutated_response/src/main.nr:19:5
+     2. /work/mutated_response/src/attest.nr:81:12
+
+Failed to solve program: 'Cannot satisfy constraint'

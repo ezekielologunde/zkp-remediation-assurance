@@ -4,6 +4,8 @@
 
 **Local proof milestone:** an unchanged PIRANHAS single-device Circom example compiled and produced a verifying proof. The initial test setup failed a public-key mutation control; an explicitly amended setup passed it. Both runs are preserved. [Feasibility results](analysis/feasibility-report-v0.md) and [independent receipt checks](analysis/interface-verification.json) report the three public inputs, dependency deviations, and limits. This does not reproduce the full swarm protocol or establish an application vulnerability.
 
+**Backend comparison milestone:** real Circom and Noir proofs now verify locally. A fixed response/root mutation is accepted by the Circom benchmark with an unchanged signature, while the Noir response mutation fails at signature verification. [Comparison report](analysis/backend-comparison-v0.md) preserves environment failures, an abnormal malformed-proof termination, and the subsequent clean public-key rejection control. This is one artifact with two executed backends, not a cross-system result or novelty clearance.
+
 The public zkSBOM source is pinned and 246 file hashes recorded. Three public CycloneDX fixtures were parsed, containing 522, 2,308, and 4 top-level component records. They are build/parser inputs, not fleet ground truth. [Reproduction instructions](REPRODUCE.md) and [source/data audit](data/public-fixture-audit.json) distinguish these checks from proof-system execution. The historical proposal below is retained for context.
 
 [Research protocol and prior-art leads](protocol/research-plan.md). This plan comes from the October 4, 2026 independent research portfolio. Its literature assessment must be refreshed before implementation and submission.

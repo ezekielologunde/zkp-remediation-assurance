@@ -1,0 +1,15 @@
+{
+  "image": "sha256:0dd364ba7e10242f07755449e3a3d0e35f9efd987952737b90def6709ab0c5ce",
+  "sha256": {
+    "data/piranhas-source/noir/1-attest-(Pi-zkRA)/src/attest.nr": "66767623fa6364f52817651fb187cf7c0ad7421031f7d8b5103ed469fec91bf3",
+    "data/piranhas-source/noir/1-attest-(Pi-zkRA)/src/main.nr": "1e88a5863f33c80026f78a9aca74780bcb43db962c81316d3d166bd5a08164ab",
+    "data/piranhas-source/noir/1-attest-(Pi-zkRA)/Nargo.toml": "f5c1fa802f2889545fa3020241714f790d1ad4aec3b99a465b93351a25fe4be6",
+    "data/piranhas-source/noir/1-attest-(Pi-zkRA)/Prover.toml": "5eb0f3926bceec2eb447f4dd67519562765818ffb7f55454861fd01b43c47370",
+    "data/proof-sandbox/noir-runtime/nargo.tar.gz": "6fabbfc216dc5d44e937e99e3bd0171f88542a99a8b16d04d38103e2dfb2db2d",
+    "data/proof-sandbox/noir-runtime/bb.tar.gz": "53144bd63b1bded6a190640c65da834b49d5d312f33b4720c843d0389ff0917d",
+    "data/proof-sandbox/noir-runtime/original/Nargo.toml": "01b4777b535fd3b13783c58f35d12f746bb9854b83136d92bb930b883cb5913e",
+    "protocol/noir-comparison-v0.md": "19fe7052fbc6adbf8cbd28d3354cea06711015433a26be2b782b5454fdd0439e",
+    "src/run_noir_comparison.py": "88eb5cd2668b29f1e00a3ae1f6414d51f18150d7895a16f94af2acd542c7649c"
+  },
+  "dependency_commit": "07ab027a52ea75a93f20bb849b6a1da93791d0a3"
+}

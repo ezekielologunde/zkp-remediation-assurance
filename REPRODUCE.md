@@ -33,3 +33,22 @@ The dependency lock above is part of the archived release. Preserve a copy befor
 The first driver intentionally reproduces the setup sequence whose negative control failed. The second implements the documented amendment. Neither creates production-secure parameters. After both finish, run `python src/verify_interface_receipts.py` followed by `python src/report_interface_pilot.py`. The receipt verifier requires generated local binaries and will not fully run from the public logs alone. Random setup changes generated hashes on reproduction; each new manifest must verify its own bytes, while acceptance/control outcomes should agree.
 
 Read analysis/feasibility-report-v0.md for the exact limits of this example. No swarm protocol, real device measurement, or deployed application vulnerability is reproduced.
+
+## Root-binding and Noir comparison
+
+Use a separate reproduction workspace; the drivers deliberately refuse existing output directories. After the Circom setup above, install circomlibjs 0.1.7 into `data/proof-sandbox/mutation-runtime` using the archived lock in `analysis/root-binding-v0/package-lock.json`. Run `src/run_root_binding.py` and `src/verify_root_binding.py`. The latter checks local generated witnesses/proofs, so archived logs alone are insufficient.
+
+For Noir, acquire these official binaries into `data/proof-sandbox/noir-runtime` as `nargo.tar.gz` and `bb.tar.gz`:
+
+- https://github.com/noir-lang/noir/releases/download/v1.0.0-beta.3/nargo-x86_64-unknown-linux-gnu.tar.gz
+- https://github.com/AztecProtocol/aztec-packages/releases/download/v0.82.0/barretenberg-amd64-linux.tar.gz
+
+Clone https://github.com/noir-lang/schnorr.git into that directory's `schnorr` child and checkout `07ab027a52ea75a93f20bb849b6a1da93791d0a3`. Archive hashes are in `analysis/noir-comparison-v0/freeze.json`. Run `src/run_noir_comparison.py`, then `src/run_noir_proof_controls.py`. The latter intentionally preserves the original missing-curl environment failure. Its response/signature witness controls should reject.
+
+To reproduce the exact environment history, build `analysis/noir-proof-amended-v0/Dockerfile` as `zkp-noir-audit:local`, then run `src/resume_noir_proof.py`. This records the missing-jq failure. Build `analysis/noir-proof-complete-v0/Dockerfile` as `zkp-noir-audit:complete` using that local parent, then run `src/complete_noir_proof.py`, `src/noir_field_control.py`, and `src/verify_backend_comparison.py`. The Dockerfiles install packages via apt, so rebuilt image IDs may differ; each run freezes its actual image ID and package versions. Native proof binaries are not redistributed. The first malformed-proof control may terminate abnormally and must not be labeled clean rejection. The field control checks exact serialization and should explicitly reject.
+
+Noir drivers use local Linux containers, four CPUs and 4 GiB, with no exposed ports. Backend parameter downloads are allowed during key/proof generation; files under the dedicated sandbox HOME are hashed. These are functional controls, not performance estimates or a production deployment. A fresh proof can differ bytewise while satisfying the same semantic controls.
+
+## TrustBOM selection
+
+Clone https://github.com/tuberlin-blockchain-prototyping/sharing-sbom-system.git into `data/proof-sandbox/trustbom-source` and checkout `ea90058af5b137e0cdf6a4aa663bcc77040a928f`. Run `src/audit_trustbom.py` with Python 3.9 or newer. All seven fixture files should reconstruct their recorded Merkle roots: 387 records, 200 distinct proof records. This is independent SHA-256 path validation, not a RISC Zero proof reproduction. See `protocol/trustbom-selection-v0.md` for the remaining build and trust-boundary gates.

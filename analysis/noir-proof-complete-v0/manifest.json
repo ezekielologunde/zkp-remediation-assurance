@@ -1,0 +1,10 @@
+{
+  "Dockerfile": "bcc482ae1bf631d6bd33e65adbf21613bc1b87a8b1705ef9c01065d0165d66e1",
+  "freeze.json": "1668fb879cb2c0cbe422a3f82c78e730a527e5d096a4b23a6177fdbbfe1150e8",
+  "packages.log": "257514579b44286a9da9074a24c1e6b4b1c9e80d3afc24878d9a061eb9037273",
+  "prove.log": "b853d65b2d768d1dc99a1bf722cdeb98696b5371b34351e2cffd0a3415197a39",
+  "receipt.json": "47d24bd20517c184858ff093f9913b1ce368b535a1be76eab4c3da3eb93c465c",
+  "verify-original.log": "84fdfba363b15cd571d9d620c43652a63f9aab1ffa2267ec96f04f14a40de3eb",
+  "verify-tampered.log": "5b89627913abd23d4681dd926520c7af878a9c1d1378e640846d9edc59304695",
+  "write-vk.log": "c3eb0963e9ae1e493d751feca5d2e3401f69907887a0ebca8a64d9e1a2d76a3c"
+}

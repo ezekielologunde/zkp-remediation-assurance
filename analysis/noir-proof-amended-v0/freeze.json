@@ -1,0 +1,11 @@
+{
+  "image": "sha256:019e1a586ab9ce8bd50bf4e19b2b4afa387f7ce44050d9aa3427956dd36e7324",
+  "sha256": {
+    "data/proof-sandbox/noir-runtime/Dockerfile": "9e04ddcaa7e53d14e08f54e19eb05207549ea3db4578633edf0825b8f795aa07",
+    "data/proof-sandbox/noir-runtime/bin/bb": "879db8d65b80f8f2f89560bec93c480e2caa49ba14e2c4012783a498c5922bbd",
+    "data/proof-sandbox/noir-runtime/original/target/attest.json": "687f10b38caf682f4cd14140c2b37ceafb5ec407539c188d45ace61bcd6792f9",
+    "data/proof-sandbox/noir-runtime/original/target/attest.gz": "4e84c7ef39ff46dec51fea12ef6ee4d9a64e6f51a5df1c66990a5ea7257f6a5d",
+    "src/resume_noir_proof.py": "aa608469b6f60a41ed908b7ae31c7ebf9d689a6efd12b67b851fac9aabe2f199",
+    "protocol/noir-environment-amendment-v0.md": "9d1b16493cb02be0fcc4c328f9b8049e8c67f946fb8c5a156d690fab96021c59"
+  }
+}

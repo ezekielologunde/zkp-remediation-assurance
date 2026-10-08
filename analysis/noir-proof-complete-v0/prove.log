@@ -1,0 +1,29 @@
+
+bb command: prove
+Scheme is: ultra_honk
+  --scheme: ultra_honk
+  --bytecode_path: /work/original/target/attest.json
+  --witness_path: /work/original/target/attest.gz
+  --output_path: /work/original/target
+  --verbose: true
+  --output_format: bytes_and_fields
+  --init_kzg_accumulator: true
+  --recursive: true
+  --honk_recursion: 1
+using cached grumpkin crs of size 65537 at: "/work/home/.bb-crs/grumpkin_g1.dat"
+Initialized Grumpkin prover CRS from memory with num points = 65537
+created circuit
+Constructing DeciderProvingKey
+Finalized circuit size: 16680
+allocating polynomials object in proving key...
+populating trace...
+time to construct proving key: 63 ms.
+using cached bn254 crs of size 65537 at "/work/home/.bb-crs/bn254_g1.dat"
+Initialized BN254 prover CRS from memory with num points = 65537
+created oink proof
+starting sumcheck rounds...
+completed 16 rounds of sumcheck
+executed multivariate-to-univariate reduction
+computed opening proof
+Proof saved to "/work/original/target/proof"
+Proof fields saved to "/work/original/target/proof_fields.json"
