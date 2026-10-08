@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "case_count": 6,
+  "manifest_hashes": 3,
+  "frozen_hashes": 5,
+  "source_hashes": 7,
+  "source_anchors": 64,
+  "scope": "Local adapter with saved real receipt; not HTTP handler or deployment test"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "hash_counts": {
+    "repair-v0": {
+      "manifest": 4,
+      "frozen": 14,
+      "generated": 15
+    },
+    "repair-v1": {
+      "manifest": 12,
+      "frozen": 14,
+      "generated": 21
+    },
+    "repair-proof-v0": {
+      "manifest": 7,
+      "frozen": 5,
+      "generated": 5
+    },
+    "repair-proof-control-v1": {
+      "manifest": 3,
+      "frozen": 6,
+      "generated": 0
+    }
+  },
+  "positive_witness": true,
+  "negative_witness_cases": 6,
+  "positive_real_proof": true,
+  "public_challenge_rejected": true,
+  "constraints": {
+    "original": 16743,
+    "repair": 17954
+  },
+  "constraint_delta": 1211,
+  "constraint_increase_percent": 7.232873439646426,
+  "limits": "Local alternative hash instantiation; not production certification, privacy-equivalence or runtime benchmark"
+}

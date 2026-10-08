@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "manifest_hashes": 9,
+  "frozen_hashes": 12,
+  "generated_hashes": 7,
+  "source_hashes": 162,
+  "positive_proof": true,
+  "negative_public_cases": 3,
+  "negative_witness_cases": 1,
+  "limits": "Shipped ra40 binaries/keys; no fresh source-build correspondence or on-chain execution"
+}

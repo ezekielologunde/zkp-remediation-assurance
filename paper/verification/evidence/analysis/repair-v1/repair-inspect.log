@@ -1,0 +1,24 @@
+[32mtemplate instances[0m: 161
+non-linear constraints: 11097
+linear constraints: 6857
+public inputs: 5
+private inputs: 45
+public outputs: 0
+wires: 17979
+labels: 35642
+[32mWritten successfully:[0m build/attest.r1cs
+[32mWritten successfully:[0m build/attest.sym
+[32mWritten successfully:[0m build/attest_js/attest.wasm
+[32mEverything went okay[0m
+
+[0m[1m[38;5;11mwarning[P1004][0m[1m: File "merkleTree.circom" does not include pragma version. Assuming pragma version 2.2.3[0m
+ [0m[34m=[0m At the beginning of file "merkleTree.circom", you should add the directive "pragma circom <Version>", to indicate which compiler version you are using.
+
+[0m[1m[38;5;11mwarning[CA02][0m[1m: In template "EscalarMulAny(253)": Array of subcomponent input/output signals segments[1].dbl contains a total of 2 signals that do not appear in any constraint of the father component[0m
+ [0m[34m=[0m For example: segments[1].dbl[0], segments[1].dbl[1].
+
+[0m[1m[38;5;11mwarning[CA02][0m[1m: In template "EscalarMulAny(254)": Array of subcomponent input/output signals segments[1].dbl contains a total of 2 signals that do not appear in any constraint of the father component[0m
+ [0m[34m=[0m For example: segments[1].dbl[0], segments[1].dbl[1].
+
+[0m[1m[38;5;11mwarning[CA01][0m[1m: In template "Schnorr(5299619240641551281634865583518297030282874472190772894086521144482721001553,16950150798460657717958625567821834550301663161624707787222815936182638968203)": Local signal enabled does not appear in any constraint[0m
+

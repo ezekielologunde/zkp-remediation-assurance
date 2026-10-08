@@ -41,3 +41,7 @@ src/verify_zksbom_execution.py -text
 src/zksbom_cli_cases.py -text
 src/zksbom_system_build.rs -text
 src/zksbom_wrapper_probe.cpp -text
+
+# Preserve manuscript evidence and artifact bytes across checkouts.
+paper/** -text
+deliverables/** -text

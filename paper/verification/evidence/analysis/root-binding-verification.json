@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "hash_counts": {
+    "manifest": 14,
+    "freeze": 9,
+    "generated": 10
+  },
+  "changed_fields": {
+    "original": [],
+    "stale_root": [
+      "response"
+    ],
+    "recomputed_root": [
+      "response",
+      "root"
+    ],
+    "invalid_signature": [
+      "S"
+    ]
+  },
+  "accepted_public_vectors_identical": true,
+  "scope": "Local benchmark circuit only"
+}

@@ -1,0 +1,56 @@
+{
+  "selection_protocol": "protocol/corpus-expansion-v0.md",
+  "sampling": "purposive, exploratory, five papers; no prevalence inference",
+  "systems": [
+    {
+      "id": "zra",
+      "paper": "https://www.ndss-symposium.org/wp-content/uploads/2024-815-paper.pdf",
+      "artifact": "https://github.com/zero-savvy/zk-remote-attestation",
+      "revision": "4a0416c614061753dcdfe7fc7494a4ba0d020afd",
+      "status": "executed_selected_controls_no_mismatch",
+      "relationship": "PIRANHAS predecessor, shared author lineage",
+      "evidence": "analysis/zra-verification.json",
+      "limits": "Shipped binaries, no fresh source/binary correspondence or on-chain test"
+    },
+    {
+      "id": "piranhas",
+      "paper": "https://www.ndss-symposium.org/wp-content/uploads/2026-f526-paper.pdf",
+      "artifact": "https://github.com/AppliedCryptoGroup/piranhas",
+      "revision": "62bd2af3b7501ab7458a682d8849206537a86d9e",
+      "status": "executed_benchmark_statement_mismatch",
+      "relationship": "Builds on zRA; multiple backends count as one system",
+      "evidence": "analysis/repair-report-v0.md",
+      "limits": "Local benchmark discrepancy, not deployed exploit"
+    },
+    {
+      "id": "trustbom",
+      "paper": "https://arxiv.org/html/2609.21419v1",
+      "artifact": "https://github.com/tuberlin-blockchain-prototyping/sharing-sbom-system",
+      "revision": "ea90058af5b137e0cdf6a4aa663bcc77040a928f",
+      "status": "executed_selected_controls_no_mismatch",
+      "relationship": "Separate application artifact",
+      "evidence": "analysis/trustbom-receipt-report.md",
+      "limits": "Two-entry real receipt and local consumer adapter, not HTTP deployment"
+    },
+    {
+      "id": "zksbom",
+      "paper": "https://arxiv.org/html/2605.00076v1",
+      "artifact": "https://github.com/chains-project/zkSBOM",
+      "revision": "0bb63acc24f70e3480615696266963023b128275",
+      "status": "executed_native_and_cli_controls",
+      "relationship": "Separate artifact",
+      "evidence": "analysis/zksbom-execution-report.md",
+      "limits": "Default oZKS native proofs and original Rust application; build-only linking adjustments; no operator deployment; empty/missing-label behavior does not establish caller exploitability; upstream tests not passed"
+    },
+    {
+      "id": "verisbom",
+      "paper": "https://arxiv.org/html/2602.13682v1",
+      "artifact": "https://zenodo.org/records/21372814",
+      "revision": "Zenodo record 21372814",
+      "status": "executed_local_cli_output_binding_mismatch",
+      "relationship": "Shared author with zRA/PIRANHAS; depositor identity alias VeriSBOM",
+      "evidence": "analysis/verisbom-output-binding-report.md",
+      "limits": "One-package local real Nova proof, unchanged proof-core bytes, four original and four repaired controls; no hosted test; archived circuit/parameters; depositor project alias"
+    }
+  ]
+}

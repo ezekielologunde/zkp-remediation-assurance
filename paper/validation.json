@@ -1,0 +1,29 @@
+{
+  "status": "passed_with_documented_limitations",
+  "manuscript": "Bounded empirical reproduction, no novel-method or publication claim",
+  "author": "Ezekiel Ologunde, Independent Researcher, Boston, MA, USA, ologunde@bu.edu",
+  "compiler": "Tectonic 0.17.0 (XeTeX)",
+  "builtin_compiler": "Unavailable: Windows sandbox helper setup error before compilation",
+  "evidence_snapshot": "70a6f01224c9bfd64cbca40d4049de82100414ba",
+  "source_sha256": "2adb5f84e28435530bc6887fda7701ae8fe4cbc088a48309873e9e6d7dcae572",
+  "pdf_sha256": "bc90ea3a553f715a7c202cccd2d69003f1770a09a3c6b0b0cf0c6a365f75ad6e",
+  "presentation_checks": 69,
+  "pages": 6,
+  "tables": 3,
+  "figures": 2,
+  "visual_review": "All six pages inspected; final diagram re-inspected at 150 dpi; no observed clipping or collisions",
+  "warnings": [
+    "Final-page overfull vbox 1.64198pt; visually inspected without clipped content",
+    "Underfull box diagnostics",
+    "Fontconfig default configuration warning and font-request diagnostics; Libertine and other used fonts embedded"
+  ],
+  "unverified": [
+    "Prior-art novelty and first-discovery status",
+    "Maintainer confirmation",
+    "Deployed-system exploitability",
+    "Fresh reproduction of all proof systems during packaging",
+    "Overleaf remote compiler"
+  ],
+  "clean_extraction": "Passed: rebuilt from empty extraction; pdftotext -layout output byte-identical; no text normalization",
+  "clean_pdf_sha256": "c8aee0f1e9cd0a9bc5a41e4175fe9229572d18c9034dd621bfb603d02431c01f"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "hash_checks": 274,
+  "native_wrapper_cases": 6,
+  "cli_cases": 6,
+  "cli_all_exit_zero": true,
+  "explicit_query_baseline": [
+    true,
+    true,
+    false,
+    false,
+    false,
+    false
+  ],
+  "baseline_scope": "Saved-output consumer requirement, not additional cryptographic verification or an upstream promised policy",
+  "source_unchanged": true
+}

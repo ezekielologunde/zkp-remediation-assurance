@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "sha256_checks": 465,
+  "application_cases": 8,
+  "real_proof_math_acceptances": 8,
+  "proof_core_bytes_identical": true,
+  "acceptance_patterns": {
+    "acceptance": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "repair": [
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  "scope": "Independent evidence parsing and hashing; cryptographic execution is performed by recorded Nova binaries, not a separate crypto implementation."
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "case": "member",
+    "exit_code": 0,
+    "proof_valid_message": true,
+    "expected_message": true,
+    "member_message": true,
+    "nonmember_message": false,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a000000ca4b3efa38f01ea0fe7bb622b8fe246dcfdc1f3e2862a72f121762f4e5077b6910000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/member.txt"
+    ]
+  },
+  {
+    "case": "nonmember",
+    "exit_code": 0,
+    "proof_valid_message": true,
+    "expected_message": true,
+    "member_message": false,
+    "nonmember_message": true,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a000000ca4b3efa38f01ea0fe7bb622b8fe246dcfdc1f3e2862a72f121762f4e5077b6910000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/nonmember.txt"
+    ]
+  },
+  {
+    "case": "wrong_label",
+    "exit_code": 0,
+    "proof_valid_message": false,
+    "expected_message": false,
+    "member_message": true,
+    "nonmember_message": false,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a000000ca4b3efa38f01ea0fe7bb622b8fe246dcfdc1f3e2862a72f121762f4e5077b6910000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/wrong_label.txt"
+    ]
+  },
+  {
+    "case": "missing_label",
+    "exit_code": 0,
+    "proof_valid_message": true,
+    "expected_message": true,
+    "member_message": true,
+    "nonmember_message": false,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a000000ca4b3efa38f01ea0fe7bb622b8fe246dcfdc1f3e2862a72f121762f4e5077b6910000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/missing_label.txt"
+    ]
+  },
+  {
+    "case": "wrong_commitment",
+    "exit_code": 0,
+    "proof_valid_message": false,
+    "expected_message": false,
+    "member_message": false,
+    "nonmember_message": true,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a00000026d6ede4830a7ad61b4aca62c94448975b68f6d6e13b57472c5c060b81dd842410000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/wrong_commitment.txt"
+    ]
+  },
+  {
+    "case": "empty",
+    "exit_code": 0,
+    "proof_valid_message": true,
+    "expected_message": true,
+    "member_message": false,
+    "nonmember_message": false,
+    "command": [
+      "/work/target/release/zksbom-verifier",
+      "verify",
+      "--method",
+      "ozks",
+      "--commitment",
+      "700000001000000000000a002e002800240004000a000000ca4b3efa38f01ea0fe7bb622b8fe246dcfdc1f3e2862a72f121762f4e5077b6910000000010000000000060008000400060000000400000020000000ce67bcd11cf49b09e64d6971171269419b0a5805f10042e07ace989fa6296875",
+      "--proof_path",
+      "/fixtures/empty.txt"
+    ]
+  }
+]

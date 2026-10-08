@@ -9,3 +9,6 @@ __pycache__/
 data/zkSBOM-source/
 data/piranhas-source/
 data/proof-sandbox/
+
+paper/build/
+paper/qa/
