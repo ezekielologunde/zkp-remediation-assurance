@@ -1,0 +1,16 @@
+[32mtemplate instances[0m: 161
+non-linear constraints: 10569
+linear constraints: 6174
+public inputs: 3
+private inputs: 47
+public outputs: 0
+wires: 16770
+labels: 33773
+[32mWritten successfully:[0m build/attest.r1cs
+[32mWritten successfully:[0m build/attest.sym
+[32mWritten successfully:[0m build/attest_js/attest.wasm
+[32mEverything went okay[0m
+
+[0m[1m[38;5;11mwarning[P1004][0m[1m: File "merkleTree.circom" does not include pragma version. Assuming pragma version 2.2.3[0m
+ [0m[34m=[0m At the beginning of file "merkleTree.circom", you should add the directive "pragma circom <Version>", to indicate which compiler version you are using.
+

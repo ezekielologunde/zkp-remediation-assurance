@@ -1,0 +1,18 @@
+{
+  "compile.log": "1ce091595ea270a26e7594bb0aae4138a5ee6847ca06df36dc09d1b3b215cbac",
+  "compiler-version.log": "18801e9d5323fc26cc64f509180c173b80a4d0cffe87401ed1c7979af6485e17",
+  "freeze.json": "56c48179e21e455460b6eac4d8484e66b27a6aa0437a45f6d4955dd6295feb56",
+  "package-lock.json": "5bd86f3942b6bf0ac51ea34549e5490a0b63bd0494e58ef8111782ff1f0c2945",
+  "prove.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+  "r1cs-info.log": "62c369f84abe24cc3ba78416b88fbdcb02e22f3e9fd591fd76575c925e768b6e",
+  "receipt.json": "e639d047646afc7be6d6376be19981850b1cf5d60f80e75a3cc35c2283e5336e",
+  "test-setup-groth16.log": "89dc7cd1b6cb2f49e2a905152ec4da631c6951460bb1c2f18a20a8d8f938fe65",
+  "test-setup-init.log": "9f24de444a8a7e77d1ebf88c72c93d542cc7182c68676533699e5a73730400d2",
+  "test-setup-phase2.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+  "verification-key.log": "1c0eb8a8bcc7f7a43c2c5a09298d11313ca84431bdc97f99e5392eff7b739dad",
+  "verify-different-external-request-label.log": "f1dbf617f481593ff4b982459a4d9f6a6a78e669f9e360cb08b1de2b52ad8316",
+  "verify-original-request.log": "f1dbf617f481593ff4b982459a4d9f6a6a78e669f9e360cb08b1de2b52ad8316",
+  "verify-tampered-public-key.log": "f1dbf617f481593ff4b982459a4d9f6a6a78e669f9e360cb08b1de2b52ad8316",
+  "witness-check.log": "6810f8d5cda5782f72a277293e4508527f76db378e9459607a048457c17ff540",
+  "witness.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+}

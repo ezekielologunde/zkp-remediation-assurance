@@ -1,0 +1,12 @@
+{
+  "manifest_files_verified": 27,
+  "generated_files_verified": 21,
+  "original_negative_control_failed": true,
+  "amended_negative_control_passed": true,
+  "public_signal_names": [
+    "enabled",
+    "pubX",
+    "pubY"
+  ],
+  "scope": "Single-device Circom example and local test setup only. No swarm reproduction, application exploit, or cryptographic soundness claim."
+}

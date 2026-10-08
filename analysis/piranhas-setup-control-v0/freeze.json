@@ -1,0 +1,11 @@
+{
+  "revision": "d7bb9114a927455cfc2c732edfe9d7cc015b4bf0",
+  "inputs": {
+    "build/attest.r1cs": "f50116d885411b9cc58c5b9ce7cc27da34907aa03b7746925d7bb454a8b99162",
+    "build/witness.wtns": "cff72e52899dd3bfe0381de8bc1436aa2f3974898ce4ff75883a3f27c2a8fcbf",
+    "build/test.ptau": "e43fb710e482f5d741cf2ec40af9a60b76b7234dda9e86b10bc489aff8ca26de",
+    "package-lock.json": "5bd86f3942b6bf0ac51ea34549e5490a0b63bd0494e58ef8111782ff1f0c2945"
+  },
+  "driver_sha256": "6cf6a4afd030272d554c0d519f05216a7fa7874644264485c698afb4eb81b7df",
+  "amendment_sha256": "4612572436e6a8bc0f67f883b15dc3fc92a24dd136f132dda61e7fca3a2db515"
+}

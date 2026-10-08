@@ -1,0 +1,204 @@
+{
+  "steps": [
+    {
+      "step": "compiler-version",
+      "command": [
+        "node",
+        "node_modules/circom2/cli.js",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.107275500020478
+    },
+    {
+      "step": "compile",
+      "command": [
+        "node",
+        "node_modules/circom2/cli.js",
+        "attest.circom",
+        "--r1cs",
+        "--wasm",
+        "--sym",
+        "-l",
+        "node_modules",
+        "-o",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 2.6626801999809686
+    },
+    {
+      "step": "r1cs-info",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "r1cs",
+        "info",
+        "build/attest.r1cs"
+      ],
+      "exit_code": 0,
+      "seconds": 3.1735437999886926
+    },
+    {
+      "step": "witness",
+      "command": [
+        "node",
+        "build/attest_js/generate_witness.js",
+        "build/attest_js/attest.wasm",
+        "input.json",
+        "build/witness.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1660769000009168
+    },
+    {
+      "step": "witness-check",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "wtns",
+        "check",
+        "build/attest.r1cs",
+        "build/witness.wtns"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9004615999874659
+    },
+    {
+      "step": "test-setup-init",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "powersoftau",
+        "new",
+        "bn128",
+        "15",
+        "build/test.ptau"
+      ],
+      "exit_code": 0,
+      "seconds": 1.507648099999642
+    },
+    {
+      "step": "test-setup-phase2",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "powersoftau",
+        "prepare",
+        "phase2",
+        "build/test.ptau",
+        "build/test-final.ptau"
+      ],
+      "exit_code": 0,
+      "seconds": 32.55548879998969
+    },
+    {
+      "step": "test-setup-groth16",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "setup",
+        "build/attest.r1cs",
+        "build/test-final.ptau",
+        "build/test.zkey"
+      ],
+      "exit_code": 0,
+      "seconds": 1.7446936999913305
+    },
+    {
+      "step": "verification-key",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "zkey",
+        "export",
+        "verificationkey",
+        "build/test.zkey",
+        "build/vk.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.282220099994447
+    },
+    {
+      "step": "prove",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "prove",
+        "build/test.zkey",
+        "build/witness.wtns",
+        "build/proof.json",
+        "build/public.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5447953999973834
+    },
+    {
+      "step": "verify-original-request",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "build/vk.json",
+        "build/public.json",
+        "build/proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0288310000032652
+    },
+    {
+      "step": "verify-different-external-request-label",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "build/vk.json",
+        "build/public.json",
+        "build/proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8521557000058237
+    },
+    {
+      "step": "verify-tampered-public-key",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "build/vk.json",
+        "build/changed-public.json",
+        "build/proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6348493999976199
+    }
+  ],
+  "conclusion": {
+    "public_signal_count": 3,
+    "original_verified": true,
+    "identical_inputs_verified_again": true,
+    "tampered_public_key_rejected": false,
+    "interpretation": "External request label is not a verifier input here. Repetition alone is not a vulnerability or full-protocol result.",
+    "test_setup_only": true
+  },
+  "generated_sha256": {
+    "build/attest.r1cs": "f50116d885411b9cc58c5b9ce7cc27da34907aa03b7746925d7bb454a8b99162",
+    "build/attest.sym": "684d00303e4635b8ddd4cc18188800422aad003dbddedfcf745eb3b87f32d5c4",
+    "build/changed-public.json": "9a6b070c59f35502be1cf05b0d5a90add0480ebe11541a2cdd44dfd72df93c43",
+    "build/proof.json": "accb8e52a2598daeea2b582acaab33e2a7d0b71669b0d6174743b6c116ef5c0e",
+    "build/public.json": "88b17a02a72fedcd076e6c3012360f329ee60696a0394cdd7e7192da509997b3",
+    "build/test-final.ptau": "970524953a27fc7cc3b5df4f0375bc3b42ecd9c6abfa7ffc1dc4317ce8ff5c4b",
+    "build/test.ptau": "e43fb710e482f5d741cf2ec40af9a60b76b7234dda9e86b10bc489aff8ca26de",
+    "build/test.zkey": "5b0866ee3d4b11b41a8410c34d95c6bc6edbc0f22334abeb09408695db7d0687",
+    "build/vk.json": "7dbbab42d1bd5df5fff8cb0e41c4b5c3d705cd9eb58d58f0709fde011cc0adbb",
+    "build/witness.wtns": "cff72e52899dd3bfe0381de8bc1436aa2f3974898ce4ff75883a3f27c2a8fcbf",
+    "build/attest_js/attest.wasm": "cea28d5bb1f54a18febdd754e5d66662dc3541be7a2daa9c8cfb8f68ecec06ec",
+    "build/attest_js/generate_witness.js": "4995a2e6b01432f76182abec6a831fdaf7f840384035072002ccaa43101b14d4",
+    "build/attest_js/witness_calculator.js": "3bfca49ee5489996a827a1e5a0c8a1f558dbd99e657c7591f5b32e0d33189ce4"
+  }
+}

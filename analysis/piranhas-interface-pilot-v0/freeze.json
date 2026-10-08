@@ -1,0 +1,14 @@
+{
+  "upstream_revision": "62bd2af3b7501ab7458a682d8849206537a86d9e",
+  "revision": "acdd70ebdb83243a1a8b95725eb3c5eadd3cf39e",
+  "source_hashes": {
+    "attest.circom": "da224d86a04af86c5291fcbff93c07f8ccd105e2f4a5084b97fd83755ddf0590",
+    "merkleTree.circom": "ec17de35d2596170f1a6f431800bffd9cc90fe6e95f4130256f37559faca79f0",
+    "verifyKeySchnorrGroup.circom": "ef943680d80091da8ca0ab7cd4d584e62fce1d8b51a38a91fe75311e7c0c241d",
+    "input.json": "32432a40f3366e74c66aff1a61cb5f4cc2c100806c4592f0f82e1d7fad327f7f"
+  },
+  "driver_sha256": "0c17a5bfa51d80589d742ad8e35f92e1d169901f9c527c23c6fdf86a6d7f586c",
+  "protocol_sha256": "2498048b2cb80edd5b7784d3b35e1db87b8b6ae8cf250517846e61a7700d6c6f",
+  "package_lock_sha256": "5bd86f3942b6bf0ac51ea34549e5490a0b63bd0494e58ef8111782ff1f0c2945",
+  "node": "v24.15.0"
+}

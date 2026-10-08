@@ -1,0 +1,151 @@
+{
+  "steps": [
+    {
+      "step": "phase1-contribution",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "powersoftau",
+        "contribute",
+        "build/test.ptau",
+        "control/contributed.ptau",
+        "--name=local-test",
+        "-e=<fresh-local-entropy-not-recorded>"
+      ],
+      "exit_code": 0,
+      "seconds": 20.695684700011043
+    },
+    {
+      "step": "phase2-prepare",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "powersoftau",
+        "prepare",
+        "phase2",
+        "control/contributed.ptau",
+        "control/final.ptau"
+      ],
+      "exit_code": 0,
+      "seconds": 342.5949696000025
+    },
+    {
+      "step": "groth16-setup",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "setup",
+        "build/attest.r1cs",
+        "control/final.ptau",
+        "control/initial.zkey"
+      ],
+      "exit_code": 0,
+      "seconds": 14.705563099996652
+    },
+    {
+      "step": "zkey-contribution",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "zkey",
+        "contribute",
+        "control/initial.zkey",
+        "control/final.zkey",
+        "--name=local-test",
+        "-e=<fresh-local-entropy-not-recorded>"
+      ],
+      "exit_code": 0,
+      "seconds": 3.3434960000158753
+    },
+    {
+      "step": "key-export",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "zkey",
+        "export",
+        "verificationkey",
+        "control/final.zkey",
+        "control/vk.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5318821000109892
+    },
+    {
+      "step": "prove",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "prove",
+        "control/final.zkey",
+        "build/witness.wtns",
+        "control/proof.json",
+        "control/public.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4612829000107013
+    },
+    {
+      "step": "verify-original",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "control/vk.json",
+        "control/public.json",
+        "control/proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4815089000039734
+    },
+    {
+      "step": "verify-identical-inputs",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "control/vk.json",
+        "control/public.json",
+        "control/proof.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4768577000068035
+    },
+    {
+      "step": "verify-changed-key",
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "control/vk.json",
+        "control/changed-public.json",
+        "control/proof.json"
+      ],
+      "exit_code": 1,
+      "seconds": 0.47422809997806326
+    }
+  ],
+  "conclusion": {
+    "original_verified": true,
+    "repeated_inputs_verified": true,
+    "changed_public_key_rejected": true,
+    "public_inputs": 3,
+    "public_key_ic_points_nonidentity": true,
+    "local_test_setup_only": true
+  },
+  "generated_sha256": {
+    "control/changed-public.json": "9a6b070c59f35502be1cf05b0d5a90add0480ebe11541a2cdd44dfd72df93c43",
+    "control/contributed.ptau": "40cbc85f0e4072d3714d0351b1367ec6ddc958992febb7f30d21dd6a488a1bb8",
+    "control/final.ptau": "ad9db54fc3a9fcf9944efa213ce0035c6d5ea07fff009cc496c57758eef84e65",
+    "control/final.zkey": "63b618c5a2bf31be9cde98811e2e5d4ff446eb88008191347dbb229e8dea7e55",
+    "control/initial.zkey": "ff0605dc93f6916a0fc61904a7eea122a8af925f2ba8e897726c7163cda6bf55",
+    "control/proof.json": "a47d004d95a1a6cced5367e452fd7b48085b665613e25d09d971d53e0929513c",
+    "control/public.json": "88b17a02a72fedcd076e6c3012360f329ee60696a0394cdd7e7192da509997b3",
+    "control/vk.json": "dc76820a6053cc5537c0835846a45d1174cc0dc6fd44c487e39b29ff86d492cd"
+  }
+}

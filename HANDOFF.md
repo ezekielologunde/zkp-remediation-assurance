@@ -1,5 +1,13 @@
 # ZKP remediation assurance handoff
 
+## Latest execution results
+
+Read analysis/feasibility-report-v0.md. PIRANHAS pinned at 62bd2af3b7501ab7458a682d8849206537a86d9e, 313 source files hashed, no root license identified; do not vendor it. Source and proof binaries stay ignored. Static review found private challenge inputs in Circom/Noir single-device examples. Only Circom executed, using npm circom2 0.2.23 (compiler2.2.3), snarkjs0.7.6, circomlib2.0.5, Node24.15.0. Compilation produced 16,743 constraints; supplied witness passed. Public inputs are enabled,pubX,pubY. Do not equate an external request-label change with a cryptographically bound challenge or a complete attack.
+
+Initial benchmark-style setup omitted contributions and produced identity IC points, accepting a mutated public key. That negative control failed and is retained. A frozen amendment added local phase1 and zkey contributions. Corrected proof and identical-input repeat verified; pubX mutation rejected (exit1). These are local test parameters, not a secure ceremony. Independent verifier checked27 manifest entries and21 generated-file hashes plus source/driver inputs and public-signal order. Both run receipts and dependency lock are committed; generated witnesses/keys are not. No entropy was logged. No third-party report or contact was sent.
+
+Next: reproduce a second applicable backend and trace challenge/scope binding through the complete caller/verifier. Determine whether a benchmark simplification, an enforced application precondition, or a genuine contract mismatch explains the interface. No novelty clearance yet; generic timestamp/root composition remains rejected. Docker reports a Linux daemon available, but no Docker/HPC job was needed for this pilot. Frozen run directories refuse overwrites; use separate reproduction workspaces. Older no-proof statements below refer to zkSBOM itself.
+
 User authorized the next roadmap project after adaptive-deception-evaluation closed its novel-method route. Continue autonomously, but do not manufacture novelty or produce a manuscript before a contribution is established. No em dashes. Author: Ezekiel Ologunde, Independent Researcher, Boston, MA, USA, ologunde@bu.edu, no corresponding-author designation. Original work remains unlicensed. GitHub updates are authorized; journal submission is not.
 
 Read protocol/literature-audit-v0.md, threat-model-v0.md, and artifact-audit-plan-v0.md. Generic ZKP plus inventory/epoch/nonce is not cleared for development as a novel protocol. TrustBOM, VeriSBOM, zkSBOM, PIRANHAS, CRA semantics, and RATS overlap substantially. Incomplete SBOMs and contributor/scope semantics are acknowledged in prior work. Candidate empirical composition audit is conditional, not a validated gap.
