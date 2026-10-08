@@ -1,0 +1,16 @@
+[ 83%] Built target ozks
+[100%] Built target ozks-simple
+[ 77%] Built target ozks
+[ 92%] Built target ozks-simple
+[ 95%] Linking CXX executable ../../bin/ozks-simple-unit-tests
+/usr/bin/ld: warning: fp2_1271_AVX2.S.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: ../../lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<32ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+/usr/bin/ld: ../../lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<64ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+collect2: error: ld returned 1 exit status
+gmake[3]: *** [examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/build.make:120: bin/ozks-simple-unit-tests] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:441: examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:448: examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/rule] Error 2
+gmake: *** [Makefile:208: ozks-simple-unit-tests] Error 2

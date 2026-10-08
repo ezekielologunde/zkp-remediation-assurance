@@ -1,0 +1,23 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "8g",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\zkSBOM-source\\zksbom-verifier\\third_party\\oZKS,target=/source,readonly",
+    "--mount",
+    "type=volume,source=zkp-zksbom-native-v1,target=/work",
+    "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+    "bash",
+    "-c",
+    "set -eu; cp -a /source/. /work/; cd /work; dpkg-query -W; mkdir -p /work/shim; printf \"include(/usr/lib/x86_64-linux-gnu/cmake/flatbuffers/FlatBuffersConfig.cmake)\\nset(Flatbuffers_FOUND TRUE)\\nadd_executable(flatbuffers::flatc IMPORTED)\\nset_target_properties(flatbuffers::flatc PROPERTIES IMPORTED_LOCATION_RELEASE /usr/bin/flatc)\\n\" > /work/shim/FlatbuffersConfig.cmake; cmake -S . -B build -DFlatbuffers_DIR=/work/shim -DOZKS_BUILD_EXAMPLES=ON -DOZKS_BUILD_TESTS=ON; cmake --build build -j4; build/bin/ozks-simple-unit-tests --gtest_list_tests"
+  ],
+  "exit_code": 1,
+  "seconds": 5.01600000000326
+}

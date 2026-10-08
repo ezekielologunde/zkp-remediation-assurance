@@ -1,0 +1,9 @@
+{
+  "image": "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+  "inputs": {
+    "src\\run_zksbom_label_wrapper.py": "aa32e7e053b5181d93e4ce3993df38e42482a52282307d95261bae3b7ba7d240",
+    "data\\proof-sandbox\\zksbom-label-fixture-v0\\probe.cpp": "92a7f1eff0705c33246387e73232d68deff0be44e4c4e454412b36c77ae51e76",
+    "data\\zkSBOM-source\\zksbom-verifier\\cpp\\verify_wrapper.cpp": "5e49124600c328cac82e2fa4a5916a7502b306c05c0acc67dfb36e07aa466344",
+    "protocol\\zksbom-cli-v0.md": "8f084b6b7d4a4e9c38fb75e1ab03473156ed1af0ccd36275b0f6083c41ea3ede"
+  }
+}

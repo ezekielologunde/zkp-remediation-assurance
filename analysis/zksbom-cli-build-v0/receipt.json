@@ -1,0 +1,25 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--cpus",
+    "4",
+    "--memory",
+    "10g",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\zkSBOM-source\\zksbom-verifier,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\zksbom_system_build.rs,target=/build.rs,readonly",
+    "--mount",
+    "type=volume,source=zkp-zksbom-native-v2,target=/native,readonly",
+    "--mount",
+    "type=volume,source=zkp-zksbom-cli-v0,target=/work",
+    "sha256:e2e8b758f7f5567b7e5dd3557a4d66ef1a57d06fce725d9e04b83428392e431a",
+    "bash",
+    "-c",
+    "set -eu; cp -a /source/. /work/; cd /work; cp /build.rs build.rs; cp config/config_template.toml config/config.toml; CARGO_BUILD_JOBS=4 cargo build --locked --release; sha256sum target/release/zksbom-verifier"
+  ],
+  "exit_code": 0,
+  "seconds": 137.31200000000536
+}

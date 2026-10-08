@@ -1,0 +1,13 @@
+{
+  "image": "sha256:e2e8b758f7f5567b7e5dd3557a4d66ef1a57d06fce725d9e04b83428392e431a",
+  "inputs": {
+    "src\\run_zksbom_cli_cases.py": "09c23694f5c08ce61bada594007ccbff9a2d33a89dc33e63ea47745e2239d39a",
+    "src\\zksbom_cli_cases.py": "7fed3f75fe011345cbf58d9f173e7714093549a4466302410128cf13c9b85ee4",
+    "protocol\\zksbom-cli-v0.md": "8f084b6b7d4a4e9c38fb75e1ab03473156ed1af0ccd36275b0f6083c41ea3ede",
+    "data\\proof-sandbox\\zksbom-label-fixture-v0\\labels.json": "123947b1f8cb7a002a27272383b354efdc5b1c830af4a85443e04bda49ea2514",
+    "data\\proof-sandbox\\zksbom-label-wrapper-v1\\commitment.bin": "e4890b678197934410646bd3dede1dfe88115ad25e864390175b560478d1e6ee",
+    "data\\proof-sandbox\\zksbom-label-wrapper-v1\\member.bin": "9216a0d03cd7b1cde3c092f97c5065ceeb96701d03ecca678bb4f0f2a0e1c248",
+    "data\\proof-sandbox\\zksbom-label-wrapper-v1\\new-commitment.bin": "052ea7deab84dd64267e0c0749e2d098fc069e4aa12e61ea0b57b79104595dc5",
+    "data\\proof-sandbox\\zksbom-label-wrapper-v1\\nonmember.bin": "a0360db4f498b2fb28e33b23971ebb6c42535cd2ea6524c35506751a724ca31f"
+  }
+}

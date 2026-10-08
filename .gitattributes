@@ -21,3 +21,23 @@ src/verisbom_acceptance_cases.py -text
 src/verisbom_bundle_probe.rs -text
 src/verisbom_honest.py -text
 protocol/verisbom-output-binding-v0.md -text
+
+# Preserve exact zkSBOM frozen source/protocol input bytes.
+protocol/common-binding-audit-v1.md -text
+protocol/zksbom-cli-v0.md -text
+protocol/zksbom-native-v0.md -text
+protocol/zksbom-wrapper-v0.md -text
+protocol/zksbom-wrapper-v1.md -text
+src/build_zksbom_cli.py -text
+src/generate_zksbom_label_fixture.py -text
+src/run_zksbom_cli_cases.py -text
+src/run_zksbom_label_wrapper.py -text
+src/run_zksbom_native.py -text
+src/run_zksbom_native_v1.py -text
+src/run_zksbom_native_v2.py -text
+src/run_zksbom_wrapper.py -text
+src/run_zksbom_wrapper_v1.py -text
+src/verify_zksbom_execution.py -text
+src/zksbom_cli_cases.py -text
+src/zksbom_system_build.rs -text
+src/zksbom_wrapper_probe.cpp -text

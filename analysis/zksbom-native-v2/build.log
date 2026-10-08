@@ -1,0 +1,367 @@
+apt	2.8.3
+base-files	13ubuntu10.5
+base-passwd	3.6.3build1
+bash	5.2.21-2ubuntu4
+binutils	2.42-4ubuntu2.10
+binutils-common:amd64	2.42-4ubuntu2.10
+binutils-x86-64-linux-gnu	2.42-4ubuntu2.10
+bsdutils	1:2.39.3-9ubuntu6.6
+build-essential	12.10ubuntu1
+bzip2	1.0.8-5.1ubuntu0.1
+cmake	3.28.3-1build7
+cmake-data	3.28.3-1build7
+coreutils	9.4-3ubuntu6.3
+cpp	4:13.2.0-7ubuntu1
+cpp-13	13.3.0-6ubuntu2~24.04.1
+cpp-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04.1
+cpp-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+dash	0.5.12-6ubuntu5
+debconf	1.5.86ubuntu1
+debianutils	5.17build1
+default-libmysqlclient-dev:amd64	1.1.0build1
+diffutils	1:3.10-1ubuntu0.1
+dpkg	1.22.6ubuntu6.6
+dpkg-dev	1.22.6ubuntu6.6
+e2fsprogs	1.47.0-2.4~exp1ubuntu4.1
+findutils	4.9.0-5build1
+flatbuffers-compiler	2.0.8+dfsg1-6build1
+flatbuffers-compiler-dev:amd64	2.0.8+dfsg1-6build1
+g++	4:13.2.0-7ubuntu1
+g++-13	13.3.0-6ubuntu2~24.04.1
+g++-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04.1
+g++-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+gcc	4:13.2.0-7ubuntu1
+gcc-13	13.3.0-6ubuntu2~24.04.1
+gcc-13-base:amd64	13.3.0-6ubuntu2~24.04.1
+gcc-13-x86-64-linux-gnu	13.3.0-6ubuntu2~24.04.1
+gcc-14-base:amd64	14.2.0-4ubuntu2~24.04.1
+gcc-x86-64-linux-gnu	4:13.2.0-7ubuntu1
+googletest	1.14.0-1
+gpgv	2.4.4-2ubuntu17.6
+grep	3.11-4build1
+gzip	1.12-1ubuntu3.2
+hostname	3.23+nmu2ubuntu2
+init-system-helpers	1.66ubuntu1
+libacl1:amd64	2.3.2-1build1.1
+libapt-pkg6.0t64:amd64	2.8.3
+libarchive13t64:amd64	3.7.2-2ubuntu0.8
+libasan8:amd64	14.2.0-4ubuntu2~24.04.1
+libassuan0:amd64	2.5.6-1build1
+libatomic1:amd64	14.2.0-4ubuntu2~24.04.1
+libattr1:amd64	1:2.5.2-1ubuntu0.1
+libaudit-common	1:3.1.2-2.1build1.1
+libaudit1:amd64	1:3.1.2-2.1build1.1
+libbinutils:amd64	2.42-4ubuntu2.10
+libblkid1:amd64	2.39.3-9ubuntu6.6
+libbrotli1:amd64	1.1.0-2build2
+libbz2-1.0:amd64	1.0.8-5.1ubuntu0.1
+libc-bin	2.39-0ubuntu8.9
+libc-dev-bin	2.39-0ubuntu8.9
+libc6:amd64	2.39-0ubuntu8.9
+libc6-dev:amd64	2.39-0ubuntu8.9
+libcap-ng0:amd64	0.8.4-2build2
+libcap2:amd64	1:2.66-5ubuntu2.4
+libcc1-0:amd64	14.2.0-4ubuntu2~24.04.1
+libcom-err2:amd64	1.47.0-2.4~exp1ubuntu4.1
+libcrypt-dev:amd64	1:4.4.36-4build1
+libcrypt1:amd64	1:4.4.36-4build1
+libctf-nobfd0:amd64	2.42-4ubuntu2.10
+libctf0:amd64	2.42-4ubuntu2.10
+libcurl4t64:amd64	8.5.0-2ubuntu10.15
+libdb5.3t64:amd64	5.3.28+dfsg2-7
+libdebconfclient0:amd64	0.271ubuntu3
+libdpkg-perl	1.22.6ubuntu6.6
+libexpat1:amd64	2.6.1-2ubuntu0.6
+libexpat1-dev:amd64	2.6.1-2ubuntu0.6
+libext2fs2t64:amd64	1.47.0-2.4~exp1ubuntu4.1
+libffi8:amd64	3.4.6-1build1
+libflatbuffers-dev:amd64	2.0.8+dfsg1-6build1
+libflatbuffers2:amd64	2.0.8+dfsg1-6build1
+libgcc-13-dev:amd64	13.3.0-6ubuntu2~24.04.1
+libgcc-s1:amd64	14.2.0-4ubuntu2~24.04.1
+libgcrypt20:amd64	1.10.3-2ubuntu0.2
+libgdbm-compat4t64:amd64	1.23-5.1build1
+libgdbm6t64:amd64	1.23-5.1build1
+libgmp10:amd64	2:6.3.0+dfsg-2ubuntu6.1
+libgnutls30t64:amd64	3.8.3-1.1ubuntu3.6
+libgomp1:amd64	14.2.0-4ubuntu2~24.04.1
+libgpg-error0:amd64	1.47-3build2.1
+libgprofng0:amd64	2.42-4ubuntu2.10
+libgssapi-krb5-2:amd64	1.20.1-6ubuntu2.10
+libgtest-dev:amd64	1.14.0-1
+libhogweed6t64:amd64	3.9.1-2.2build1.1
+libhwasan0:amd64	14.2.0-4ubuntu2~24.04.1
+libicu74:amd64	74.2-1ubuntu3.1
+libidn2-0:amd64	2.3.7-2build1.1
+libisl23:amd64	0.26-3build1.1
+libitm1:amd64	14.2.0-4ubuntu2~24.04.1
+libjansson4:amd64	2.14-2build2
+libjsoncpp25:amd64	1.9.5-6build1
+libk5crypto3:amd64	1.20.1-6ubuntu2.10
+libkeyutils1:amd64	1.6.3-3build1
+libkrb5-3:amd64	1.20.1-6ubuntu2.10
+libkrb5support0:amd64	1.20.1-6ubuntu2.10
+libldap2:amd64	2.6.10+dfsg-0ubuntu0.24.04.1
+liblsan0:amd64	14.2.0-4ubuntu2~24.04.1
+libltdl7:amd64	2.4.7-7build1
+liblz4-1:amd64	1.9.4-1build1.1
+liblzma5:amd64	5.6.1+really5.4.5-1ubuntu0.3
+libmd0:amd64	1.1.0-2build1.1
+libmount1:amd64	2.39.3-9ubuntu6.6
+libmpc3:amd64	1.3.1-1build1.1
+libmpfr6:amd64	4.2.1-1build1.1
+libmsgsl-dev	4.0.0-3
+libmysqlclient-dev	8.0.46-0ubuntu0.24.04.4
+libmysqlclient21:amd64	8.0.46-0ubuntu0.24.04.4
+libncursesw6:amd64	6.4+20240113-1ubuntu2.2
+libnettle8t64:amd64	3.9.1-2.2build1.1
+libnghttp2-14:amd64	1.59.0-1ubuntu0.4
+libnpth0t64:amd64	1.6-3.1build1
+libodbc2:amd64	2.3.12-1ubuntu0.24.04.1
+libp11-kit0:amd64	0.25.3-4ubuntu2.2
+libpam-modules:amd64	1.5.3-5ubuntu5.7
+libpam-modules-bin	1.5.3-5ubuntu5.7
+libpam-runtime	1.5.3-5ubuntu5.7
+libpam0g:amd64	1.5.3-5ubuntu5.7
+libpcre16-3:amd64	2:8.39-15build1
+libpcre2-8-0:amd64	10.42-4ubuntu2.1
+libpcre3:amd64	2:8.39-15build1
+libpcre3-dev:amd64	2:8.39-15build1
+libpcre32-3:amd64	2:8.39-15build1
+libpcrecpp0v5:amd64	2:8.39-15build1
+libperl5.38t64:amd64	5.38.2-3.2ubuntu0.6
+libpoco-dev:amd64	1.11.0-4.1build2
+libpocoactiverecord80t64:amd64	1.11.0-4.1build2
+libpococrypto80t64:amd64	1.11.0-4.1build2
+libpocodata80t64:amd64	1.11.0-4.1build2
+libpocodatamysql80t64:amd64	1.11.0-4.1build2
+libpocodataodbc80t64:amd64	1.11.0-4.1build2
+libpocodatapostgresql80t64:amd64	1.11.0-4.1build2
+libpocodatasqlite80t64:amd64	1.11.0-4.1build2
+libpocoencodings80t64:amd64	1.11.0-4.1build2
+libpocofoundation80t64:amd64	1.11.0-4.1build2
+libpocojson80t64:amd64	1.11.0-4.1build2
+libpocojwt80t64:amd64	1.11.0-4.1build2
+libpocomongodb80t64:amd64	1.11.0-4.1build2
+libpoconet80t64:amd64	1.11.0-4.1build2
+libpoconetssl80t64:amd64	1.11.0-4.1build2
+libpocoredis80t64:amd64	1.11.0-4.1build2
+libpocoutil80t64:amd64	1.11.0-4.1build2
+libpocoxml80t64:amd64	1.11.0-4.1build2
+libpocozip80t64:amd64	1.11.0-4.1build2
+libpq5:amd64	16.15-0ubuntu0.24.04.1
+libproc2-0:amd64	2:4.0.4-4ubuntu3.3
+libpsl5t64:amd64	0.21.2-1.1build1
+libpython3-stdlib:amd64	3.12.3-0ubuntu2.1
+libpython3.12-minimal:amd64	3.12.3-1ubuntu0.17
+libpython3.12-stdlib:amd64	3.12.3-1ubuntu0.17
+libquadmath0:amd64	14.2.0-4ubuntu2~24.04.1
+libreadline8t64:amd64	8.2-4build1
+librhash0:amd64	1.4.3-3build1
+librtmp1:amd64	2.4+20151223.gitfa8646d.1-2build7
+libsasl2-2:amd64	2.1.28+dfsg1-5ubuntu3.1
+libsasl2-modules-db:amd64	2.1.28+dfsg1-5ubuntu3.1
+libseccomp2:amd64	2.5.5-1ubuntu3.1
+libselinux1:amd64	3.5-2ubuntu2.1
+libsemanage-common	3.5-1build5
+libsemanage2:amd64	3.5-1build5
+libsepol2:amd64	3.5-2build1
+libsframe1:amd64	2.42-4ubuntu2.10
+libsmartcols1:amd64	2.39.3-9ubuntu6.6
+libsqlite3-0:amd64	3.45.1-1ubuntu2.8
+libsqlite3-dev:amd64	3.45.1-1ubuntu2.8
+libss2:amd64	1.47.0-2.4~exp1ubuntu4.1
+libssh-4:amd64	0.10.6-2ubuntu0.5
+libssl-dev:amd64	3.0.13-0ubuntu3.16
+libssl3t64:amd64	3.0.13-0ubuntu3.16
+libstdc++-13-dev:amd64	13.3.0-6ubuntu2~24.04.1
+libstdc++6:amd64	14.2.0-4ubuntu2~24.04.1
+libsystemd0:amd64	255.4-1ubuntu8.17
+libtasn1-6:amd64	4.19.0-3ubuntu0.24.04.2
+libtinfo6:amd64	6.4+20240113-1ubuntu2.2
+libtsan2:amd64	14.2.0-4ubuntu2~24.04.1
+libubsan1:amd64	14.2.0-4ubuntu2~24.04.1
+libudev1:amd64	255.4-1ubuntu8.17
+libunistring5:amd64	1.1-2build1.1
+libuuid1:amd64	2.39.3-9ubuntu6.6
+libuv1t64:amd64	1.48.0-1.1build1
+libxml2:amd64	2.9.14+dfsg-1.3ubuntu3.9
+libxxhash0:amd64	0.8.2-2build1
+libzstd-dev:amd64	1.5.5+dfsg2-2build1.1
+libzstd1:amd64	1.5.5+dfsg2-2build1.1
+linux-libc-dev:amd64	6.8.0-146.146
+login	1:4.13+dfsg1-4ubuntu3.2
+logsave	1.47.0-2.4~exp1ubuntu4.1
+lto-disabled-list	47
+make	4.3-4.1build2
+mawk	1.3.4.20240123-1build1
+media-types	10.1.0
+mount	2.39.3-9ubuntu6.6
+mysql-common	5.8+1.1.0build1
+ncurses-base	6.4+20240113-1ubuntu2.2
+ncurses-bin	6.4+20240113-1ubuntu2.2
+netbase	6.4
+passwd	1:4.13+dfsg1-4ubuntu3.2
+patch	2.7.6-7build3
+perl	5.38.2-3.2ubuntu0.6
+perl-base	5.38.2-3.2ubuntu0.6
+perl-modules-5.38	5.38.2-3.2ubuntu0.6
+procps	2:4.0.4-4ubuntu3.3
+python3	3.12.3-0ubuntu2.1
+python3-minimal	3.12.3-0ubuntu2.1
+python3.12	3.12.3-1ubuntu0.17
+python3.12-minimal	3.12.3-1ubuntu0.17
+readline-common	8.2-4build1
+rpcsvc-proto	1.4.2-0ubuntu7
+sed	4.9-2ubuntu0.24.04.1
+sensible-utils	0.0.22
+sysvinit-utils	3.08-6ubuntu3
+tar	1.35+dfsg-3ubuntu0.4
+tzdata	2026c-0ubuntu0.24.04.1
+ubuntu-keyring	2023.11.28.1
+unminimize	0.2.1
+util-linux	2.39.3-9ubuntu6.6
+xz-utils	5.6.1+really5.4.5-1ubuntu0.3
+zlib1g:amd64	1:1.3.dfsg-3.1ubuntu2.2
+zlib1g-dev:amd64	1:1.3.dfsg-3.1ubuntu2.2
+-- Build type (CMAKE_BUILD_TYPE): Release
+-- The CXX compiler identification is GNU 13.3.0
+-- The C compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Compile oZKS for Open Enclave: OFF
+-- Compile oZKS with support for the MSVC profiler: OFF
+-- Compile oZKS using NIST-P256 (OpenSSL) for VRF implementation: OFF
+-- Compile oZKS using SHA2 (OpenSSL): OFF
+-- Intrinsics header found (x86intrin.h)
+-- Compile oZKS using intrinsics: ON
+-- Microsoft GSL: found
+-- Flatbuffers: found
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+-- Found PCRE: /usr/lib/x86_64-linux-gnu/libpcre.so  
+-- Poco: found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- GTest: found
+-- FourQlib optimization: arch=AMD64
+-- FourQlib optimization: simd=AVX2
+-- Looking for a ASM compiler
+-- Looking for a ASM compiler - /usr/bin/cc
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- FourQlib optimization: asm=ON
+-- Build type (CMAKE_BUILD_TYPE): Release
+-- Configuring done (2.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /work/build
+[  4%] Building CXX object CMakeFiles/ozks.dir/oZKS/ct_node.cpp.o
+[  4%] Building CXX object CMakeFiles/ozks.dir/oZKS/compressed_trie.cpp.o
+[  4%] Building CXX object CMakeFiles/ozks.dir/oZKS/commitment.cpp.o
+[  6%] Building CXX object CMakeFiles/ozks.dir/oZKS/ct_node_linked.cpp.o
+[  7%] Building CXX object CMakeFiles/ozks.dir/oZKS/ct_node_stored.cpp.o
+[  9%] Building CXX object CMakeFiles/ozks.dir/oZKS/ecpoint.cpp.o
+[ 10%] Building CXX object CMakeFiles/ozks.dir/oZKS/insert_result.cpp.o
+[ 12%] Building CXX object CMakeFiles/ozks.dir/oZKS/ozks_config.cpp.o
+[ 13%] Building CXX object CMakeFiles/ozks.dir/oZKS/partial_label.cpp.o
+[ 15%] Building CXX object CMakeFiles/ozks.dir/oZKS/query_result.cpp.o
+[ 16%] Building CXX object CMakeFiles/ozks.dir/oZKS/serialization_helpers.cpp.o
+[ 18%] Building CXX object CMakeFiles/ozks.dir/oZKS/utilities.cpp.o
+[ 20%] Building CXX object CMakeFiles/ozks.dir/oZKS/version.cpp.o
+[ 21%] Building CXX object CMakeFiles/ozks.dir/oZKS/vrf.cpp.o
+[ 23%] Building CXX object CMakeFiles/ozks.dir/oZKS/vrf_cache.cpp.o
+[ 24%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/crypto_util.c.o
+/work/oZKS/fourq/crypto_util.c: In function 'decode':
+/work/oZKS/fourq/crypto_util.c:112:9: warning: 'fp2neg1271' accessing 32 bytes in a region of size 16 [-Wstringop-overflow=]
+  112 |         fp2neg1271(P->x);
+      |         ^~~~~~~~~~~~~~~~
+/work/oZKS/fourq/crypto_util.c:112:9: note: referencing argument 1 of type 'digit_t[2][2]' {aka 'long unsigned int[2][2]'}
+In file included from /work/oZKS/fourq/crypto_util.c:10:
+/work/oZKS/fourq/FourQ_internal.h:316:6: note: in a call to function 'fp2neg1271'
+  316 | void fp2neg1271(f2elm_t a);
+      |      ^~~~~~~~~~
+[ 26%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/eccp2_core.c.o
+[ 27%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/eccp2_no_endo.c.o
+[ 29%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/eccp2.c.o
+[ 30%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/hash_to_curve.c.o
+[ 32%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/random.c.o
+[ 33%] Building C object CMakeFiles/ozks.dir/oZKS/fourq/amd64/consts.c.o
+[ 35%] Building ASM object CMakeFiles/ozks.dir/oZKS/fourq/amd64/fp2_1271_AVX2.S.o
+[ 36%] Building CXX object CMakeFiles/ozks.dir/oZKS/hash/hash.cpp.o
+[ 38%] Building CXX object CMakeFiles/ozks.dir/oZKS/providers/query_provider.cpp.o
+[ 40%] Building CXX object CMakeFiles/ozks.dir/oZKS/providers/trie_info_provider.cpp.o
+[ 41%] Building CXX object CMakeFiles/ozks.dir/oZKS/providers/update_provider.cpp.o
+[ 43%] Building CXX object CMakeFiles/ozks.dir/oZKS/storage/memory_storage.cpp.o
+[ 44%] Building CXX object CMakeFiles/ozks.dir/oZKS/storage/memory_storage_batch_inserter.cpp.o
+[ 46%] Building CXX object CMakeFiles/ozks.dir/oZKS/storage/memory_storage_cache.cpp.o
+[ 47%] Linking CXX static library lib/libozks-1.6.a
+[ 47%] Built target ozks
+[ 50%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/commitment_tests.cpp.o
+[ 50%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/unit_tests_runner.cpp.o
+[ 52%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple.dir/ozks.cpp.o
+[ 53%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/ozks_distributed.cpp.o
+[ 55%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/compressed_trie_tests.cpp.o
+[ 56%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/config_tests.cpp.o
+[ 58%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/ozks_config_dist.cpp.o
+[ 60%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/ct_node_tests.cpp.o
+[ 61%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple.dir/providers/local_query_provider.cpp.o
+[ 63%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/common_storage.cpp.o
+[ 64%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/dist_query_provider.cpp.o
+[ 66%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple.dir/providers/local_trie_info_provider.cpp.o
+[ 67%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple.dir/providers/local_update_provider.cpp.o
+[ 69%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/dist_trie_info_provider.cpp.o
+[ 70%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/dist_update_provider.cpp.o
+[ 72%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple.dir/providers/mapped_tries.cpp.o
+[ 73%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/ecpoint_tests.cpp.o
+[ 75%] Linking CXX static library ../../lib/libozks-simple.a
+[ 75%] Built target ozks-simple
+[ 76%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/querier/querier.cpp.o
+[ 78%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/unit-tests/unit_tests_runner.cpp.o
+[ 80%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/insert_result_tests.cpp.o
+[ 81%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed.dir/providers/updater/updater.cpp.o
+[ 83%] Building CXX object examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/unit-tests/ozks_tests.cpp.o
+[ 84%] Linking CXX static library ../../lib/libozks-distributed.a
+[ 84%] Built target ozks-distributed
+[ 86%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/p256point_tests.cpp.o
+[ 87%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/partial_label_tests.cpp.o
+[ 89%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/query_result_tests.cpp.o
+[ 90%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/utilities_tests.cpp.o
+[ 92%] Building CXX object CMakeFiles/unit_tests.dir/unit-tests/vrf_tests.cpp.o
+[ 93%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed-unit-tests.dir/unit-tests/unit_tests_runner.cpp.o
+[ 95%] Building CXX object examples/ozks_distributed/CMakeFiles/ozks-distributed-unit-tests.dir/unit-tests/ozks_dist_tests.cpp.o
+[ 96%] Linking CXX executable bin/unit_tests
+/usr/bin/ld: warning: fp2_1271_AVX2.S.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<32ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+/usr/bin/ld: lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<64ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/unit_tests.dir/build.make:279: bin/unit_tests] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:388: CMakeFiles/unit_tests.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/work/examples/ozks_distributed/unit-tests/ozks_dist_tests.cpp: In function 'std::vector<std::vector<std::byte> > {anonymous}::RandomInsertTestCore(ozks_distributed::OZKS&, size_t)':
+/work/examples/ozks_distributed/unit-tests/ozks_dist_tests.cpp:363:9: error: 'this_thread' has not been declared
+  363 |         this_thread::sleep_for(chrono::seconds(10));
+      |         ^~~~~~~~~~~
+gmake[2]: *** [examples/ozks_distributed/CMakeFiles/ozks-distributed-unit-tests.dir/build.make:90: examples/ozks_distributed/CMakeFiles/ozks-distributed-unit-tests.dir/unit-tests/ozks_dist_tests.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:494: examples/ozks_distributed/CMakeFiles/ozks-distributed-unit-tests.dir/all] Error 2
+[ 98%] Linking CXX executable ../../bin/ozks-simple-unit-tests
+/usr/bin/ld: warning: fp2_1271_AVX2.S.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: ../../lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<32ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm32EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+/usr/bin/ld: ../../lib/libozks-1.6.a(hash.cpp.o): in function `void ozks::hash::hash<64ul>(std::byte const*, unsigned long, std::byte*)':
+hash.cpp:(.text._ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_[_ZN4ozks4hash4hashILm64EEEvPKSt4bytemPS2_]+0x1c): undefined reference to `blake2b'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/build.make:120: bin/ozks-simple-unit-tests] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:441: examples/ozks_simple/CMakeFiles/ozks-simple-unit-tests.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

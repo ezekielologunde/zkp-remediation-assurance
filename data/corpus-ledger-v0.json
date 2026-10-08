@@ -37,10 +37,10 @@
       "paper": "https://arxiv.org/html/2605.00076v1",
       "artifact": "https://github.com/chains-project/zkSBOM",
       "revision": "0bb63acc24f70e3480615696266963023b128275",
-      "status": "source_assessed_execution_pending",
+      "status": "executed_native_and_cli_controls",
       "relationship": "Separate artifact",
-      "evidence": "data/zksbom-contract-audit.json",
-      "limits": "oZKS native dependencies and proof-producing application adapter not built; no cryptographic result"
+      "evidence": "analysis/zksbom-execution-report.md",
+      "limits": "Default oZKS native proofs and original Rust application; build-only linking adjustments; no operator deployment; empty/missing-label behavior does not establish caller exploitability; upstream tests not passed"
     },
     {
       "id": "verisbom",

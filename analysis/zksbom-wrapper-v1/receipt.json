@@ -1,0 +1,33 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "8g",
+    "--mount",
+    "type=volume,source=zkp-zksbom-native-v2,target=/work",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\zksbom_wrapper_probe.cpp,target=/probe.cpp,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\zkSBOM-source\\zksbom-verifier\\cpp,target=/wrapper,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zksbom-wrapper-v1,target=/out",
+    "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+    "bash",
+    "-c",
+    "set -eu; cd /work; cmake --build build --target ozks-simple -j4; gcc -O2 -c oZKS/hash/blake2b.c -o /work/blake2b.o; g++ -std=c++17 -O2 -I/work -I/work/build -I/wrapper /probe.cpp /wrapper/verify_wrapper.cpp build/lib/libozks-simple.a build/lib/libozks-1.6.a /work/blake2b.o -lPocoFoundation -lflatbuffers -lpthread -o /work/wrapper-probe; sha256sum /work/wrapper-probe; /work/wrapper-probe"
+  ],
+  "exit_code": 0,
+  "seconds": 5.51600000000326,
+  "generated": {
+    "data\\proof-sandbox\\zksbom-wrapper-v1\\commitment.bin": "2750ad8dab7e7e1cd97b6f7ccb657146d34ba9de874931af8b347837de4454b7",
+    "data\\proof-sandbox\\zksbom-wrapper-v1\\member.bin": "bbfae7e8b1f0bfc39b0558ea7c636d39063a5ef366d46ca944e2764f838f61b4",
+    "data\\proof-sandbox\\zksbom-wrapper-v1\\new-commitment.bin": "8f9ce49b89aee8243525582442a6fa6079b3f879f70e6fc7ddeb7e3027f202a7",
+    "data\\proof-sandbox\\zksbom-wrapper-v1\\nonmember.bin": "b3b1b5ea36efe5efa4da4d649e93ae4e73990a4cf282b1a6877e81fb41bf7038"
+  }
+}

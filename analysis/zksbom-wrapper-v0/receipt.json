@@ -1,0 +1,28 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "8g",
+    "--mount",
+    "type=volume,source=zkp-zksbom-native-v2,target=/work",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\zksbom_wrapper_probe.cpp,target=/probe.cpp,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\zkSBOM-source\\zksbom-verifier\\cpp,target=/wrapper,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zksbom-wrapper-v0,target=/out",
+    "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+    "bash",
+    "-c",
+    "set -eu; cd /work; cmake --build build --target ozks-simple ozks-simple-unit-tests -j4; build/bin/ozks-simple-unit-tests --gtest_filter=OZKSTests.QueryTest:OZKSTests.InsertTest; g++ -std=c++17 -O2 -I/work -I/work/build -I/wrapper /probe.cpp /wrapper/verify_wrapper.cpp build/lib/libozks-simple.a build/lib/libozks-1.6.a -lPocoFoundation -lflatbuffers -lpthread -o /work/wrapper-probe; sha256sum /work/wrapper-probe; /work/wrapper-probe"
+  ],
+  "exit_code": 2,
+  "seconds": 1.2969999999913853,
+  "generated": {}
+}

@@ -1,0 +1,9 @@
+{
+  "image": "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+  "inputs": {
+    "src\\run_zksbom_wrapper.py": "39bf3cbb974dcae3724f992fe8b697defa55d4c4cf690f453c4c7f0d6680cb61",
+    "src\\zksbom_wrapper_probe.cpp": "aa3542c1b65d12f8b260941ed12faf395971cf513031109e4165c964f70c5ef7",
+    "data\\zkSBOM-source\\zksbom-verifier\\cpp\\verify_wrapper.cpp": "5e49124600c328cac82e2fa4a5916a7502b306c05c0acc67dfb36e07aa466344",
+    "protocol\\zksbom-wrapper-v0.md": "e814252683135fe72e909fb0511581a90d27c0823b47538fdd154d464be5df35"
+  }
+}

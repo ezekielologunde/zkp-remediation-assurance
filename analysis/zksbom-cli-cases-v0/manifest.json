@@ -1,0 +1,12 @@
+{
+  "cases.json": "59a8cc664d1c6e0d5aedc9a865b485da824379436b1981924eff6b965627166b",
+  "empty.log": "341c2586694fcbbad8fc127c9250df0e9d4c1fabaef0d7495eb7bb657bc9f18e",
+  "execution.log": "c2743ec3f2eef2628feb61c66aaa5bb0d589d479b35015c0a30c33b80df4c708",
+  "freeze.json": "4985212593f864c9b0162e604769bfeaf1962fe3ac0d6cd06f929d9de845bb18",
+  "member.log": "7e9c9cba728bc95942017b1f2b74f04fa597d20ac2e902c0735a9c60e20a5c48",
+  "missing_label.log": "355206def84b7eba1cb43d982783fa0c505199d67c4e7912bbf83f9b32c9ca1c",
+  "nonmember.log": "f4b397468966b7737b8257c8622dfe041e01ce7b55a80fe62ac34b67fead8fc1",
+  "receipt.json": "808092f24af3850ecbe4f17407bc113a3848d69345d2b29beb30ff8b723bef0a",
+  "wrong_commitment.log": "b0e5bb74d3ffd2c6c8cdf337a96d9fe02c31dc4414ac4b9a7a9f6ecf3f5314ce",
+  "wrong_label.log": "1604bbf91c65cb23677110936a2e9f976626eec811f35692975c8a049f25492d"
+}

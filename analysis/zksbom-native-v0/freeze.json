@@ -1,0 +1,8 @@
+{
+  "image": "sha256:0a2bb8dae325e682bb307790f9e906aed096a934904395430618f5bda1d9efbd",
+  "inputs": {
+    "src\\run_zksbom_native.py": "6faf31b2a35f8f5a6c493db6b62376db3e749d43741cf509d92a9fe972dd9eb7",
+    "protocol\\zksbom-native-v0.md": "58fa3dde7562415282e736bdfe6143ee926107701893673246bc03ca97a741f9",
+    "data\\zksbom-contract-audit.json": "3d509be73602d04603ea85198586b3037ea8ac4f9bd3a093b9a8297f960fd809"
+  }
+}

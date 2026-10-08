@@ -1,0 +1,5 @@
+# zkSBOM CLI build and control amendment
+
+Build original Rust verifier with its archived Cargo.lock and unchanged src/ and C++ wrapper. Replace only build.rs in a disposable volume with src/zksbom_system_build.rs to link already built native oZKS and distro Poco instead of vcpkg. Preserve original sources and hash replacement. This environment deviation precludes byte-for-byte upstream build claims. No operator service, GitHub credential or external advisory lookup.
+
+For application controls, generate native proofs using dependency hashes computed by independent Python Blake2b-256, consistent with the archived hasher formula. Test honest member, honest nonmember, wrong dependency label, omitted dependency label, wrong commitment and empty proof file. Record boolean output and membership separately from exit code. Missing-label or empty-file acceptance does not alone prove a vulnerability without a promised nonempty authenticated query obligation. Strong comparison checks nonempty detail count and caller-expected dependency before interpreting membership. Tests are exploratory, specified after source inspection and earlier wrapper results.

@@ -1,0 +1,21 @@
+{
+  "image": "sha256:e2e8b758f7f5567b7e5dd3557a4d66ef1a57d06fce725d9e04b83428392e431a",
+  "inputs": {
+    "src\\build_zksbom_cli.py": "6685896edf0bbb1f1755e50456ad61e81c9be70fad2b8f70cb03c9e222958dee",
+    "src\\zksbom_system_build.rs": "57496ad04f53e5829183670539f039bd0cbdd9f1b4e06f136dc47ddf300644bc",
+    "protocol\\zksbom-cli-v0.md": "8f084b6b7d4a4e9c38fb75e1ab03473156ed1af0ccd36275b0f6083c41ea3ede",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\cli.rs": "af285a610e893c3e75cd37c562120aea6cc46465f7680082665b92247a4fb392",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\config.rs": "d6520732d3a255180a59112821e2df3f4b03e063290803dfa69b5c54e51c13f9",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\hasher.rs": "4ab621ecb89370d71a16d88a0633cb6795ae69b01d05a7f94abae9ff6b19479b",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\lib.rs": "e2a74d398e44392500b7b237f5e07ad991a360b213ff2763fb4de58d3f1bd7ec",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\main.rs": "2be0ef84257a82a8dcc4c58d370e6000127241c978e307c6500fb1a9bd3d77ed",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\method\\merkle_patricia_trie.rs": "e031155a30808c352fb32777b32631c115dd6453644e234916df849522cfa35a",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\method\\merkle_tree.rs": "f88f956b8f1b48d43ed51236cf6dd6d21f424b747c65917afe5fb05eb79f212d",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\method\\method_handler.rs": "6db04b4e264973548da20cd17719647d0ff48961d788815d0664cfa898f9251a",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\method\\ozks.rs": "9be84f8d10b61c0e64406ae1806760d1cacd25b720e1226a4f83a955fa2d1b58",
+    "data\\zkSBOM-source\\zksbom-verifier\\src\\method\\sparse_merkle_tree.rs": "013b3b966a3bd4c0f07c5de92828bc887db63e69cd1849056fb0103b10e67621",
+    "data\\zkSBOM-source\\zksbom-verifier\\Cargo.lock": "b6d4989632b3c92994674cd9f3568ae51d50dbfddada8f57432feeb2553a3636",
+    "data\\zkSBOM-source\\zksbom-verifier\\Cargo.toml": "ad61aabd41c1a32e576192337e9c517870915293cb6244f5abd7fe6b22a5e29f",
+    "data\\zkSBOM-source\\zksbom-verifier\\build.rs": "fefd058c0da438cd4d5404296ef8a16178ad993a0674bc25b5596b18846b8e17"
+  }
+}

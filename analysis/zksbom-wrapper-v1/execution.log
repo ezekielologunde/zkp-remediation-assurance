@@ -1,0 +1,9 @@
+[ 83%] Built target ozks
+[100%] Built target ozks-simple
+/usr/bin/ld: warning: fp2_1271_AVX2.S.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+0fab882aeee74e158c19338073c90cd9f0c6902d8efc39542d62ef69bc382013  /work/wrapper-probe
+member result=0 expected=0 key_match=1
+nonmember result=1 expected=1 key_match=1
+stale_proof_new_commitment result=2 expected=2 key_match=1
+THREE_WRAPPER_CONTROLS_PASSED
