@@ -1,0 +1,5 @@
+# Setup-control amendment, before second proof run
+
+The first local pilot accepted a proof even after public-key input mutation. Its verification key has all four IC points equal to the identity [0,1,0]. The benchmark-style initial setup, which omitted contributions, therefore did not provide a usable public-input binding control in this execution. Preserve its receipts and do not infer an application vulnerability from that acceptance.
+
+Repeat only the setup/prove/verify portion, reusing the compiled circuit and checked witness. Add a fresh local Powers-of-Tau contribution before phase-2 preparation and a fresh zkey contribution after Groth16 setup. Do not log entropy or claim a production ceremony; the same local operator performs all setup steps. Record dependency and input hashes. Check that public-key IC points are not identity, then repeat original verification, identical-input verification, and a pubX mutation. Only a successful rejection control permits discussing the compiled example's public-input boundary. This is a diagnosed setup deviation, not a replacement for the original failed run or a complete protocol reproduction.
