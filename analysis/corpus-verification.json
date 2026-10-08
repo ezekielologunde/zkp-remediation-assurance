@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "screened_papers": 5,
+  "executed_systems": 3,
+  "pending_systems": 2,
+  "zksbom_source_hashes": 7,
+  "ozks_dependency_hashes": 179,
+  "verisbom_source_hashes": 51,
+  "verisbom_archive_hash": true,
+  "zra_analyzer_hashes": 11,
+  "limitations": "Purposive sample; no prevalence or independence claim"
+}

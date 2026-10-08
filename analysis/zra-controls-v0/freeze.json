@@ -1,0 +1,14 @@
+{
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\generate_witness.js": "aa167b25f664beab194149687479f502e69c008a8d7ac0a109ce103e86dad2a7",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\good_input.json": "0add05f979c8b8f952aaea2a79d68e39690429c43a5235f59a06a84923c1e7f8",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\proof.json": "eafddf8e45fdf5b6966b56bf718a59b9b68ae18a49b93a15b8bf64648a1a10ec",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\public.json": "cd16d8d1ea6377f2e46807c12c9ecc32da2da3327fa0f4e00cdbeaa97132eaab",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\verification_key.json": "0391612cf19989383f9be2311a698096ad68062425e5471f9ae4b23849656224",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\witness.wtns": "4bdd76df1637b5a5ca0404bae98f3442382be3b33aa991730145e267930372cf",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\witness_calculator.js": "4636b72c23b70f69fecb11e8568ae7cb572a2f70a8718acbdae346bbf0914da5",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\zRA.wasm": "7bac2d4e28b7c6c391fae9646f770c7076358fb6e77bed44eebef3b0e5d1059f",
+  "data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\zRA.zkey": "c3bbad085cc0cf62c5ddbeb791e6223955b93d1b6e104e8692682dd72ff5f5cd",
+  "src\\run_zra_controls.py": "e956419c211efcca40834657e39c41267befca4e9bf8ac75f691230e24365ba4",
+  "protocol\\zra-controls-v0.md": "eccffe791ebe942b48ae8f807cd0fe612c0f16fe9fb1f5b967a42ed1d27a01b5",
+  "data\\proof-sandbox\\package-lock.json": "5bd86f3942b6bf0ac51ea34549e5490a0b63bd0494e58ef8111782ff1f0c2945"
+}

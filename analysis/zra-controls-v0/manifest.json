@@ -1,0 +1,11 @@
+{
+  "changed-challenge.log": "f0e738359e046add31c62fe2861d6e0cf2f4dc09c311a54ce678c9cd79bdd70a",
+  "changed-devAddr.log": "f0e738359e046add31c62fe2861d6e0cf2f4dc09c311a54ce678c9cd79bdd70a",
+  "changed-response.log": "092bd85c19b3d72892506ba04b8de512f870953ca79d76c87b3bc3b2eb090fac",
+  "changed-root.log": "f0e738359e046add31c62fe2861d6e0cf2f4dc09c311a54ce678c9cd79bdd70a",
+  "freeze.json": "772d0c23fa1d94443faf90f8c22f344936fc3319aa27778988e9af1fa89e1917",
+  "prove.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+  "receipt.json": "3bcd2b71d674a58d33d8f5cf4880d94e607369d549c58f48af29fcd943cfcaa7",
+  "verify.log": "f1dbf617f481593ff4b982459a4d9f6a6a78e669f9e360cb08b1de2b52ad8316",
+  "witness.log": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+}

@@ -1,0 +1,3 @@
+# zRA controls v0
+
+Use pinned upstream ra40 prebuilt witness generator, WASM and proving/verification keys, and good_input.json. Generate a fresh positive witness and proof, verify it, check exact three public values against fixture root/devAddr/challenge, then mutate each public value independently by one. All three must reject. Mutate response by one with original root/path and require witness failure. No blockchain deployment or transaction. This reproduces shipped binaries, not a fresh source-to-binary correspondence or trusted ceremony. Preserve original source; third-party binaries and proofs remain ignored. The public root/challenge contract is traced separately through attest.sol. No test of global security or current live deployment.

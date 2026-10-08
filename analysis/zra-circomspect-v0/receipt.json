@@ -1,0 +1,29 @@
+{
+  "exit_code": 0,
+  "seconds": 1.3280000000086147,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "zkp-circomspect-v0",
+    "--cpus",
+    "4",
+    "--memory",
+    "6g",
+    "--env",
+    "CARGO_BUILD_JOBS=4",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\circomspect-source,target=/source,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox,target=/box,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\zra-circomspect-v0,target=/out",
+    "--mount",
+    "type=volume,source=zkp-circomspect-work-v0,target=/work",
+    "sha256:140bdd65ade4d82dc3038021f41b5bb17564f0395e10f94b8493008772ae7eca",
+    "bash",
+    "-c",
+    "set -eu; cd /work; sha256sum target/release/circomspect; set +e; target/release/circomspect /box/zra-source/circom/zRA.circom -L /box/zra-source/circom --level INFO --sarif-file /out/original.sarif > /out/original.log 2>&1; echo $? > /out/original.exit"
+  ]
+}

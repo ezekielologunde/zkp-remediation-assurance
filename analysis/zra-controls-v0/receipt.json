@@ -1,0 +1,109 @@
+{
+  "status": "complete",
+  "steps": [
+    {
+      "name": "witness",
+      "code": 0,
+      "command": [
+        "node",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\generate_witness.js",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\zRA.wasm",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\good_input.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\witness.wtns"
+      ],
+      "seconds": 0.139999999984866
+    },
+    {
+      "name": "prove",
+      "code": 0,
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "prove",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\zRA.zkey",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\witness.wtns",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\proof.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\public.json"
+      ],
+      "seconds": 1.4530000000086147
+    },
+    {
+      "name": "verify",
+      "code": 0,
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\verification_key.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\public.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\proof.json"
+      ],
+      "seconds": 0.5469999999913853
+    },
+    {
+      "name": "changed-root",
+      "code": 1,
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\verification_key.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\root.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\proof.json"
+      ],
+      "seconds": 0.6410000000032596
+    },
+    {
+      "name": "changed-devAddr",
+      "code": 1,
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\verification_key.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\devAddr.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\proof.json"
+      ],
+      "seconds": 0.5780000000086147
+    },
+    {
+      "name": "changed-challenge",
+      "code": 1,
+      "command": [
+        "node",
+        "node_modules/snarkjs/build/cli.cjs",
+        "groth16",
+        "verify",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\verification_key.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\challenge.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\proof.json"
+      ],
+      "seconds": 0.75
+    },
+    {
+      "name": "changed-response",
+      "code": 1,
+      "command": [
+        "node",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\generate_witness.js",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-source\\benchmarking\\ra40\\zRA.wasm",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\changed-response.json",
+        "C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\zra-controls-v0\\changed.wtns"
+      ],
+      "seconds": 0.139999999984866
+    }
+  ],
+  "generated_sha256": {
+    "data\\proof-sandbox\\zra-controls-v0\\challenge.json": "4781981dc71906583124d0a3bf9b4e9065c9058128f35fc1e6ee628925523bc7",
+    "data\\proof-sandbox\\zra-controls-v0\\changed-response.json": "7cf769cc86221af8a83b7fcf18623dcb007574773284692404533fc5763945fd",
+    "data\\proof-sandbox\\zra-controls-v0\\devAddr.json": "345366d240c8e52c2a0c55aed9112cb556e7dfb1c58648656d245c1a8f02b334",
+    "data\\proof-sandbox\\zra-controls-v0\\proof.json": "c97e48df08de6d21c769e9493cca9d0a37562d05bb51d09eb9e18b86169f08e1",
+    "data\\proof-sandbox\\zra-controls-v0\\public.json": "5c30e881462ca0b70c90f4e95455937bb82e51877db1d3a67b0d847e4be1aca3",
+    "data\\proof-sandbox\\zra-controls-v0\\root.json": "ffe35399888b792d16b51fa6f4b856ec8d9053709e0378055ea4cad04441215b",
+    "data\\proof-sandbox\\zra-controls-v0\\witness.wtns": "4bdd76df1637b5a5ca0404bae98f3442382be3b33aa991730145e267930372cf"
+  }
+}

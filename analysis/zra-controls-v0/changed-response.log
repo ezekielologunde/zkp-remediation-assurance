@@ -1,0 +1,16 @@
+
+C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\zra-source\benchmarking\ra40\witness_calculator.js:161
+                    throw new Error(err);
+                          ^
+
+Error: Error: Assert Failed.
+Error in template MerkleTreeChecker_142 line: 48
+Error in template Attest_143 line: 31
+
+    at C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\zra-source\benchmarking\ra40\witness_calculator.js:161:27
+    at Array.forEach (<anonymous>)
+    at WitnessCalculator._doCalculateWitness (C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\zra-source\benchmarking\ra40\witness_calculator.js:136:14)
+    at WitnessCalculator.calculateWTNSBin (C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\zra-source\benchmarking\ra40\witness_calculator.js:212:20)
+    at C:\Users\WT8\Projects\zkp-remediation-assurance\data\proof-sandbox\zra-source\benchmarking\ra40\generate_witness.js:15:38
+
+Node.js v24.15.0
