@@ -91,3 +91,21 @@ See analysis/verisbom-output-binding-report.md and protocol/verisbom-*.md. Archi
 ## zkSBOM native and CLI controls
 
 See analysis/zksbom-execution-report.md. Frozen Docker commands, image IDs, build errors and package inventories are in analysis/zksbom-*/. Native v2 builds libraries with a Flatbuffers naming shim but the full target fails. Wrapper v1 links the unchanged bundled Blake2 C implementation. Generate dependency fixtures with src/generate_zksbom_label_fixture.py, then src/run_zksbom_label_wrapper.py. The CLI image and src/build_zksbom_cli.py use unchanged application sources and Cargo.lock with a recorded build.rs linking adapter. src/run_zksbom_cli_cases.py runs six cases without network. src/verify_zksbom_execution.py checks hashes and saved outcomes. Do not rerun immutable drivers into existing evidence paths; use a separate reproduction checkout with separately acquired ignored sources. The Docker volumes are local build caches, not included in Git.
+
+## October 14 extracted client integration
+
+The existing archived VeriSBOM runtime and build volumes are prerequisites. Run
+`python src/run_verisbom_client_path.py` only in a fresh reproduction checkout;
+it refuses an existing analysis/client-path-v0 directory. It mounts previous
+proof evidence and compiler volumes read-only, disables networking and uses
+4 CPUs and 12 GiB. The script extracts the original client block and root helpers,
+substitutes widget inputs and messages, and executes real hashing and verification.
+`python src/verify_client_path.py` independently checks 15 hashes and eight results.
+This is not a full Streamlit/browser test. Existing immutable output should be
+verified, not deleted to make the runner repeatable.
+
+The paper ZIP is independently rebuildable without these large runtime caches.
+Run its verification/verify.py and compile main.tex as described in its README.
+The ZIP contains selected evidence, not third-party sources, proof binaries or
+all cryptographic environments. Full reproduction follows the source acquisitions
+and frozen Docker commands in this repository.

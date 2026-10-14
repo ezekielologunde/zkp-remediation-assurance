@@ -1,0 +1,9 @@
+original-original True
+original-expected_root_only False
+original-metadata_only False
+original-metadata_and_expected_root True
+bound-original True
+bound-expected_root_only False
+bound-metadata_only True
+bound-metadata_and_expected_root False
+

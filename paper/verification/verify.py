@@ -19,6 +19,11 @@ for i,(u,v) in enumerate(zip(vs,vr)):
  for d,r in [('verisbom-acceptance-v0',u),('verisbom-repair-v0',v)]:
   log=(E/'analysis'/d/(r['case']+'.log')).read_text();ck(d+':'+r['case'],('VERIFICATION AND SBOM BINDING SUCCESSFUL' in log)==r['application_accepted'] and 'ZK Proof Math Valid' in log)
 z=j('analysis/zksbom-cli-cases-v0/cases.json')
+for variant,pattern in [('original',[True,False,False,True]),('bound',[True,False,True,False])]:
+ for name,want in zip(['original','expected_root_only','metadata_only','metadata_and_expected_root'],pattern):
+  row=j('analysis/client-path-v0/'+variant+'-'+name+'.json')
+  calls=[c for c in row['commands'] if '--mode' in c['command']]
+  ck('client integration '+variant+':'+name,row['success']==want and len(calls)==1 and 'ZK Proof Math Valid' in calls[0]['stdout'] and calls[0]['exit_code']==(0 if want else 1) and any(m['kind']=='success' and 'Verification Successful' in m['text'] for m in row['messages'])==want)
 for name,expected in [('original',[True,False,False,True]),('bound',[True,False,True,False])]:
  replay=j('analysis/verisbom-replay-2026-10-14/'+name+'/cases.json')
  ck('replay pattern '+name,len(replay)==4 and [r['application_accepted'] for r in replay]==expected)

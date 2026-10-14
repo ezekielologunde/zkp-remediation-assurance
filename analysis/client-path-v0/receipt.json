@@ -1,0 +1,31 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cpus",
+    "4",
+    "--memory",
+    "12g",
+    "--mount",
+    "type=volume,source=zkp-verisbom-work-v0,target=/work,readonly",
+    "--mount",
+    "type=volume,source=zkp-verisbom-build-v0,target=/compiled,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\verisbom_client_path_probe.py,target=/probe.py,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0,target=/bundle,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\client-path-v0,target=/out",
+    "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+    "python3",
+    "/probe.py"
+  ],
+  "image": "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+  "exit_code": 0,
+  "seconds": 28.955653099983465
+}

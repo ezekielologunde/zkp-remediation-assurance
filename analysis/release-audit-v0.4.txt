@@ -1,0 +1,59 @@
+Final scientific and package audit, 2026-10-14
+
+Objective: an evidence-supported distinct contribution, complete manuscript and
+reproducible package, with negative evidence and limitations preserved.
+
+Scientific scope
+The supported contribution is artifact-specific empirical evidence: a missing
+relation in a pinned Circom benchmark and an authenticated-output mismatch in an
+archived Nova consumer. The latter also survives an extracted client-block test.
+The reviewed primary papers define the tested obligations. General binding and
+audit principles already exist. The paper attributes them rather than claiming
+them as new. Exact observations were not found in targeted prior-report searches.
+This supports distinctness relative to reviewed work, not worldwide priority.
+
+Evidence inspected
+Original root mutation and backend controls retain real proof evidence; source
+hashes, witness outcomes, public vectors and signature controls were checked.
+Nine artifact/evidence verifiers passed in the preceding revision cycle.
+Eight fresh saved-proof VeriSBOM executions reproduced both decision patterns.
+Eight additional extracted-client executions recomputed the expected SBOM hash
+and propagated those patterns using actual hashing and Nova verification.
+The independent client evidence checker passed 15 hashes and eight case checks.
+These repeated cases are not independent samples or additional systems.
+
+Baselines and rejection conditions
+The correctly bound consumer accepts irrelevant metadata edits and rejects
+changed expected roots, avoiding an indiscriminate reject-all control.
+Noir, TrustBOM and zRA provide scoped correctly rejecting controls, not a claim
+that any whole system is secure. The Circom alternative changes the relation;
+no exact repair equivalence or comparative performance is claimed.
+zkSBOM interface behavior is not represented as an established third defect.
+
+Manuscript requirements
+Complete abstract, questions, method, results, discussion, limitations,
+reproducibility and references are in paper/main.tex. It is six pages, with three
+tables and two figures in acmart sigconf,nonacm. Author and affiliation follow
+the user's block. Scientific changes reside in manuscript.template.tex and the
+generated main.tex. Original releases remain available.
+
+Release verification
+111 independent presentation/evidence checks pass. All six final pages were
+visually inspected. The standard built-in compiler remains unavailable due to
+its Windows helper; the pinned local Tectonic fallback produced the PDF.
+Clean-directory ZIP compilation and exact extracted-text comparison are recorded
+in paper/validation.json. Figure values match retained machine-readable evidence.
+Full cryptographic reproduction requires separate third-party acquisitions and
+the documented build inputs; the ZIP reproduces the manuscript independently.
+
+Claims deliberately excluded
+First discovery, a new cryptographic primitive, a new audit method, prevalence,
+deployed-system exploitation, full Streamlit execution, independent cryptographic
+reimplementation, author/maintainer endorsement, submission and acceptance.
+These are outside the supported manuscript claims, not concealed failed tests.
+
+Publication boundary
+The manuscript is a bounded empirical reproduction study ready for author review
+and journal assessment. Journal acceptance and the venue's novelty judgment
+cannot be established by local tests. No paper has been submitted or uploaded
+to ResearchGate in this cycle. Choosing a venue may require format changes.

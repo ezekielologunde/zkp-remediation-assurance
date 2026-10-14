@@ -163,7 +163,9 @@ The diagnostic comparator uses Nova's authenticated primary output for the three
 \label{fig:flow}
 \end{figure}
 
-The required threat condition is an untrusted bundle supplied to this CLI with an independently chosen expected root. The caller does not have to alter its expectation maliciously: the two roots are alternative fixed test contexts. What remains untested is whether a deployment restricts bundle provenance or adds a check outside this path. We consequently attribute the finding to the archived local verifier and do not claim a hosted exploit or a Nova soundness failure.
+An additional local integration test extracted the archived client verification block and its root/policy helpers without changing their source. A test double supplied the interface widgets; the archived hashing helpers, hashing executables, and Nova verifier ran normally. Across the same eight cases, the client decoded the uploaded representation, recomputed the honest SBOM hash, read synthetic expected roots from files, and preserved both acceptance patterns in its success messages. Thus, these client operations did not remove the observed mismatch. This is an extracted-block integration result, not execution of the full Streamlit application, browser sessions, HTTP uploads, or a hosted deployment.
+
+The required threat condition is an untrusted bundle supplied to this CLI with an independently chosen expected root. The caller does not have to alter its expectation maliciously: the two roots are alternative fixed test contexts. What remains untested is whether a deployment restricts bundle provenance or adds a check outside this path. We consequently attribute the finding to the archived local verifier and tested client block and do not claim a hosted exploit or a Nova soundness failure.
 
 \section{Controls and Consumer Semantics}
 \subsection{zRA and TrustBOM}

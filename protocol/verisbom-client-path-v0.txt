@@ -1,0 +1,17 @@
+Frozen local client-path experiment, 2026-10-14, before execution.
+Question: does the archived client verification block propagate the proven CLI
+metadata mismatch after decoding an upload, recomputing the SBOM hash and reading
+the expected roots from local files?
+Extract the unmodified tab4 AST and its root/policy helper definitions from the
+archived app.py. Replace only Streamlit presentation/input widgets with a minimal
+test double. Execute original hashing helpers/binaries and real Nova verifier.
+All original evidence and compiled volumes remain read-only. Work in disposable
+container storage with network disabled; retain logs and source hashes externally.
+Use the existing one-package fixture. Four metadata/root contexts for both the
+original and bound-output verifier. Expected patterns TFFT and TFTF respectively.
+Require computed hash equals the saved honest expected hash, positive proof math,
+no UI errors on positive cases, and exactly one verifier invocation per case.
+Record failure instead of silently modifying the extracted client code.
+This is a headless extracted-block integration test, not the full Streamlit app,
+HTTP upload/browser/session behavior, public registry authority, or deployment.
+It adds no independent system and does not create a first-discovery claim.

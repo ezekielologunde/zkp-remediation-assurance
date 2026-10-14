@@ -1,0 +1,61 @@
+{
+  "variant": "bound",
+  "case": "expected_root_only",
+  "success": false,
+  "expected_success": false,
+  "computed_hash": "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4",
+  "messages": [
+    {
+      "kind": "header",
+      "text": "2. Client: Verification & Binding"
+    },
+    {
+      "kind": "info",
+      "text": "The Client loads the artifact received from the Vendor to verify its cryptographic integrity and policy compliance."
+    },
+    {
+      "kind": "success",
+      "text": "Status: Artifact received. Ready for verification."
+    },
+    {
+      "kind": "write",
+      "text": "Step 0 (scheduler): 0x2362c3afda841..."
+    },
+    {
+      "kind": "error",
+      "text": "**Binding Error!** The provided plaintext SBOM data does not mathematically match the cryptographic proof."
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "/tmp/client-path/circuits/poseidon3_cpp/poseidon3",
+        "c_p9d983017.json",
+        "c_p9d983017.wtns"
+      ],
+      "exit_code": 0,
+      "stdout": "16005451294303314235654045125291561473797329478835895528804401173716225885172\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/compiled/target/release/bound_verifier",
+        "--mode",
+        "verify",
+        "--circuit",
+        "circuits/step.r1cs",
+        "--output",
+        "/tmp/client-path/c_verify_test.proof",
+        "--root-pm",
+        "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498",
+        "--root-audit",
+        "0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca",
+        "--expected-hash",
+        "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4"
+      ],
+      "exit_code": 1,
+      "stdout": "[*] Loading R1CS...\nR1CS Loaded in: 7.63ms\n[*] Loading Public Parameters from cache (circuits/step.r1cs.pp)\nPublic Parameters ready in: 3.25s\n=== VERIFIER MODE ===\nChecking: /tmp/client-path/c_verify_test.proof\nStep 1: Math Verify (Zero Knowledge Check)...\nZK Proof Math Valid\nStep 2: Checking Public Roots & BINDING (Consensus Check)...\nExpected PM Root:        0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498\nActual PM Root:          0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497\nExpected Audit Root:     0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca\nActual Audit Root:       0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca\nExpected SBOM Hash:      0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4\nActual ZK Computed Hash: 0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4\n\nVERIFICATION FAILED\n   -> PM Root differs (Data Integrity Fail)\n",
+      "stderr": ""
+    }
+  ]
+}

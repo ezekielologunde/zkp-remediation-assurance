@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "hash_checks": 15,
+  "cases": [
+    {
+      "verifier": "original",
+      "case": "original",
+      "accepted": true
+    },
+    {
+      "verifier": "original",
+      "case": "expected_root_only",
+      "accepted": false
+    },
+    {
+      "verifier": "original",
+      "case": "metadata_only",
+      "accepted": false
+    },
+    {
+      "verifier": "original",
+      "case": "metadata_and_expected_root",
+      "accepted": true
+    },
+    {
+      "verifier": "bound",
+      "case": "original",
+      "accepted": true
+    },
+    {
+      "verifier": "bound",
+      "case": "expected_root_only",
+      "accepted": false
+    },
+    {
+      "verifier": "bound",
+      "case": "metadata_only",
+      "accepted": true
+    },
+    {
+      "verifier": "bound",
+      "case": "metadata_and_expected_root",
+      "accepted": false
+    }
+  ],
+  "source_matches_archived_manifest": true,
+  "scope": "Independent parsing and hash checks of extracted-block integration evidence; not independent cryptography or full UI execution"
+}

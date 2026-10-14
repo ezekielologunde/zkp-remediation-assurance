@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "cases": 8,
+  "app_sha256": "ea2d08af3721c7b7ccf9deff8e39944345d695231e4b6c685f6b2bdabe9a178b",
+  "block_lines": [
+    612,
+    718
+  ],
+  "scope": "Unmodified extracted client block with test-double widgets, real hashing and proof verification; not full Streamlit/HTTP/browser execution"
+}

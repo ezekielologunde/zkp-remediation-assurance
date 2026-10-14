@@ -2,14 +2,14 @@
 import hashlib,json,pathlib,shutil,subprocess,zipfile,sys
 R=pathlib.Path(__file__).resolve().parents[1]; P=R/'paper'
 revision=sys.argv[1] if len(sys.argv)>1 else 'v0.3'
-assert revision in ['v0.2','v0.3']
+assert revision in ['v0.2','v0.3','v0.4']
 D=R/('deliverables/binding-audit-'+revision); D.mkdir(exist_ok=False)
 E=R/('data/proof-sandbox/paper-release-check-'+revision); E.mkdir(exist_ok=False)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 v=json.loads((P/'validation.json').read_text())
 v.pop('clean_pdf_sha256',None)
 v.update(status='release_validation_in_progress',source_sha256=sha(P/'main.tex'),
- pdf_sha256=sha(P/'build/main.pdf'),presentation_checks=93,
+ pdf_sha256=sha(P/'build/main.pdf'),presentation_checks=json.loads((P/'verification/check-results.json').read_text())['check_count'],
  visual_review='All six revised pages inspected on October 14; no observed clipping or collisions',
  warnings=['Underfull box diagnostics','Fontconfig default configuration and font-request diagnostics; visual rendering inspected'],
  clean_extraction='pending',replay='Eight fresh saved-proof verifications; original and bound patterns reproduced; not fresh proof generation',
