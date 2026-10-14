@@ -47,8 +47,16 @@ PIRANHAS issues; closed issues and every external discussion were not exhaustive
 reviewed. These facts do not establish priority or absence of prior discovery.
 No author or maintainer was contacted. No external submission was made.
 
-5. Remaining release work
-Rebuild revised manuscript and validate all pages, then clean-extraction rebuild.
-Preserve v0.1; release a separately versioned package with current replay evidence.
-Check exact relation text and artifact disclosure history further before stronger
-priority wording. Keep independent author review and deployment claims separate.
+5. Release checkpoint
+Revised v0.2 and v0.3 manuscripts were compiled, all six pages visually reviewed,
+and clean-extraction PDF text and rendered pixel arrays matched. v0.1 is preserved.
+The v0.3 related-work section adds the closer context-binding paper. See the
+empirical-contribution-gate-2026-10-14.txt protocol for precise originality scope.
+Independent author review and deployment claims remain separate.
+
+6. Additional caller evidence
+The exact archived app.py success expression at line679 was evaluated over all
+eight retained CLI outputs. It preserves both acceptance patterns. Source hash
+matches the archive inventory. Extra witness-root diagnostics are in the failure
+branch. This is expression replay and branch inspection, not complete application
+execution or a deployed-system test. See verisbom-client-predicate-check.json.

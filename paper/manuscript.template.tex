@@ -38,7 +38,9 @@ Layered ZKP auditing is established practice. Tang et al. describe analysis from
 
 The study artifacts span different applications. zRA concerns transparent non-interactive attestation, and PIRANHAS extends privacy-preserving attestation to swarms~\cite{zra,piranhas}. TrustBOM, zkSBOM, and VeriSBOM concern confidential or selectively disclosed SBOM properties~\cite{trustbom,zksbom,verisbom}. We use their public artifacts as executable case studies rather than claiming that the complete protocols share one security definition. Our observations are specifically attributed to backend, revision, fixture, and consumer path.
 
-The empirical distinction from these systems' original evaluations is the controlled comparison of accepted statements with application expectations. That distinction is a scope description, not a priority claim. We have not established that the two observed artifact discrepancies were previously unknown, and no independent novelty assessment or author confirmation has been obtained. The targeted literature screen also does not establish systematic-review completeness.
+Ootani studies context-binding failures and compares in-proof and off-circuit enforcement in a geo-content application, including correctly enforced server-side alternatives~\cite{contextbinding}. Thus, neither the proof/application distinction nor comparing binding strategies is new here. Our empirical object is the correspondence of pinned third-party attestation and SBOM execution paths to their specified relations. We do not claim that these cases establish a new general vulnerability taxonomy.
+
+The empirical distinction from these systems' original evaluations is the controlled comparison of accepted statements with application expectations. The contribution is the inspectable record of the two artifact-specific discrepancies and their contrasting controls, relative to the reviewed work. This is not a first-discovery claim: targeted searches did not locate prior reports of the exact observations, but cannot exclude private, unindexed, or differently described reports. No author confirmation has been obtained. The targeted literature screen also does not establish systematic-review completeness.
 
 \section{Study Design}
 \subsection{Questions and units of analysis}
@@ -198,6 +200,7 @@ In five selected artifacts, proof execution and application interpretation requi
 \bibitem{picus} Veridise. Picus: Automated verification of uniqueness property for ZKP circuits. Accessed October 8, 2026. \url{https://github.com/Veridise/Picus}
 \bibitem{circomspect} Trail of Bits. Circomspect: A static analyzer and linter for the Circom zero-knowledge DSL. Accessed October 8, 2026. \url{https://github.com/trailofbits/circomspect}
 \bibitem{zkfuzz} Hideaki Takahashi, Jihwan Kim, Suman Jana, and Junfeng Yang. 2026. zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits. IEEE Symposium on Security and Privacy. \url{https://www.cs.columbia.edu/~junfeng/papers/zkfuzz/}
+\bibitem{contextbinding} Yoshiyuki Ootani. 2026. Context-Binding Gaps in Stateful Zero-Knowledge Proximity Proofs: Taxonomy, Separation, and Mitigation. arXiv:2604.03900v1. \url{https://arxiv.org/abs/2604.03900v1}
 \end{thebibliography}
 
 \appendix

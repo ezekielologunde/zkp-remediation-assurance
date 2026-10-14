@@ -3,7 +3,7 @@
   "analysis/verisbom-acceptance-v0/cases.json": "4b1f1291bd68e4f415c711b14826eebe9a92adb283afddffd57717b4f79558de",
   "analysis/verisbom-repair-v0/cases.json": "1ab94ae49d8a4fb5b5b27746df51811fca474636186520e76b4f5e92bcfa6aa7",
   "analysis/zksbom-cli-cases-v0/cases.json": "59a8cc664d1c6e0d5aedc9a865b485da824379436b1981924eff6b965627166b",
-  "analysis/verisbom-verification.json": "9f6b226b42a8139cfbf84b921e7d75d90800f4ed0352d1c4ecca6f6f3e888efa",
+  "analysis/verisbom-verification.json": "3c37a0707d36590b556930263f23ace369a365e4618668cc8adf03610cd50597",
   "analysis/zksbom-verification.json": "97e65ad20acc11fecd2452a3a328a84698ae6574284cd07c130634a0b7ae49d9",
   "data/corpus-ledger-v0.json": "a9a4646430940eb1a98e1f168cd93442aac009b4ee7348e538faf571af0963f5",
   "analysis/root-binding-verification.json": "7040dc62b76a27a3e415a0c756c7c26cdbe7b62be9716e49d64ecac637b91e4d",

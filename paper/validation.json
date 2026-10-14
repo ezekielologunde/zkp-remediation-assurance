@@ -5,8 +5,8 @@
   "compiler": "Tectonic 0.17.0 (XeTeX)",
   "builtin_compiler": "Unavailable: Windows sandbox helper setup error before compilation",
   "evidence_snapshot": "Original evidence follows 70a6f01; additional dated replay identified by included manifest",
-  "source_sha256": "85fc576609a120c42fec66a6197f4ffc72179e79950c5b3fd0a7cb5dc93daeff",
-  "pdf_sha256": "3346ce51844b4f8b576ed7239ea78b00c048f6cd085e92be249a6ad427ee9e53",
+  "source_sha256": "e1d3874a05dbdea83d09f6cb7b3e1603351386266ddd3d84fdcced806f2878f1",
+  "pdf_sha256": "caebf28366d574691cea4f9f8ca60e18ac2155202da21192fa9130e6fc84f588",
   "presentation_checks": 93,
   "pages": 6,
   "tables": 3,
@@ -23,7 +23,7 @@
     "Fresh reproduction of all proof systems during packaging",
     "Overleaf remote compiler"
   ],
-  "clean_extraction": "Passed: empty-directory build and exact pdftotext -layout comparison; all six rendered pixel arrays match and extracted page 4 visually inspected",
+  "clean_extraction": "Passed: empty-directory build and exact pdftotext -layout comparison; six raster pixel arrays match the visually reviewed build",
   "replay": "Eight fresh saved-proof verifications; original and bound patterns reproduced; not fresh proof generation",
-  "extracted_pdf_sha256": "a08bcd6032e109d13a058c899ec69358b265f7bc6132410dd7ed12749646a8e5"
+  "extracted_pdf_sha256": "8deff9f5d7ae92c686b03233e433014be8171289d80473eb1e996a84e73a967b"
 }

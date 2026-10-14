@@ -1,0 +1,89 @@
+EMPIRICAL CONTRIBUTION GATE, OCTOBER 14, 2026
+
+Purpose
+Assess the contribution actually supported by the artifacts, rather than require
+an unrelated new algorithm or treat a known vulnerability class as a new class.
+This assessment is exploratory and follows the original findings; it is not a
+preregistered discovery protocol.
+
+Candidate claim
+Two pinned research execution paths fail specific connections required by the
+associated design: a signed-accumulator connection in a Circom benchmark and
+an authenticated-output-to-expected-root comparison in a Nova consumer. Their
+different failure locations require different diagnostic controls. A shared
+successful-proof symptom does not imply a common patch.
+
+Closest-work matrix
+Tang et al. 2024, Zero-Knowledge Proof Vulnerability Analysis and Security Auditing
+https://eprint.iacr.org/2024/514.pdf, section 4.2.
+Contribution: layered auditing including application design and integration.
+Overlap: the general audit principle. It invalidates a new-method claim here.
+Difference: the present artifact observations and recorded paired controls are
+the empirical object, not an invented auditing taxonomy.
+
+Ootani 2026, Context-Binding Gaps in Stateful Zero-Knowledge Proximity Proofs
+https://arxiv.org/html/2604.03900v1, sections III-F, VII-F and VIII-B.
+Contribution: compares binding strategies and operational assumptions in a
+geo-content system, including correctly enforced server-side alternatives.
+Overlap: proof validity versus application context and diagnostic comparisons.
+Difference: our study executes third-party attestation/SBOM paths. It does not
+claim the general separation or in-proof binding as new. The full text scopes
+its empirical results to geo-content, not our two named artifact discrepancies.
+
+zkFuzz 2026, https://www.cs.columbia.edu/~junfeng/papers/zkfuzz/
+Contribution: execution-trace/constraint consistency testing of ZK circuits.
+Overlap: circuit mutation and real-proof controls are established techniques.
+Difference: our accepted mutation satisfies both witness code and constraints;
+the missing link is the specified application relation. Our Rust case is a
+consumer output selection issue. No measured comparison to zkFuzz was run, so
+do not claim detector superiority or a demonstrated tool false negative.
+
+PIRANHAS 2026, https://www.ndss-symposium.org/wp-content/uploads/2026-f526-paper.pdf
+Contribution: anonymous single-device and swarm attestation and performance.
+Obligation: signed accumulator and key relation; pinned README C1/E1 identifies
+the Groth16 benchmark. Our result is a benchmark correspondence discrepancy,
+not an invalidation of its theorem or an exploitation of its full protocol.
+
+VeriSBOM 2026, https://arxiv.org/html/2602.13682v1
+Contribution: private SBOM verification against authoritative roots.
+Obligation: section5.3 and Algorithm1 require root matching at verification.
+Our mismatch changes auxiliary metadata while retaining the authenticated proof.
+It is not the already acknowledged issue of stale trusted roots or incomplete
+SBOM input. An honest committed SBOM in a synthetic fixture is sufficient for
+the tested consumer mismatch.
+
+Claim rejection rules and observed status
+- If the claimed obligation is absent from the design: reject that discrepancy.
+  Outcome: obligations located, with benchmark-only qualification for PIRANHAS.
+- If the changed proof or witness is invalid: reject the acceptance claim.
+  Outcome: saved evidence shows real proofs; eight fresh VeriSBOM replays agree.
+- If the control rejects honest or irrelevant edits indiscriminately: reject it
+  as a useful diagnostic. Outcome: authenticated-output consumer accepts the
+  metadata-only case and rejects changed expected roots. Circom alternative is
+  explicitly a changed relation, not an exact-equivalence repair.
+- If prior work reports the same pinned defect: revise originality attribution.
+  Outcome: no matching report located in targeted searches, not exhaustive proof.
+- If the finding only restates an author-acknowledged limitation: do not call it
+  a new implementation finding. The tested metadata substitution differs from
+  the acknowledged provenance/freshness limitations; benchmark intent retains
+  an explicit qualification pending author interpretation.
+
+Disclosure evidence
+GitHub REST state=all issues returned an empty array. attest.circom history
+returned one commit, 6058393ce342dca774a99754cf1e0587cbe8e270, dated 2025-07-29.
+Responses saved in analysis/disclosure-check-2026-10-14. This does not cover
+private disclosures, other branches, deleted records or every external report.
+No maintainer contact occurred.
+
+Decision
+Supported: a distinct, bounded empirical account relative to the reviewed work.
+Unsupported: a novel cryptographic primitive, novel audit principle, first-ever
+discovery, representative prevalence, analyzer superiority, deployed exploit.
+Journal suitability remains an editorial judgment. Scientific submission should
+use the narrow empirical claim and preserve all scope limitations. A complete
+draft is not journal acceptance and does not remove the author's review duty.
+
+Remaining concrete work
+Integrate the closest context-binding source and explicit scope comparison in
+the manuscript, regenerate the final package, and audit its claims against the
+evidence rather than adding more experiments solely to increase counts.

@@ -1,8 +1,10 @@
 """Package the reviewed October 14 revision without overwriting release v0.1."""
-import hashlib,json,pathlib,shutil,subprocess,zipfile
+import hashlib,json,pathlib,shutil,subprocess,zipfile,sys
 R=pathlib.Path(__file__).resolve().parents[1]; P=R/'paper'
-D=R/'deliverables/binding-audit-v0.2'; D.mkdir(exist_ok=True)
-E=R/'data/proof-sandbox/paper-release-check-v2'; E.mkdir(exist_ok=False)
+revision=sys.argv[1] if len(sys.argv)>1 else 'v0.3'
+assert revision in ['v0.2','v0.3']
+D=R/('deliverables/binding-audit-'+revision); D.mkdir(exist_ok=False)
+E=R/('data/proof-sandbox/paper-release-check-'+revision); E.mkdir(exist_ok=False)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 v=json.loads((P/'validation.json').read_text())
 v.pop('clean_pdf_sha256',None)

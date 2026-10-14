@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "source_sha256": "ea2d08af3721c7b7ccf9deff8e39944345d695231e4b6c685f6b2bdabe9a178b",
+  "line": 679,
+  "expression": "res.returncode == 0 and 'fail' not in out_text and ('invalid' not in out_text) and ('error' not in out_text)",
+  "case_count": 8,
+  "cases": [
+    {
+      "verifier": "original",
+      "case": "original",
+      "client_success": true,
+      "exit_code": 0
+    },
+    {
+      "verifier": "original",
+      "case": "expected_root_only",
+      "client_success": false,
+      "exit_code": 1
+    },
+    {
+      "verifier": "original",
+      "case": "metadata_only",
+      "client_success": false,
+      "exit_code": 1
+    },
+    {
+      "verifier": "original",
+      "case": "metadata_and_expected_root",
+      "client_success": true,
+      "exit_code": 0
+    },
+    {
+      "verifier": "bound",
+      "case": "original",
+      "client_success": true,
+      "exit_code": 0
+    },
+    {
+      "verifier": "bound",
+      "case": "expected_root_only",
+      "client_success": false,
+      "exit_code": 1
+    },
+    {
+      "verifier": "bound",
+      "case": "metadata_only",
+      "client_success": true,
+      "exit_code": 0
+    },
+    {
+      "verifier": "bound",
+      "case": "metadata_and_expected_root",
+      "client_success": false,
+      "exit_code": 1
+    }
+  ],
+  "scope": "Exact success-expression replay over recorded CLI output, plus branch structure inspection. Not full web-app execution, root acquisition, upload handling or deployed exploit validation."
+}

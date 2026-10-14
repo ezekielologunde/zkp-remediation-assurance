@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "sha256_checks": 465,
+  "sha256_checks": 478,
   "application_cases": 8,
   "real_proof_math_acceptances": 8,
   "proof_core_bytes_identical": true,
