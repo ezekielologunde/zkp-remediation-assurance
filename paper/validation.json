@@ -4,18 +4,17 @@
   "author": "Ezekiel Ologunde, Independent Researcher, Boston, MA, USA, ologunde@bu.edu",
   "compiler": "Tectonic 0.17.0 (XeTeX)",
   "builtin_compiler": "Unavailable: Windows sandbox helper setup error before compilation",
-  "evidence_snapshot": "70a6f01224c9bfd64cbca40d4049de82100414ba",
-  "source_sha256": "2adb5f84e28435530bc6887fda7701ae8fe4cbc088a48309873e9e6d7dcae572",
-  "pdf_sha256": "bc90ea3a553f715a7c202cccd2d69003f1770a09a3c6b0b0cf0c6a365f75ad6e",
-  "presentation_checks": 69,
+  "evidence_snapshot": "Original evidence follows 70a6f01; additional dated replay identified by included manifest",
+  "source_sha256": "85fc576609a120c42fec66a6197f4ffc72179e79950c5b3fd0a7cb5dc93daeff",
+  "pdf_sha256": "3346ce51844b4f8b576ed7239ea78b00c048f6cd085e92be249a6ad427ee9e53",
+  "presentation_checks": 93,
   "pages": 6,
   "tables": 3,
   "figures": 2,
-  "visual_review": "All six pages inspected; final diagram re-inspected at 150 dpi; no observed clipping or collisions",
+  "visual_review": "All six revised pages inspected on October 14; no observed clipping or collisions",
   "warnings": [
-    "Final-page overfull vbox 1.64198pt; visually inspected without clipped content",
     "Underfull box diagnostics",
-    "Fontconfig default configuration warning and font-request diagnostics; Libertine and other used fonts embedded"
+    "Fontconfig default configuration and font-request diagnostics; visual rendering inspected"
   ],
   "unverified": [
     "Prior-art novelty and first-discovery status",
@@ -24,6 +23,7 @@
     "Fresh reproduction of all proof systems during packaging",
     "Overleaf remote compiler"
   ],
-  "clean_extraction": "Passed: rebuilt from empty extraction; pdftotext -layout output byte-identical; no text normalization",
-  "clean_pdf_sha256": "c8aee0f1e9cd0a9bc5a41e4175fe9229572d18c9034dd621bfb603d02431c01f"
+  "clean_extraction": "Passed: empty-directory build and exact pdftotext -layout comparison; all six rendered pixel arrays match and extracted page 4 visually inspected",
+  "replay": "Eight fresh saved-proof verifications; original and bound patterns reproduced; not fresh proof generation",
+  "extracted_pdf_sha256": "a08bcd6032e109d13a058c899ec69358b265f7bc6132410dd7ed12749646a8e5"
 }

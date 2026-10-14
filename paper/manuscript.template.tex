@@ -81,6 +81,8 @@ VeriSBOM & Archived source-built Nova CLI; unchanged-proof metadata controls & H
 
 \section{PIRANHAS: Separately Satisfied Relations}
 \subsection{Observed benchmark behavior}
+The intended connection is grounded in the original attestation design: the manufacturer signs the accumulator value, and attestation establishes membership in that signed accumulator~\cite{piranhas}. The pinned artifact README identifies its Circom experiment E1 as a Groth16 implementation of the proposed protocol. Consequently, this is a correspondence question for that benchmark, not an assumption that unrelated signature and membership tests must always be connected. We do not extrapolate its result to the complete swarm protocol.
+
 At the pinned revision, the Circom benchmark supplies a private root to its Merkle component and a separate message to its Schnorr component. The public vector contains enabled, pubX, and pubY. We first reproduced an honest witness and proof. We then increased the response by one. Retaining the old root failed witness generation; recomputing the root restored the Merkle relation. With the original signature and message unchanged, the new witness satisfied the unchanged R1CS and produced a verifying Groth16 proof. Both accepted proofs exposed the same public vector.
 
 The result distinguishes two enforced properties from their missing connection. The old-root mutation confirms that the Merkle equation is active. A changed signature scalar fails its witness assertion, confirming that the tested signature equation is active. The jointly changed response and root demonstrate that satisfying both equations does not itself bind them together. This is an implementation-to-intended-relation discrepancy in a benchmark path, not a signature forgery.
@@ -101,6 +103,8 @@ Circomspect at a pinned revision reported two informational categories for each 
 
 \section{VeriSBOM: Unauthenticated Output Metadata}
 \subsection{Fixture and authenticated outputs}
+The comparison obligation comes from VeriSBOM's own design. Section~5.3 requires verification against independently obtained trusted roots and rejection when the proof uses different roots; Algorithm~1 supplies those roots to verification~\cite{verisbom}. Our test concerns whether the archived consumer implements this obligation. It does not contradict the soundness theorem under a correctly implemented verification procedure.
+
 We acquired the archive associated with Zenodo record 21372814~\cite{veriartifact}, checked its recorded archive checksum, and retained source hashes. The depositor uses the alias VeriSBOM; individual depositor identity was not independently authenticated. The local test uses the archived CLI, not its hosted application.
 
 The honest fixture contains one authorized package in the archived depth-10 circuit. Expected package-manager and auditor roots were created before proof generation using the archived helpers. The authorization policy is explicitly synthetic. These checks establish fixture consistency, not independent correctness of the hash helpers, real-world package policy, or SBOM completeness. The Rust prover/verifier was built from archived source with its lockfile; circuit files and public parameters were taken from the archive.
@@ -111,6 +115,8 @@ The verifier calls Nova verification and checks success. It then reads the separ
 Table~\ref{tab:veri} shows four bundle/expectation combinations for the unchanged CLI and a diagnostic comparator. All eight executions passed cryptographic verification. Changing only the expected root makes the original CLI reject; changing only auxiliary metadata also makes it reject. Changing both causes it to accept even though the proof authenticates the original root. No cryptographic proof was forged or regenerated for this discrepancy.
 
 % GENERATED_VERI_TABLE
+
+On October 14, 2026, we replayed all eight saved-proof cases in network-disabled containers with the existing evidence and build volumes mounted read-only. Both acceptance patterns were reproduced. Binary hashes, commands, case logs, and a file manifest identify this checkpoint. This was fresh verification of a saved proof, not fresh proof generation, an independent cryptographic implementation, or eight additional independent observations.
 
 The diagnostic comparator uses Nova's authenticated primary output for the three value comparisons and length checks. It rejects both cases with the changed expected root. It accepts the metadata-only case because the authenticated root still matches the original expectation. This is the intended positive control: unused auxiliary data does not change the proven statement. Figure~\ref{fig:flow} illustrates the observed consumer paths.
 

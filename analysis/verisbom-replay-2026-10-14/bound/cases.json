@@ -1,0 +1,90 @@
+[
+  {
+    "case": "original",
+    "command": [
+      "/compiled/target/release/bound_verifier",
+      "--mode",
+      "verify",
+      "--circuit",
+      "circuits/step.r1cs",
+      "--root-audit",
+      "0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca",
+      "--expected-hash",
+      "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4",
+      "--output",
+      "/evidence/honest.proof.proof",
+      "--root-pm",
+      "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497"
+    ],
+    "exit_code": 0,
+    "math_verified": true,
+    "application_accepted": true,
+    "expected_root": "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497"
+  },
+  {
+    "case": "expected_root_only",
+    "command": [
+      "/compiled/target/release/bound_verifier",
+      "--mode",
+      "verify",
+      "--circuit",
+      "circuits/step.r1cs",
+      "--root-audit",
+      "0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca",
+      "--expected-hash",
+      "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4",
+      "--output",
+      "/evidence/honest.proof.proof",
+      "--root-pm",
+      "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498"
+    ],
+    "exit_code": 1,
+    "math_verified": true,
+    "application_accepted": false,
+    "expected_root": "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498"
+  },
+  {
+    "case": "metadata_only",
+    "command": [
+      "/compiled/target/release/bound_verifier",
+      "--mode",
+      "verify",
+      "--circuit",
+      "circuits/step.r1cs",
+      "--root-audit",
+      "0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca",
+      "--expected-hash",
+      "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4",
+      "--output",
+      "/bundle/changed-metadata.proof",
+      "--root-pm",
+      "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497"
+    ],
+    "exit_code": 0,
+    "math_verified": true,
+    "application_accepted": true,
+    "expected_root": "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9497"
+  },
+  {
+    "case": "metadata_and_expected_root",
+    "command": [
+      "/compiled/target/release/bound_verifier",
+      "--mode",
+      "verify",
+      "--circuit",
+      "circuits/step.r1cs",
+      "--root-audit",
+      "0x2bd9fd41ae8e72c11e1587317924b45943ad43cdc489c6a12bafd21383e01aca",
+      "--expected-hash",
+      "0x2362c3afda8416ebcfcb0f55e9413a5315f609ac8843dd475eb0f5af87ee03f4",
+      "--output",
+      "/bundle/changed-metadata.proof",
+      "--root-pm",
+      "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498"
+    ],
+    "exit_code": 1,
+    "math_verified": true,
+    "application_accepted": false,
+    "expected_root": "0x3736540e9ef0cbfafd8a70eb5b686e421d1da47ef07f7e075d2f2e0a3e5c9498"
+  }
+]

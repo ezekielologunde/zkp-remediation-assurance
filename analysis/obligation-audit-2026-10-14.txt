@@ -1,0 +1,54 @@
+CONTRIBUTION CHECKPOINT: 2026-10-14
+
+Decision: continue the bounded empirical paper. Two artifact-specific observations
+have stronger evidential support than the recently rejected generic candidates.
+This is not certification of novelty, first discovery, acceptance or deployment risk.
+
+1. VeriSBOM
+Primary design: https://arxiv.org/html/2602.13682v1, section 5.3 and Algorithm 1.
+The consumer is required to use independently obtained trusted roots and reject
+proofs tied to different roots. This obligation is stated in the source paper.
+Archived nova/src/main.rs:225 verifies the proof; lines244-251 use the separately
+deserialized zi_primary vector for expected-value checks instead of authenticated
+return values. Source and archive provenance remain bounded to the retained pins.
+Fresh saved-proof replay: analysis/verisbom-replay-2026-10-14.
+Original decisions [accept,reject,reject,accept].
+Authenticated-output comparator [accept,reject,accept,reject].
+All eight cryptographic verifications succeeded. The original proof is unchanged.
+This reproduces a consumer correspondence failure, not Nova unsoundness. It does
+not require claiming a live deployment or compromised real package registry.
+
+2. PIRANHAS
+Primary design: https://www.ndss-symposium.org/wp-content/uploads/2026-f526-paper.pdf,
+page 2: membership in the manufacturer-signed accumulator.
+Pinned README: data/piranhas-source/README.md, C1 and experiment E1 identify the
+Circom benchmark as a Groth16 implementation of the proposed protocol.
+attest.circom passes root into the Merkle checker and independent message into
+the signature checker. The saved recomputed-root witness and proof retain the
+original signature/message/public vector. Stale-root and invalid-signature
+controls reject. Current-turn evidence verification passed all 33 hash checks.
+The tested Noir backend supplies a useful correctly rejecting comparison.
+Limit: benchmark path, not complete swarm protocol; local alternative changes
+the relation and is not an exact repair. Fresh proof generation was not repeated
+in this checkpoint.
+
+3. Closest-work interpretation
+Tang et al., https://eprint.iacr.org/2024/514.pdf, section 4.2 already covers
+application design and primitive integration. A layered audit method is not new.
+Our contribution candidate is the specific reproducible observations and their
+controls, not renaming that methodology. A new vulnerability class is not a
+necessary claim for an empirical reproduction paper.
+
+4. Disclosure/priority search boundaries
+Targeted searches used VeriSBOM zi_primary verifier; VeriSBOM vulnerability
+verifier metadata; VeriSBOM audit; PIRANHAS Circom binding. No matching report
+was located in the returned results. The GitHub open-issue view showed no open
+PIRANHAS issues; closed issues and every external discussion were not exhaustively
+reviewed. These facts do not establish priority or absence of prior discovery.
+No author or maintainer was contacted. No external submission was made.
+
+5. Remaining release work
+Rebuild revised manuscript and validate all pages, then clean-extraction rebuild.
+Preserve v0.1; release a separately versioned package with current replay evidence.
+Check exact relation text and artifact disclosure history further before stronger
+priority wording. Keep independent author review and deployment claims separate.

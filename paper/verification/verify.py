@@ -19,6 +19,12 @@ for i,(u,v) in enumerate(zip(vs,vr)):
  for d,r in [('verisbom-acceptance-v0',u),('verisbom-repair-v0',v)]:
   log=(E/'analysis'/d/(r['case']+'.log')).read_text();ck(d+':'+r['case'],('VERIFICATION AND SBOM BINDING SUCCESSFUL' in log)==r['application_accepted'] and 'ZK Proof Math Valid' in log)
 z=j('analysis/zksbom-cli-cases-v0/cases.json')
+for name,expected in [('original',[True,False,False,True]),('bound',[True,False,True,False])]:
+ replay=j('analysis/verisbom-replay-2026-10-14/'+name+'/cases.json')
+ ck('replay pattern '+name,len(replay)==4 and [r['application_accepted'] for r in replay]==expected)
+ for r in replay:
+  log=(E/'analysis/verisbom-replay-2026-10-14'/name/(r['case']+'.log')).read_text()
+  ck('replay log '+name+':'+r['case'],'ZK Proof Math Valid' in log and ('VERIFICATION AND SBOM BINDING SUCCESSFUL' in log)==r['application_accepted'])
 for label,r in zip(['Honest member','Honest nonmember','Wrong label','Missing label','Changed commitment','Empty file'],z):
  ck('zkSBOM table '+r['case'],label+' & '+('Valid' if r['proof_valid_message'] else 'Invalid')+' & '+str(r['exit_code']) in s)
  log=(E/'analysis/zksbom-cli-cases-v0'/(r['case']+'.log')).read_text();ck('zkSBOM log '+r['case'],('Proof is valid.' in log)==r['proof_valid_message'])

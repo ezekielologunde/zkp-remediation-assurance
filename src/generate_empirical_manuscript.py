@@ -3,6 +3,7 @@ R=pathlib.Path(__file__).resolve().parents[1];P=R/'paper';E=P/'verification/evid
 paths=['analysis/repair-verification.json','analysis/verisbom-acceptance-v0/cases.json','analysis/verisbom-repair-v0/cases.json','analysis/zksbom-cli-cases-v0/cases.json','analysis/verisbom-verification.json','analysis/zksbom-verification.json','data/corpus-ledger-v0.json']
 paths += ['analysis/root-binding-verification.json','analysis/backend-comparison-verification.json','analysis/trustbom-receipt-verification.json','analysis/contract-controls-verification.json','analysis/zra-verification.json','analysis/circomspect-verification.json']
 paths += ['analysis/repair-v1/original-inspect.log','analysis/repair-v1/repair-inspect.log']
+paths += [str(x.relative_to(R)).replace('\\','/') for x in sorted((R/'analysis/verisbom-replay-2026-10-14').rglob('*')) if x.is_file()]
 for d in ['verisbom-acceptance-v0','verisbom-repair-v0','zksbom-cli-cases-v0']:
  paths += [str(x.relative_to(R)).replace('\\','/') for x in (R/'analysis'/d).glob('*.log')]
 for f in paths:

@@ -1,0 +1,72 @@
+{
+  "scope": "Fresh execution of saved-proof controls; not fresh proof generation or independent cryptography",
+  "image": "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+  "runs": [
+    {
+      "name": "original",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "12g",
+        "--mount",
+        "type=volume,source=zkp-verisbom-work-v0,target=/work,readonly",
+        "--mount",
+        "type=volume,source=zkp-verisbom-build-v0,target=/compiled,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\src\\verisbom_acceptance_cases.py,target=/probe.py,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-replay-2026-10-14\\original,target=/out",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0,target=/bundle,readonly",
+        "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+        "bash",
+        "-c",
+        "set -eu; cd /work; sha256sum /work/bomz /compiled/target/release/bound_verifier; python3 /probe.py"
+      ],
+      "exit_code": 0,
+      "seconds": 15.330601699999534,
+      "script_sha256": "b685b4a715f7f9d1e62f889e3ccd217fa2f13cdd6733183549bc0e1b016b48fa"
+    },
+    {
+      "name": "bound",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "4",
+        "--memory",
+        "12g",
+        "--mount",
+        "type=volume,source=zkp-verisbom-work-v0,target=/work,readonly",
+        "--mount",
+        "type=volume,source=zkp-verisbom-build-v0,target=/compiled,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-repair-v0\\cases.py,target=/probe.py,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\analysis\\verisbom-replay-2026-10-14\\bound,target=/out",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-results-v3,target=/evidence,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\WT8\\Projects\\zkp-remediation-assurance\\data\\proof-sandbox\\verisbom-bundle-v0,target=/bundle,readonly",
+        "sha256:9049274e186c7749190fb63840a0c0ca4bac6725d888eb02ff19bd32aee8dc48",
+        "bash",
+        "-c",
+        "set -eu; cd /work; sha256sum /work/bomz /compiled/target/release/bound_verifier; python3 /probe.py"
+      ],
+      "exit_code": 0,
+      "seconds": 15.232368999975733,
+      "script_sha256": "b998c6342c5c121620c69e2e808a6b0e60662fd788385ab68e266a3d03112b82"
+    }
+  ]
+}
